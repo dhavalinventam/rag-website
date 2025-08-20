@@ -1,0 +1,18 @@
+// Theme Colors
+$color-bg-primary: #0A0B12;   // main background (dark navy)
+$color-bg-secondary: #111827; // section backgrounds
+$color-bg-card: #1F2937;      // cards, feature boxes
+
+$color-text-primary: #FFFFFF;   // main text
+$color-text-secondary: #9CA3AF; // muted text
+$color-text-light: #E6E6E6;     // navbar, footer links
+
+$color-accent-blue: #3B82F6;    // primary gradient start
+$color-accent-purple: #9333EA;  // primary gradient end
+$color-accent-gold: #FBBF24;    // highlight (stars, ratings)
+
+// Gradients
+$gradient-primary: linear-gradient(90deg, $color-accent-blue, $color-accent-purple);
+
+// Misc
+$radius: 12px;
