@@ -43,23 +43,29 @@ export default function Header() {
           <Navbar.Toggle aria-controls="primaryNav" className={styles.toggler} />
 
           <Navbar.Collapse id="primaryNav" className={styles.collapse}>
-            <Nav
-              className={`${styles.nav} mx-auto`}
-              as="nav"
-              role="navigation"
-              aria-label="Primary Navigation"
-            >
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  className={`${styles.link} nav-link`}
-                  href={link.href}
-                  onClick={() => setExpanded(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </Nav>
+            <div className={`${styles.navGroup} mx-lg-auto mb-3 mb-lg-0`}>
+              <Nav
+                className={`${styles.nav}`}
+                as="nav"
+                role="navigation"
+                aria-label="Primary Navigation"
+              >
+                {navLinks.map((link, index) => (
+                  <span key={link.label} className="d-inline-flex align-items-center">
+                    <Link
+                      className={`${styles.link} nav-link`}
+                      href={link.href}
+                      onClick={() => setExpanded(false)}
+                    >
+                      {link.label}
+                    </Link>
+                    {index < navLinks.length - 1 && (
+                      <span className={styles.linkSeparator} aria-hidden="true" />
+                    )}
+                  </span>
+                ))}
+              </Nav>
+            </div>
 
             <div className="d-lg-none mt-3 w-100">
               <Link
@@ -72,7 +78,7 @@ export default function Header() {
             </div>
           </Navbar.Collapse>
 
-          <div className="d-none d-lg-block">
+          <div className="d-none d-lg-flex align-items-center gap-2">
             <Link
               href={{ pathname: "/", hash: "get-started" }}
               className={"btn btn-gradient-primary rounded-pill"}

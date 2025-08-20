@@ -1,23 +1,11 @@
 import type { Metadata } from "next";
-import { Open_Sans, Poppins } from "next/font/google";
+// Using local/installed SF UI Display via CSS variables in global styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/global.scss";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-open-sans",
-  display: "swap",
-});
+// Deprecated font variables removed; use --font-sf from global styles
 
 export const metadata: Metadata = {
   title: {
@@ -47,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
+    <html lang="en">
       <body>
         <Header />
         <main>{children}</main>
