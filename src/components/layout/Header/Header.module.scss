@@ -71,7 +71,7 @@
 }
 
 .nav {
-  gap: 22px;
+  // gap: 22px;
   align-items: center;
 }
 
@@ -90,27 +90,27 @@
   border-radius: 999px;
 }
 
-.link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: $gradient-primary;
-  transition: transform 0.3s ease;
-}
+// .link::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   bottom: -6px;
+//   width: 100%;
+//   height: 2px;
+//   transform: scaleX(0);
+//   transform-origin: left;
+//   background: $gradient-primary;
+//   transition: transform 0.3s ease;
+// }
 
 .link:hover {
   opacity: 1;
   background: rgba(255, 255, 255, 0.08);
 }
 
-.link:hover::after {
-  transform: scaleX(1);
-}
+// .link:hover::after {
+//   transform: scaleX(1);
+// }
 
 .toggler {
   border: 1px solid rgba(230, 230, 230, 0.2);
@@ -161,7 +161,7 @@
     height: 4px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.35);
-    margin: 0 6px;
+    margin: 0 15px;
   }
 }
 
