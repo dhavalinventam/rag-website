@@ -8,7 +8,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default function Button({ label, ...props }: Props) {
   return (
-    <button className={styles.button} {...props}>
+    <button className={`${styles.button} btn`} {...props}>
       {label}
     </button>
   );

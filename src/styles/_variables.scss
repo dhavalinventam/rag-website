@@ -13,6 +13,13 @@ $color-accent-gold: #FBBF24;    // highlight (stars, ratings)
 
 // Gradients
 $gradient-primary: linear-gradient(90deg, $color-accent-blue, $color-accent-purple);
+// Muted CTA gradient for buttons (toned blue → purple with mid stop for depth)
+$gradient-cta: linear-gradient(
+  135deg,
+  mix($color-accent-blue, $color-bg-primary, 55%) 0%,
+  mix(mix($color-accent-blue, $color-accent-purple, 50%), $color-bg-primary, 40%) 52%,
+  mix($color-accent-purple, $color-bg-primary, 50%) 100%
+);
 
 // Misc
 $radius: 12px;

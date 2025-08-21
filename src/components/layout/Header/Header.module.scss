@@ -2,46 +2,45 @@
 
 .header {
   width: 100%;
-  background: transparent;
+  // background: transparent;
   color: $color-text-light;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 50;
   transition: background-color 0.3s ease, padding 0.3s ease, backdrop-filter 0.3s ease, opacity 0.3s ease;
-  position: sticky;
 }
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(900px 500px at 18% 0%, rgba($color-accent-blue, 0.28), transparent 60%),
-    radial-gradient(900px 500px at 82% 0%, rgba($color-accent-purple, 0.24), transparent 60%),
-    linear-gradient(180deg, rgba($color-bg-primary, 0.86), rgba($color-bg-primary, 0.6));
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
-  opacity: 0.85;
-  pointer-events: none;
-}
+// .header::before {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+//   background:
+//     radial-gradient(900px 500px at 18% 0%, rgba($color-accent-blue, 0.28), transparent 60%),
+//     radial-gradient(900px 500px at 82% 0%, rgba($color-accent-purple, 0.24), transparent 60%),
+//     linear-gradient(180deg, rgba($color-bg-primary, 0.86), rgba($color-bg-primary, 0.6));
+//   backdrop-filter: blur(12px) saturate(140%);
+//   -webkit-backdrop-filter: blur(12px) saturate(140%);
+//   opacity: 0.85;
+//   pointer-events: none;
+// }
 .brandLogo {
   max-width: 110px;
   height: auto;
 }
-.header::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: $gradient-primary;
-  opacity: 0.45;
-  transition: opacity 0.3s ease;
-}
+// .header::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   height: 1px;
+//   background: $gradient-primary;
+//   opacity: 0.6;
+//   transition: opacity 0.3s ease;
+// }
 
 .navbar {
   padding: 0.9rem 0;
-  background-color: rgba($color-bg-primary, 0.16);
+  // background-color: rgba($color-bg-primary, 0.16);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
@@ -143,10 +142,10 @@
   }
   .navbar {
     padding: 0.6rem 0;
-    background-color: rgba($color-bg-primary, 0.75);
+    background-color: rgb(97 164 255 / 10%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: rgb(0 0 0 / 19%) 0px 8px 24px;
   }
 }
 

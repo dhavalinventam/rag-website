@@ -1,12 +1,13 @@
 .button {
   appearance: none;
   border-radius: 9999px;
-  height: 48px;
-  padding: 0 20px;
-  border: 1px solid var(--foreground);
-  background: var(--foreground);
-  color: var(--background);
+  padding: 0.625rem 1.25rem;
+  font-size: 16px;
   font-weight: 600;
+  line-height: 1.25;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: transparent;
+  color: #f3f3f3;
 }
 
 
