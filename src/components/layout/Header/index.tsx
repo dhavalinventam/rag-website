@@ -72,7 +72,7 @@ export default function Header() {
                 className={"btn btn-gradient-primary rounded-pill w-100"}
                 onClick={() => setExpanded(false)}
               >
-                Join waitlist
+                Join wishlist
               </Link>
             </div>
           </Navbar.Collapse>
@@ -82,7 +82,7 @@ export default function Header() {
               href={{ pathname: "/", hash: "get-started" }}
               className={"btn btn-gradient-primary rounded-pill"}
             >
-              Join waitlist
+              Join wishlist
             </Link>
           </div>
         </Container>
