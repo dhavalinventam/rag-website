@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // Using local/installed SF UI Display via CSS variables in global styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/global.scss";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
