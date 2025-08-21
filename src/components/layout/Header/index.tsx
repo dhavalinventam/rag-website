@@ -21,7 +21,6 @@ export default function Header() {
     { label: "Features", href: { pathname: "/", hash: "features" } },
     { label: "Use Cases", href: { pathname: "/", hash: "use-cases" } },
     { label: "How It Works", href: { pathname: "/", hash: "how-it-works" } },
-    { label: "Docs", href: { pathname: "/", hash: "docs" } },
     { label: "Contact", href: { pathname: "/contact" } },
   ];
 
@@ -73,7 +72,7 @@ export default function Header() {
                 className={"btn btn-gradient-primary rounded-pill w-100"}
                 onClick={() => setExpanded(false)}
               >
-                Get Started
+                Join waitlist
               </Link>
             </div>
           </Navbar.Collapse>
@@ -83,7 +82,7 @@ export default function Header() {
               href={{ pathname: "/", hash: "get-started" }}
               className={"btn btn-gradient-primary rounded-pill"}
             >
-              Get Started
+              Join waitlist
             </Link>
           </div>
         </Container>

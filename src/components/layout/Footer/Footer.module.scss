@@ -1,17 +1,165 @@
 .footer {
+  position: relative;
   width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  margin-top: 48px;
+  margin-top: 0px;
+  padding: 0;
+  background:
+    radial-gradient(900px 500px at 10% 0%, rgba(93, 168, 255, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(166, 107, 255, 0.16), transparent 60%),
+    linear-gradient(180deg, rgba(11, 13, 22, 0.9), rgba(11, 13, 22, 0.98));
+  color: #e8ecf4;
+  overflow: hidden;
+  border-radius: 0;
 }
 
-.inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px;
+.inner {padding: 48px 16px 28px; }
+
+.brandBlock { max-width: 520px; }
+
+.brandLogo {
+  max-width: 130px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 6px;
+}
+
+.socials {
+  display: inline-flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.socialBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.socialBtn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 3px rgba(93, 168, 255, 0.1);
+}
+
+/* Columns */
+.navBlock { align-self: start; }
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.listReset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.newsletterBlock { align-self: start; }
+
+.subscribeForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)) padding-box,
+    linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0)) border-box;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0 56px 0 16px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.emailInput {
+  flex: 1 1 auto;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #ffffff;
+}
+
+.submitBtn {
+  position: absolute;
+  right: 4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: radial-gradient(120% 120% at 10% 10%, rgba(255,255,255,0.18), transparent 50%), linear-gradient(90deg, rgba(93,168,255,0.8), rgba(166,107,255,0.8));
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.submitBtn:hover { transform: translateY(-1px); box-shadow: 0 0 0 3px rgba(93,168,255,0.12); }
+.submitBtn:active { transform: translateY(0); }
+
+.followWrap { display: flex; align-items: center; gap: 12px; margin-top: 16px; }
+
+.divider {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+  margin: 12px 0 8px;
+}
+
+.bottomRow {
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  padding-top: 6px;
 }
+
+.links { display: none; }
+
+.link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+
+@media (max-width: 640px) { .bottomRow { flex-direction: column; align-items: flex-start; gap: 8px; } }
+
+/* Animated orb background */
+.orb,
+.orb2,
+.orb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.orb { width: 320px; height: 320px; background: rgba(93, 168, 255, 0.35); left: -120px; top: -60px; animation: float1 16s ease-in-out infinite alternate; }
+.orb2 { width: 380px; height: 380px; background: rgba(166, 107, 255, 0.3); right: -140px; top: 20px; animation: float2 18s ease-in-out infinite alternate; }
+.orb3 { width: 260px; height: 260px; background: rgba(93, 168, 255, 0.25); right: 10%; bottom: -120px; animation: float3 20s ease-in-out infinite alternate; }
+
+@keyframes float1 { 0% { transform: translateY(0) } 100% { transform: translateY(18px) } }
+@keyframes float2 { 0% { transform: translateY(0) } 100% { transform: translateY(-22px) } }
+@keyframes float3 { 0% { transform: translateY(0) } 100% { transform: translateY(14px) } }
 
 

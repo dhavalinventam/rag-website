@@ -1,0 +1,76 @@
+@use "../../../../styles/variables" as *;
+
+.ctaSection {
+  position: relative;
+  padding: 4.5rem 0;
+  background:
+    radial-gradient(1000px 600px at 10% 0%, rgba($color-accent-blue, 0.18), transparent 60%),
+    radial-gradient(1000px 700px at 90% 10%, rgba($color-accent-purple, 0.16), transparent 60%),
+    linear-gradient(180deg, rgba($color-bg-primary, 0.75), rgba($color-bg-primary, 0.9));
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(800px 520px at 50% -10%, rgba(255, 255, 255, 0.06), transparent 65%);
+  filter: blur(10px);
+  opacity: 0.5;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(24px, 4.5vw, 40px);
+}
+
+.subtitle {
+  color: $color-text-secondary;
+  margin-top: 12px;
+  font-size: clamp(14px, 2.6vw, 18px);
+}
+
+.actions {
+  margin-top: 24px;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  transform: translateZ(0);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.primaryBtn:hover {
+  transform: scale(1.03) translateZ(0);
+}
+
+.outlineBtn {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  padding: 0.625rem 1.25rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+.outlineBtn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 3px rgba($color-accent-blue, 0.12);
+}
+
+@media (max-width: 575.98px) {
+  .actions { width: 100%; justify-content: center; }
+  .outlineBtn, .primaryBtn { width: 100%; }
+}
+
+
