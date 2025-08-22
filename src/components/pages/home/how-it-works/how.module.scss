@@ -2,7 +2,7 @@
 
 .howSection {
   position: relative;
-  padding: 6rem 0 8rem;
+  padding: 4rem 0 5rem;
   background: linear-gradient(135deg, 
     #0b0d16 0%, 
     #1a1b2e 15%, 
@@ -12,7 +12,7 @@
     #0a0c14 100%
   );
   overflow: hidden;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
 }
@@ -32,36 +32,36 @@
   position: absolute;
   top: 15%;
   left: 10%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(93, 168, 255, 0.1) 0%, rgba(166, 107, 255, 0.05) 50%, transparent 70%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(93, 168, 255, 0.08) 0%, rgba(166, 107, 255, 0.04) 50%, transparent 70%);
   border-radius: 50%;
   animation: float 8s ease-in-out infinite;
-  filter: blur(40px);
+  filter: blur(30px);
 }
 
 .floatingOrb2 {
   position: absolute;
   top: 60%;
   right: 15%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(166, 107, 255, 0.08) 0%, rgba(255, 107, 157, 0.04) 50%, transparent 70%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(166, 107, 255, 0.06) 0%, rgba(255, 107, 157, 0.03) 50%, transparent 70%);
   border-radius: 50%;
   animation: float 12s ease-in-out infinite reverse;
-  filter: blur(30px);
+  filter: blur(25px);
 }
 
 .floatingOrb3 {
   position: absolute;
   bottom: 20%;
   left: 20%;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(255, 107, 157, 0.06) 0%, rgba(93, 168, 255, 0.03) 50%, transparent 70%);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.05) 0%, rgba(93, 168, 255, 0.02) 50%, transparent 70%);
   border-radius: 50%;
   animation: float 10s ease-in-out infinite;
-  filter: blur(25px);
+  filter: blur(20px);
 }
 
 .gridPattern {
@@ -100,7 +100,7 @@
 // Header section
 .headerSection {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 2;
 }
@@ -108,17 +108,17 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1.2rem;
   background: linear-gradient(135deg, rgba(93, 168, 255, 0.15), rgba(166, 107, 255, 0.15));
   border: 1px solid rgba(93, 168, 255, 0.3);
   border-radius: 50px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   backdrop-filter: blur(10px);
 }
 
 .badgeText {
   color: #5da8ff;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -126,10 +126,10 @@
 
 .title {
   color: #fff;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,9 +145,9 @@
 
 .subtitle {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.125rem;
-  line-height: 1.6;
-  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 700px;
   margin: 0 auto;
   opacity: 0.9;
 }
@@ -156,12 +156,12 @@
 .timelineContainer {
   position: relative;
   z-index: 2;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   
   &::before {
@@ -179,14 +179,14 @@
 
 .timelineStep {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   
   &:nth-child(odd) .stepContent {
     flex-direction: row;
     text-align: left;
     
     .stepInfo {
-      margin-left: 3rem;
+      margin-left: 2.5rem;
       margin-right: 0;
     }
   }
@@ -196,7 +196,7 @@
     text-align: right;
     
     .stepInfo {
-      margin-right: 3rem;
+      margin-right: 2.5rem;
       margin-left: 0;
     }
   }
@@ -232,8 +232,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(135deg, rgba(93, 168, 255, 0.1), rgba(166, 107, 255, 0.1));
   border: 2px solid rgba(93, 168, 255, 0.3);
   border-radius: 50%;
@@ -242,41 +242,41 @@
   justify-content: center;
   color: #5da8ff;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1rem;
   backdrop-filter: blur(10px);
   z-index: 4;
 }
 
 .stepIcon {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   background: linear-gradient(135deg, rgba(93, 168, 255, 0.15), rgba(166, 107, 255, 0.15));
   border: 1px solid rgba(93, 168, 255, 0.3);
-  border-radius: 20px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #5da8ff;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(93, 168, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(93, 168, 255, 0.2);
   }
 }
 
 .stepInfo {
   flex: 1;
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .stepTitle {
   color: #e8ecf4;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   background: linear-gradient(135deg, #e8ecf4, rgba(232, 236, 244, 0.8));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -285,195 +285,148 @@
 
 .stepDescription {
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
 .stepFeatures {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .feature {
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   background: rgba(93, 168, 255, 0.1);
   border: 1px solid rgba(93, 168, 255, 0.2);
-  border-radius: 20px;
+  border-radius: 16px;
   color: #5da8ff;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
-// CTA Section
-.ctaSection {
-  position: relative;
-  z-index: 2;
-  margin-top: 4rem;
-}
 
-.ctaCard {
-  background: linear-gradient(135deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9));
-  border: 1px solid rgba(93, 168, 255, 0.2);
-  border-radius: 24px;
-  padding: 3rem;
-  text-align: center;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #5da8ff, transparent);
-  }
-}
-
-.ctaContent {
-  position: relative;
-  z-index: 2;
-}
-
-.ctaTitle {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.ctaDescription {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ctaButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.primaryButton {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #5da8ff, #a66bff);
-  border: none;
-  border-radius: 12px;
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 24px rgba(93, 168, 255, 0.3);
-  
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(93, 168, 255, 0.4);
-  }
-  
-  svg {
-    transition: transform 0.3s ease;
-  }
-  
-  &:hover svg {
-    transform: translateX(4px);
-  }
-}
-
-.secondaryButton {
-  padding: 1rem 2rem;
-  background: transparent;
-  border: 1px solid rgba(93, 168, 255, 0.3);
-  border-radius: 12px;
-  color: #5da8ff;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    background: rgba(93, 168, 255, 0.1);
-    border-color: #5da8ff;
-    transform: translateY(-2px);
-  }
-}
 
 // Responsive design
 @media (max-width: 768px) {
   .howSection {
-    padding: 4rem 0 6rem;
+    padding: 3rem 0 4rem;
+  }
+  
+  .headerSection {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
   }
   
   .timeline {
     &::before {
-      left: 30px;
+      left: 25px;
     }
   }
   
   .timelineStep {
+    margin-bottom: 2.5rem;
+    
     .stepContent {
       flex-direction: column !important;
       text-align: left !important;
-      margin-left: 60px;
+      margin-left: 50px;
       
       &::before {
-        left: -45px;
+        left: -37px;
       }
     }
     
     .stepNumber {
-      left: -30px;
+      left: -25px;
+      width: 45px;
+      height: 45px;
+      font-size: 0.9rem;
     }
     
     .stepInfo {
-      margin: 2rem 0 0 0 !important;
+      margin: 1.5rem 0 0 0 !important;
       max-width: none;
     }
   }
   
-  .ctaCard {
-    padding: 2rem;
+  .stepIcon {
+    width: 55px;
+    height: 55px;
   }
   
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
+  .stepTitle {
+    font-size: 1.1rem;
   }
   
-  .primaryButton,
-  .secondaryButton {
-    width: 100%;
-    max-width: 300px;
+  .stepDescription {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
+  .howSection {
+    padding: 2.5rem 0 3rem;
+  }
+  
+  .headerSection {
+    margin-bottom: 1.5rem;
+  }
+  
   .title {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 6vw, 2rem);
+    margin-bottom: 0.8rem;
   }
   
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .timelineStep {
+    margin-bottom: 2rem;
+    
+    .stepContent {
+      margin-left: 40px;
+      
+      &::before {
+        left: -30px;
+      }
+    }
+    
+    .stepNumber {
+      left: -20px;
+      width: 40px;
+      height: 40px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  .stepIcon {
+    width: 50px;
+    height: 50px;
   }
   
   .stepTitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
   
-  .ctaTitle {
-    font-size: 1.5rem;
+  .stepDescription {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .feature {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
   }
 }
 

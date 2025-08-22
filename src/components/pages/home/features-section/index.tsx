@@ -281,27 +281,7 @@ const FeaturesSection = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className={styles.bottomCTA}>
-          <div className={styles.ctaGlow} />
-          <div className={styles.ctaContent}>
-            <h3 className={styles.ctaTitle}>
-              Ready to <span className={styles.ctaGradient}>transform</span> your applications?
-            </h3>
-            <p className={styles.ctaSubtitle}>
-              Join thousands of developers building the future with AI-powered retrieval
-            </p>
-            <div className={styles.ctaButtons}>
-              <button className={styles.ctaPrimary}>
-                <span>Start Building</span>
-                <div className={styles.buttonGlow} />
-              </button>
-              <button className={styles.ctaSecondary}>
-                <span>View Documentation</span>
-              </button>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );

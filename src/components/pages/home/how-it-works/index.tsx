@@ -111,27 +111,7 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className={styles.ctaSection}>
-          <div className={styles.ctaCard}>
-            <div className={styles.ctaContent}>
-              <h3 className={styles.ctaTitle}>Ready to Get Started?</h3>
-              <p className={styles.ctaDescription}>
-                Join thousands of teams already using our platform to build intelligent applications.
-              </p>
-              <div className={styles.ctaButtons}>
-                <button className={styles.primaryButton}>
-                  Start Free Trial
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-                <button className={styles.secondaryButton}>
-                  View Documentation
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
