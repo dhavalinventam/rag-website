@@ -68,21 +68,18 @@ export default function Header() {
 
             <div className="d-lg-none mt-3 w-100">
               <Link
-                href={{ pathname: "/", hash: "get-started" }}
+                href="/waitlist"
                 className={"btn btn-gradient-primary rounded-pill w-100"}
                 onClick={() => setExpanded(false)}
               >
-                Join wishlist
+                Join Waitlist
               </Link>
             </div>
           </Navbar.Collapse>
 
           <div className="d-none d-lg-flex align-items-center gap-2">
-            <Link
-              href={{ pathname: "/", hash: "get-started" }}
-              className={"btn btn-gradient-primary rounded-pill"}
-            >
-              Join wishlist
+            <Link href="/waitlist" className={"btn btn-gradient-primary rounded-pill"}>
+              Join Waitlist
             </Link>
           </div>
         </Container>
