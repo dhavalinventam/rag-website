@@ -2,7 +2,7 @@
 
 .featuresSection {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
   background: linear-gradient(135deg, 
     #0b0d16 0%, 
     #1a1b2e 15%, 
@@ -13,8 +13,8 @@
   );
   overflow: hidden;
   isolation: isolate;
-  padding: 4rem 0;
-  margin-top: -2rem;
+  padding: 3rem 0;
+  margin-top: -1rem;
 }
 
 // Animated background canvas
@@ -159,10 +159,10 @@
 }
 
 .title {
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.1;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   color: #fff;
 }
 
@@ -180,11 +180,11 @@
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto 2rem;
 }
 
 .highlight {
@@ -198,9 +198,9 @@
 // Features Grid
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .featureCard {
