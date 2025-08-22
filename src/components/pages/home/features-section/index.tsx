@@ -331,20 +331,17 @@ const FeaturesSection = () => {
         {/* Header Section */}
         <div className={styles.header} id="features">
           <div className={styles.badge}>
-            <span className={styles.badgeDot} />
             <span className={styles.badgeText}>Powerful Features</span>
           </div>
 
           <h2 className={styles.title}>
-            <span className={styles.titleGradient}>Everything you need</span>
-            <br />
-            <span className={styles.titleSubtext}>to build RAG applications</span>
+            Everything you need to
+            <span className={styles.highlight}> build RAG applications</span>
           </h2>
 
           <p className={styles.subtitle}>
             From data ingestion to model deployment, we&apos;ve got you covered with
-            <span className={styles.highlight}> enterprise-grade tools</span> that scale with your
-            needs.
+            enterprise-grade tools that scale with your needs.
           </p>
         </div>
 
