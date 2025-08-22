@@ -145,19 +145,17 @@ const HeroSection = () => {
         <div className={styles.content}>
           <h1 className={styles.title}>
             <span className={styles.titleLine}>
-              <span className={styles.gradientText}>Stop Guesswork.</span>
+              <span className={styles.typingText}>Stop Guesswork.</span>
             </span>
             <span className={styles.titleLine}>
-              <span className={styles.typingText}>Build AI That Knows.</span>
+              <span className={styles.gradientText}>Build AI That Knows.</span>
             </span>
           </h1>
 
           <p className={styles.subtitle}>
             Join the waitlist for instant access to the next-gen RAG platform
             <br />
-            <span className={styles.highlight}>
-              no more hallucinations, full data control, and enterprise-grade security.
-            </span>
+            no more hallucinations, full data control, and enterprise-grade security.
           </p>
 
           <div className={styles.trustBadges}>

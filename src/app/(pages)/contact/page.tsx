@@ -49,12 +49,12 @@ export default function ContactPage() {
             <span>💬 Let's Connect</span>
           </div>
           <h1 className={styles.title}>
-            <span className={styles.gradientText}>Get in Touch</span>
+            <span>Get in Touch</span>
           </h1>
           <p className={styles.subtitle}>
             Ready to transform your applications with AI-powered retrieval?
             <br />
-            <span className={styles.highlight}>We&apos;d love to hear from you.</span>
+            We&apos;d love to hear from you.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
               <div className={styles.infoIcon}>📧</div>
               <h3>Email Us</h3>
               <p>hello@ragplatform.com</p>
-                             <span>We&apos;ll respond within 24 hours</span>
+              <span>We&apos;ll respond within 24 hours</span>
             </div>
 
             <div className={styles.infoCard}>
@@ -180,8 +180,8 @@ export default function ContactPage() {
                         <div className={styles.buttonArrow}>→</div>
                       </>
                     )}
-        </button>
-      </form>
+                  </button>
+                </form>
               </div>
             ) : (
               <div className={styles.successCard}>
@@ -189,7 +189,8 @@ export default function ContactPage() {
                 <div className={styles.successIcon}>✅</div>
                 <h2>Message Sent Successfully!</h2>
                 <p>
-                  Thank you for reaching out. We've received your message and will get back to you within 24 hours.
+                  Thank you for reaching out. We've received your message and will get back to you
+                  within 24 hours.
                 </p>
                 <div className={styles.successBadge}>
                   <span>🎉 We'll be in touch soon!</span>
@@ -198,8 +199,6 @@ export default function ContactPage() {
             )}
           </div>
         </div>
-
-        
       </div>
     </div>
   );

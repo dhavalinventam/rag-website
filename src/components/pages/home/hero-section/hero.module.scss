@@ -70,7 +70,7 @@
 .title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: #fff;
 }
@@ -81,11 +81,10 @@
 }
 
 .gradientText {
-  background: linear-gradient(135deg, #5da8ff 0%, #a66bff 50%, #ff6b9d 100%);
+  background: linear-gradient(135deg, #5da8ff, #a66bff);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
-  animation: gradientShift 4s ease-in-out infinite;
 }
 
 .typingText {
