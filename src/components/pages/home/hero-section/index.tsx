@@ -140,14 +140,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Main content */}
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.badge}>
-            <span className={styles.badgeText}>✨ Now in Beta</span>
-          </div>
-
-          <h1 className={styles.title}>
+             {/* Main content */}
+       <div className={styles.container}>
+         <div className={styles.content}>
+           <h1 className={styles.title}>
             <span className={styles.titleLine}>
               <span className={styles.gradientText}>Revolutionary</span>
             </span>
@@ -163,11 +159,13 @@ const HeroSection = () => {
           </p>
 
           <div className={styles.actions}>
-            <Link href={{ pathname: "/", hash: "get-started" }} className={styles.primaryButton}>
+            <Link
+              href={{ pathname: "/", hash: "get-started" }}
+              className="btn btn-gradient-primary rounded-pill"
+            >
               <span>Start Building</span>
-              <div className={styles.buttonGlow} />
             </Link>
-            <Link href={{ pathname: "/", hash: "demo" }} className={styles.secondaryButton}>
+            <Link href={{ pathname: "/", hash: "demo" }} className="btn btn-secondary">
               <span>Watch Demo</span>
               <div className={styles.playIcon}>▶</div>
             </Link>
@@ -220,11 +218,10 @@ const HeroSection = () => {
                 </div> */}
               </div>
 
-              {!isSubmitted ? (
-                <form onSubmit={handleSubmit} className={styles.wishlistForm}>
-                  <div className={`${styles.inputGroup} ${isFocused ? styles.focused : ""}`}>
-                    <div className={styles.inputIcon}>📧</div>
-                    <input
+                                            {!isSubmitted ? (
+                 <form onSubmit={handleSubmit} className={styles.wishlistForm}>
+                   <div className={`${styles.inputGroup} ${isFocused ? styles.focused : ""}`}>
+                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -261,9 +258,9 @@ const HeroSection = () => {
                     <div className={styles.successIcon}>✅</div>
                     <div className={styles.successRing} />
                   </div>
-                  <h4>You're on the list!</h4>
+                  <h4>You&apos;re on the list!</h4>
                   <p>
-                    Welcome to the future! We'll notify you as soon as we launch with exclusive
+                    Welcome to the future! We&apos;ll notify you as soon as we launch with exclusive
                     early access.
                   </p>
                   <div className={styles.successBadge}>
