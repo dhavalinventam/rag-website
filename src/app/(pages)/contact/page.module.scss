@@ -1,33 +1,671 @@
-.section {
-  max-width: 900px;
+@use "../../../styles/variables" as *;
+
+.contactPage {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    #0b0d16 0%, 
+    #1a1b2e 25%, 
+    #16213e 50%, 
+    #1a1b2e 75%, 
+    #0b0d16 100%
+  );
+  overflow: hidden;
+  isolation: isolate;
+  padding: 2rem 0;
+}
+
+// Animated background elements
+.backgroundElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingOrb {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, 
+    rgba(93, 168, 255, 0.1) 0%, 
+    rgba(166, 107, 255, 0.05) 50%, 
+    transparent 100%
+  );
+  filter: blur(40px);
+  animation: floatOrb 20s ease-in-out infinite;
+
+  &:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    top: 60%;
+    right: 15%;
+    animation-delay: 7s;
+  }
+
+  &:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 14s;
+  }
+}
+
+// Container
+.container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0 2rem;
 }
 
+// Header Section
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-top: 4.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #5da8ff 0%, #a66bff 50%, #ff6b9d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #5da8ff, #a66bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+// Content Layout
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+// Contact Information Cards
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.05), 
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(93, 168, 255, 0.3);
+
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+.infoIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+.infoCard h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.infoCard p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.infoCard span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+// Form Section
+.formSection {
+  position: relative;
+}
+
+.formCard {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.formGlow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle at center, 
+    rgba(93, 168, 255, 0.15) 0%, 
+    rgba(166, 107, 255, 0.1) 30%, 
+    transparent 70%
+  );
+  border-radius: 30px;
+  filter: blur(20px);
+  animation: glowPulse 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.formHeader h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.formHeader p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+// Form Styles
 .form {
-  margin-top: 16px;
-  display: grid;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.row {
+.formRow {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.25rem;
 }
 
 .input,
 .textarea {
-  padding: 12px 14px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  background: transparent;
-  color: inherit;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    border-color: rgba(93, 168, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(93, 168, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }
 
-.submit {
-  height: 44px;
-  border-radius: 9999px;
-  background: var(--foreground);
-  color: var(--background);
-  font-weight: 600;
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #5da8ff, #a66bff);
+  color: #fff;
   border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.2), 
+      transparent
+    );
+    transition: left 0.5s ease;
+  }
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(93, 168, 255, 0.3);
+
+    &::before {
+      left: 100%;
+    }
+
+    .buttonArrow {
+      transform: translateX(3px);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.buttonArrow {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+// Success Card
+.successCard {
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.1) 0%, 
+    rgba(34, 197, 94, 0.05) 100%
+  );
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: successFadeIn 0.6s ease-out;
+}
+
+.successGlow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle at center, 
+    rgba(34, 197, 94, 0.15) 0%, 
+    transparent 70%
+  );
+  border-radius: 30px;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.successIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: successBounce 0.8s ease-out;
+}
+
+.successCard h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.successCard p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.successBadge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: badgeGlow 2s ease-in-out infinite;
+}
+
+// FAQ Section
+.faqSection {
+  margin-top: 4rem;
+}
+
+.faqSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.faqItem {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(93, 168, 255, 0.2);
+  }
+}
+
+.faqItem h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.faqItem p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+// Animations
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(30deg);
+  }
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes successFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes successBounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes badgeGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contactInfo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .infoCard {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactPage {
+    padding: 1.5rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .subtitle {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+  }
+
+  .infoCard {
+    max-width: none;
+  }
+
+  .formCard {
+    padding: 1.5rem;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactPage {
+    padding: 1rem 0;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+  }
+
+  .formCard {
+    padding: 1.2rem;
+  }
+
+  .formHeader h2 {
+    font-size: 1.5rem;
+  }
+
+  .faqSection h2 {
+    font-size: 1.5rem;
+  }
 }
