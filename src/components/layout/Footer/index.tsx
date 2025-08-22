@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-6 col-md-4">
+          <div className="col-12 col-md-4">
             <nav className={`${styles.navBlock} ps-md-5`} aria-label="Quick Links">
               <h4 className={styles.sectionTitle}>Quick Links</h4>
               <ul className={styles.listReset}>
