@@ -32,15 +32,15 @@ const HeroSection = () => {
     }> = [];
 
     // Create particles
-    for (let i = 0; i < 150; i++) {
+    for (let i = 0; i < 80; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: Math.random() > 0.7 ? "#5da8ff" : Math.random() > 0.4 ? "#a66bff" : "#ffffff",
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 1.5 + 0.5,
+        opacity: Math.random() * 0.3 + 0.05,
+        color: Math.random() > 0.8 ? "#5da8ff" : Math.random() > 0.6 ? "#a66bff" : "#ffffff",
       });
     }
 
@@ -71,13 +71,13 @@ const HeroSection = () => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 80) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = particle.color;
-            ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
-            ctx.lineWidth = 1;
+            ctx.globalAlpha = ((80 - distance) / 80) * 0.05;
+            ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         });
