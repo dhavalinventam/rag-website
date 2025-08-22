@@ -18,9 +18,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
+    { label: "Home", href: { pathname: "/", hash: "" } },
     { label: "Features", href: { pathname: "/", hash: "features" } },
+    { label: "Workflow", href: { pathname: "/", hash: "workflow" } },
     { label: "Use Cases", href: { pathname: "/", hash: "use-cases" } },
-    { label: "How It Works", href: { pathname: "/", hash: "how-it-works" } },
     { label: "Contact", href: { pathname: "/contact" } },
   ];
 
@@ -79,7 +80,7 @@ export default function Header() {
 
           <div className="d-none d-lg-flex align-items-center gap-2">
             <Link
-              href={{ pathname: "/", hash: "get-started" }}
+              href={{ pathname: "/", hash: "waitlist-sec" }}
               className={"btn btn-gradient-primary rounded-pill"}
             >
               Join Waitlist

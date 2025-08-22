@@ -72,7 +72,7 @@ const UseCases = () => {
       </div>
 
       <div className="container">
-        <div className={styles.headerSection}>
+        <div className={styles.headerSection} id="use-cases">
           <div className={styles.badge}>
             <span>Industry Solutions</span>
           </div>
@@ -117,10 +117,10 @@ const UseCases = () => {
               <p>
                 Join thousands of companies already leveraging AI to revolutionize their operations
               </p>
-              <button className={styles.ctaButton}>
+              <a href="#waitlist-sec" className={styles.ctaButton}>
                 <span>Get Early Access</span>
                 <i className="bi bi-rocket-takeoff"></i>
-              </button>
+              </a>
             </div>
             <div className={styles.ctaVisual}>
               <div className={styles.animatedCube}></div>

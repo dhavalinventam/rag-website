@@ -115,7 +115,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="waitlist-sec">
       <canvas ref={canvasRef} className={styles.particleCanvas} />
 
       {/* Animated background elements */}
@@ -152,7 +152,7 @@ const HeroSection = () => {
             </span>
           </h1>
 
-                               <p className={styles.subtitle}>
+          <p className={styles.subtitle}>
             Join the waitlist for instant access to the next-gen RAG platform
             <br />
             <span className={styles.highlight}>
@@ -189,22 +189,8 @@ const HeroSection = () => {
                   <span className={styles.titleGradient}>Join Waitlist</span>
                 </h3>
                 <p className={styles.wishlistSubtitle}>
-                Early access. Limited founder slots. Exclusive community.
+                  Early access. Limited founder slots. Exclusive community.
                 </p>
-                {/* <div className={styles.benefitsList}>
-                  <div className={styles.benefitItem}>
-                    <span className={styles.benefitIcon}>🚀</span>
-                    <span>Early Access</span>
-                  </div>
-                  <div className={styles.benefitItem}>
-                    <span className={styles.benefitIcon}>💎</span>
-                    <span>Exclusive Updates</span>
-                  </div>
-                  <div className={styles.benefitItem}>
-                    <span className={styles.benefitIcon}>🎁</span>
-                    <span>Special Perks</span>
-                  </div>
-                </div> */}
               </div>
 
               {!isSubmitted ? (
