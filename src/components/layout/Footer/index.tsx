@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div className="col-12 col-md-4">
-            {/* Newsletter + Socials (UI only) */}
+            {/* Newsletter + Socials */}
             <div className={styles.newsletterBlock}>
               <h4 className={styles.sectionTitle}>Stay Updated</h4>
               <form className={styles.subscribeForm}>
@@ -87,7 +87,7 @@ export default function Footer() {
           </div>
           <div className="col-12 d-flex mt-2">
             <div className={`${styles.bottomRow} justify-content-center text-center w-100`}>
-              <span>Copyright ©2025 RAG Studio. All rights reserved.</span>
+              <span>Copyright ©{year} RAG Studio. All rights reserved.</span>
             </div>
           </div>
         </div>
