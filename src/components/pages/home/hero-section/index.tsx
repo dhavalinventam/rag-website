@@ -116,9 +116,26 @@ const HeroSection = () => {
 
   return (
     <section className={styles.hero} id="waitlist-sec">
+      {/* Enhanced Background Elements */}
+      <div className={styles.backgroundElements}>
+        {/* Floating orbs */}
+        <div className={styles.floatingOrb} />
+        <div className={styles.floatingOrb} />
+        <div className={styles.floatingOrb} />
+        <div className={styles.floatingOrb} />
+
+        {/* Geometric shapes */}
+        <div className={styles.geometricShape} />
+        <div className={styles.geometricShape} />
+        <div className={styles.geometricShape} />
+
+        {/* Animated grid pattern */}
+        <div className={styles.gridPattern} />
+      </div>
+
       <canvas ref={canvasRef} className={styles.particleCanvas} />
 
-      {/* Animated background elements */}
+      {/* Floating cards */}
       <div className={styles.floatingElements}>
         <div className={styles.floatingCard} data-speed="0.5">
           <div className={styles.cardContent}>
