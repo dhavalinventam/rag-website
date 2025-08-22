@@ -140,36 +140,25 @@ const HeroSection = () => {
         </div>
       </div>
 
-             {/* Main content */}
-       <div className={styles.container}>
-         <div className={styles.content}>
-           <h1 className={styles.title}>
+      {/* Main content */}
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <h1 className={styles.title}>
             <span className={styles.titleLine}>
-              <span className={styles.gradientText}>Revolutionary</span>
+              <span className={styles.gradientText}>Stop Guesswork.</span>
             </span>
             <span className={styles.titleLine}>
-              <span className={styles.typingText}>RAG Platform</span>
+              <span className={styles.typingText}>Build AI That Knows.</span>
             </span>
           </h1>
 
-          <p className={styles.subtitle}>
-            Transform your applications with AI-powered retrieval.
+                               <p className={styles.subtitle}>
+            Join the waitlist for instant access to the next-gen RAG platform
             <br />
-            <span className={styles.highlight}>Deploy in minutes, scale infinitely.</span>
+            <span className={styles.highlight}>
+              no more hallucinations, full data control, and enterprise-grade security.
+            </span>
           </p>
-
-          <div className={styles.actions}>
-            <Link
-              href={{ pathname: "/", hash: "get-started" }}
-              className="btn btn-gradient-primary rounded-pill"
-            >
-              <span>Start Building</span>
-            </Link>
-            <Link href={{ pathname: "/", hash: "demo" }} className="btn btn-secondary">
-              <span>Watch Demo</span>
-              <div className={styles.playIcon}>▶</div>
-            </Link>
-          </div>
 
           <div className={styles.trustBadges}>
             <div className={styles.trustItem}>
@@ -197,10 +186,10 @@ const HeroSection = () => {
                   <div className={styles.iconRing2} />
                 </div>
                 <h3 className={styles.wishlistTitle}>
-                  <span className={styles.titleGradient}>Join the Waitlist</span>
+                  <span className={styles.titleGradient}>Join Waitlist</span>
                 </h3>
                 <p className={styles.wishlistSubtitle}>
-                  Be the first to experience the future of AI-powered applications
+                Early access. Limited founder slots. Exclusive community.
                 </p>
                 {/* <div className={styles.benefitsList}>
                   <div className={styles.benefitItem}>
@@ -218,10 +207,10 @@ const HeroSection = () => {
                 </div> */}
               </div>
 
-                                            {!isSubmitted ? (
-                 <form onSubmit={handleSubmit} className={styles.wishlistForm}>
-                   <div className={`${styles.inputGroup} ${isFocused ? styles.focused : ""}`}>
-                     <input
+              {!isSubmitted ? (
+                <form onSubmit={handleSubmit} className={styles.wishlistForm}>
+                  <div className={`${styles.inputGroup} ${isFocused ? styles.focused : ""}`}>
+                    <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
