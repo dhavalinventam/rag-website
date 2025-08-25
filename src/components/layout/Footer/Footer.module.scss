@@ -135,7 +135,6 @@
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   transition: all 0.3s ease;
-  // padding: 8px 12px;
   border-radius: 8px;
   display: inline-block;
   position: relative;
@@ -155,7 +154,6 @@
 
 .link:hover {
   color: #fff;
-  // background: rgba(255, 255, 255, 0.05);
   transform: translateX(4px);
 }
 
@@ -289,7 +287,7 @@
   text-align: center;
 }
 
-.links { display: none; }
+
 
 @media (max-width: 768px) { 
   .inner {

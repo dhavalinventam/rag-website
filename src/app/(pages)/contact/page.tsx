@@ -46,15 +46,14 @@ export default function ContactPage() {
         {/* Header Section */}
         <div className={styles.header}>
           <div className={styles.badge}>
-            <span>💬 Let's Connect</span>
+            <span>Powerful Features</span>
           </div>
           <h1 className={styles.title}>
-            <span>Get in Touch</span>
+            Get in <span className={styles.highlight}> Touch</span>
           </h1>
           <p className={styles.subtitle}>
-            Ready to transform your applications with AI-powered retrieval?
-            <br />
-            We&apos;d love to hear from you.
+            Ready to transform your applications with AI-powered retrieval? We'd love to hear from
+            you.
           </p>
         </div>
 
@@ -166,7 +165,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className={`${styles.submitButton} ${isSubmitting ? styles.loading : ""}`}
+                    className={`btn btn-gradient-primary ${isSubmitting ? styles.loading : ""}`}
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -177,7 +176,7 @@ export default function ContactPage() {
                     ) : (
                       <>
                         <span>Send Message</span>
-                        <div className={styles.buttonArrow}>→</div>
+                        <i className="bi bi-arrow-right"></i>
                       </>
                     )}
                   </button>

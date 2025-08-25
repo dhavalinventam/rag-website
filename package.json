@@ -27,8 +27,6 @@
     "eslint-plugin-prettier": "^5",
     "prettier": "^3",
     "sass": "^1",
-    "typescript": "^5",
-    "vite": "^5",
-    "vite-tsconfig-paths": "^5"
+    "typescript": "^5"
   }
 }

@@ -2,45 +2,20 @@
 
 .header {
   width: 100%;
-  // background: transparent;
   color: $color-text-light;
   position: fixed;
   top: 0;
   z-index: 50;
   transition: background-color 0.3s ease, padding 0.3s ease, backdrop-filter 0.3s ease, opacity 0.3s ease;
 }
-// .header::before {
-//   content: "";
-//   position: absolute;
-//   inset: 0;
-//   background:
-//     radial-gradient(900px 500px at 18% 0%, rgba($color-accent-blue, 0.28), transparent 60%),
-//     radial-gradient(900px 500px at 82% 0%, rgba($color-accent-purple, 0.24), transparent 60%),
-//     linear-gradient(180deg, rgba($color-bg-primary, 0.86), rgba($color-bg-primary, 0.6));
-//   backdrop-filter: blur(12px) saturate(140%);
-//   -webkit-backdrop-filter: blur(12px) saturate(140%);
-//   opacity: 0.85;
-//   pointer-events: none;
-// }
 .brandLogo {
   max-width: 110px;
   height: auto;
 }
-// .header::after {
-//   content: "";
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   height: 1px;
-//   background: $gradient-primary;
-//   opacity: 0.6;
-//   transition: opacity 0.3s ease;
-// }
+
 
 .navbar {
   padding: 0.9rem 0;
-  // background-color: rgba($color-bg-primary, 0.16);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
@@ -70,7 +45,6 @@
 }
 
 .nav {
-  // gap: 22px;
   align-items: center;
 }
 
@@ -89,27 +63,14 @@
   border-radius: 999px;
 }
 
-// .link::after {
-//   content: "";
-//   position: absolute;
-//   left: 0;
-//   bottom: -6px;
-//   width: 100%;
-//   height: 2px;
-//   transform: scaleX(0);
-//   transform-origin: left;
-//   background: $gradient-primary;
-//   transition: transform 0.3s ease;
-// }
+
 
 .link:hover {
   opacity: 1;
   background: rgba(255, 255, 255, 0.08);
 }
 
-// .link:hover::after {
-//   transform: scaleX(1);
-// }
+
 
 .toggler {
   border: 1px solid rgba(230, 230, 230, 0.2);
@@ -164,6 +125,17 @@
   }
 }
 
-// github pill styles removed as per request
+@media (max-width: 991px) {
+  .navGroup {
+    border-radius: 10px;
+  }
+  .collapse {
+    background: rgb(11 13 22 / 6%);
+  }
+  .nav {
+    align-items: flex-start;
+  }
+}
+
 
 

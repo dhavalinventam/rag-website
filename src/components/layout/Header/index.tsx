@@ -19,8 +19,8 @@ export default function Header() {
 
   const navLinks = [
     { label: "Home", href: { pathname: "/", hash: "" } },
-    { label: "Features", href: { pathname: "/", hash: "features" } },
     { label: "Workflow", href: { pathname: "/", hash: "workflow" } },
+    { label: "Features", href: { pathname: "/", hash: "features" } },
     { label: "Use Cases", href: { pathname: "/", hash: "use-cases" } },
     { label: "Contact", href: { pathname: "/contact" } },
   ];
