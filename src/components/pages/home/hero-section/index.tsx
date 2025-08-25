@@ -201,7 +201,7 @@ const HeroSection = () => {
                   <div className={styles.iconRing2} />
                 </div>
                 <h3 className={styles.wishlistTitle}>
-                  <span className={styles.titleGradient}>Join Waitlist</span>
+                  <span className={styles.titleGradient}>Get Early Access</span>
                 </h3>
                 <p className={styles.wishlistSubtitle}>
                   Early access. Limited founder slots. Exclusive community.

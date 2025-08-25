@@ -117,7 +117,7 @@ const UseCases = () => {
               <p>
                 Join thousands of companies already leveraging AI to revolutionize their operations
               </p>
-              <a href="#waitlist-sec" className={styles.ctaButton}>
+              <a href="#waitlist-sec" className="btn btn-gradient-primary rounded-pill">
                 <span>Get Early Access</span>
                 <i className="bi bi-rocket-takeoff"></i>
               </a>
