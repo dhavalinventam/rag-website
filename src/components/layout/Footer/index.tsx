@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.scss";
@@ -7,49 +8,121 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className={styles.footer} role="contentinfo">
-      <span className={styles.orb} />
-      <span className={styles.orb2} />
-      <span className={styles.orb3} />
-      <div className={`container ${styles.inner}`}>
-        {/* Top footer */}
-        <div className="row g-4">
-          <div className="col-12 col-lg-5">
-            <div className={`${styles.panel} ${styles.brandBlock}`}>
+      {/* Animated background elements */}
+      <div className={styles.backgroundElements}>
+        <div className={styles.orb} />
+        <div className={styles.orb2} />
+        <div className={styles.orb3} />
+        <div className={styles.gridPattern} />
+      </div>
+
+      <div className={styles.container}>
+        {/* Main footer content */}
+        <div className={styles.mainContent}>
+          {/* Brand section */}
+          <div className={styles.brandSection}>
+            <div className={styles.logoContainer}>
               <Image src={Logo} alt="RAG Studio logo" className={styles.brandLogo} />
-              <p className={styles.description}>
-                We create digital experiences for forward‑thinking teams using retrieval‑augmented
-                AI and modern engineering.
-              </p>
+              <div className={styles.logoGlow} />
+            </div>
+            <h3 className={styles.brandTitle}>RAG Studio</h3>
+            <p className={styles.brandDescription}>
+              We create digital experiences for forward‑thinking teams using retrieval‑augmented
+              AI and modern engineering.
+            </p>
+            <div className={styles.socialLinks}>
+              <a className={styles.socialLink} href="#" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a className={styles.socialLink} href="#" aria-label="X (Twitter)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a className={styles.socialLink} href="#" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-3">
-            <nav className={`${styles.panel} ${styles.navBlock}`} aria-labelledby="footer-quick-links">
-              <h4 id="footer-quick-links" className={styles.sectionTitle}>Quick Links</h4>
-              <ul className={styles.listReset}>
+          {/* Navigation sections */}
+          <div className={styles.navigationSections}>
+            <div className={styles.navSection}>
+              <h4 className={styles.sectionTitle}>Products</h4>
+              <ul className={styles.navList}>
                 <li>
-                  <Link className={styles.link} href="#privacy">
-                    Privacy Policy
+                  <Link className={styles.navLink} href="/rag-system">
+                    RAG System
                   </Link>
                 </li>
                 <li>
-                  <Link className={styles.link} href="#terms">
-                    Terms of Service
+                  <Link className={styles.navLink} href="/task-prompt-ai">
+                    Task Prompt AI
                   </Link>
                 </li>
                 <li>
-                  <Link className={styles.link} href="/contact">
-                    Contact
+                  <Link className={styles.navLink} href="/solutions">
+                    Solutions
                   </Link>
                 </li>
               </ul>
-            </nav>
+            </div>
+
+            <div className={styles.navSection}>
+              <h4 className={styles.sectionTitle}>Company</h4>
+              <ul className={styles.navList}>
+                <li>
+                  <Link className={styles.navLink} href="/about">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link className={styles.navLink} href="/careers">
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link className={styles.navLink} href="/blog">
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.navSection}>
+              <h4 className={styles.sectionTitle}>Support</h4>
+              <ul className={styles.navList}>
+                <li>
+                  <Link className={styles.navLink} href="/contact">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link className={styles.navLink} href="/help">
+                    Help Center
+                  </Link>
+                </li>
+                <li>
+                  <Link className={styles.navLink} href="/docs">
+                    Documentation
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-4">
-            <div className={`${styles.panel} ${styles.newsletterBlock}`}>
-              <h4 className={styles.sectionTitle}>Stay Updated</h4>
-              <form className={styles.subscribeForm} onSubmit={(e) => e.preventDefault()} aria-label="Subscribe to updates">
+          {/* Newsletter section */}
+          <div className={styles.newsletterSection}>
+            <h4 className={styles.sectionTitle}>Stay Updated</h4>
+            <p className={styles.newsletterDescription}>
+              Get the latest updates on our products and industry insights.
+            </p>
+            <form className={styles.newsletterForm} onSubmit={(e) => e.preventDefault()}>
+              <div className={styles.inputGroup}>
                 <input
                   className={styles.emailInput}
                   type="email"
@@ -57,41 +130,35 @@ export default function Footer() {
                   aria-label="Email address"
                   required
                 />
-                <button className={styles.submitBtn} aria-label="Subscribe" type="submit">
-                  →
+                <button className={styles.subscribeBtn} type="submit" aria-label="Subscribe">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                  </svg>
                 </button>
-              </form>
-
-              <div className={styles.followWrap}>
-                <div className={styles.socials}>
-                  <a className={styles.socialBtn} href="#" aria-label="LinkedIn">
-                    <i className="bi bi-linkedin" />
-                  </a>
-                  <a className={styles.socialBtn} href="#" aria-label="X">
-                    <i className="bi bi-twitter-x" />
-                  </a>
-                  <a className={styles.socialBtn} href="#" aria-label="YouTube">
-                    <i className="bi bi-youtube" />
-                  </a>
-                </div>
               </div>
+            </form>
+            <div className={styles.newsletterNote}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span>No spam, unsubscribe at any time.</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom footer */}
-        <div className="row mt-3">
-          <div className="col-12">
-            <div className={styles.divider} />
-          </div>
-          <div className="col-12 d-flex mt-2">
-            <div className={`${styles.bottomRow} justify-content-between text-center w-100 flex-wrap`}>
-              <span className="mx-auto mx-md-0">Copyright ©{year} RAG Studio. All rights reserved.</span>
-              <div className="d-none d-md-flex align-items-center gap-3">
-                <Link className={styles.link} href="#privacy">Privacy</Link>
-                <span aria-hidden="true">•</span>
-                <Link className={styles.link} href="#terms">Terms</Link>
-              </div>
+        {/* Bottom section */}
+        <div className={styles.bottomSection}>
+          <div className={styles.divider} />
+          <div className={styles.bottomContent}>
+            <div className={styles.copyright}>
+              <span>© {year} RAG Studio. All rights reserved.</span>
+            </div>
+            <div className={styles.legalLinks}>
+              <Link className={styles.legalLink} href="#privacy">Privacy Policy</Link>
+              <span className={styles.separator}>•</span>
+              <Link className={styles.legalLink} href="#terms">Terms of Service</Link>
+              <span className={styles.separator}>•</span>
+              <Link className={styles.legalLink} href="#cookies">Cookie Policy</Link>
             </div>
           </div>
         </div>
