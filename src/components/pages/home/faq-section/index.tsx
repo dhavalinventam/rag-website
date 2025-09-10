@@ -38,56 +38,63 @@ const FAQSection = () => {
 
   return (
     <section className={styles.faqSection} id="faq">
-      {/* Animated background elements */}
+      {/* Abstract background elements */}
       <div className={styles.backgroundElements}>
+        <div className={styles.wireframeGrid} />
         <div className={styles.floatingOrb} data-speed="0.3" />
         <div className={styles.floatingOrb} data-speed="0.5" />
         <div className={styles.floatingOrb} data-speed="0.7" />
       </div>
 
       <div className={styles.container}>
-        {/* Header */}
-        <div className={styles.header}>
-          <div className={styles.badge}>
-            <span className={styles.badgeText}>FAQ</span>
-          </div>
-          <h2 className={styles.title}>
-            Frequently Asked
-            <span className={styles.highlight}> Questions</span>
-          </h2>
-          <p className={styles.subtitle}>
-            Everything you need to know about our next-generation RAG platform
-          </p>
-        </div>
-
-        {/* FAQ Grid */}
-        <div className={styles.faqGrid}>
-          {faqData.map((faq, index) => (
-            <div key={index} className={styles.faqItem}>
-              <div className={styles.faqCard}>
-                <div className={styles.faqGlow} />
-                <button
-                  className={`${styles.faqQuestion} ${expandedFaq === index ? styles.expanded : ""}`}
-                  onClick={() => toggleFaq(index)}
-                  aria-expanded={expandedFaq === index}
-                >
-                  <span className={styles.questionText}>{faq.question}</span>
-                  <div className={styles.faqIcon}>
-                    <div className={`${styles.iconLine} ${expandedFaq === index ? styles.rotated : ""}`} />
-                    <div className={`${styles.iconLine} ${expandedFaq === index ? styles.hidden : ""}`} />
-                  </div>
-                </button>
-                <div className={`${styles.faqAnswer} ${expandedFaq === index ? styles.show : ""}`}>
-                  <div className={styles.answerContent}>
-                    <p>{faq.answer}</p>
-                  </div>
-                </div>
-              </div>
+        <div className={styles.faqLayout}>
+          {/* Left Panel - Introduction */}
+          <div className={styles.leftPanel}>
+            <div className={styles.introContent}>
+              <h2 className={styles.title}>
+                Frequently
+                <br />
+                asked questions
+              </h2>
+              <p className={styles.subtitle}>
+                Have more questions? Reach out to our sales team for assistance.
+              </p>
+              <button className="btn btn-gradient-primary">
+                <span>Contact sales</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
-          ))}
-        </div>
+          </div>
 
-        
+          {/* Right Panel - FAQ Items */}
+          <div className={styles.rightPanel}>
+            <div className={styles.faqList}>
+              {faqData.map((faq, index) => (
+                <div key={index} className={styles.faqItem}>
+                  <button
+                    className={`${styles.faqQuestion} ${expandedFaq === index ? styles.expanded : ""}`}
+                    onClick={() => toggleFaq(index)}
+                    aria-expanded={expandedFaq === index}
+                  >
+                    <span className={styles.questionText}>{faq.question}</span>
+                    <div className={styles.faqIcon}>
+                      <div className={`${styles.iconLine} ${expandedFaq === index ? styles.rotated : ""}`} />
+                      <div className={`${styles.iconLine} ${expandedFaq === index ? styles.hidden : ""}`} />
+                    </div>
+                  </button>
+                  <div className={`${styles.faqAnswer} ${expandedFaq === index ? styles.show : ""}`}>
+                    <div className={styles.answerContent}>
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                  {index < faqData.length - 1 && <div className={styles.divider} />}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 
 .faqSection {
   position: relative;
-  padding: 4rem 0;
+  padding: 6rem 0;
   background: linear-gradient(135deg, 
     #0b0d16 0%, 
     #1a1b2e 25%, 
@@ -14,7 +14,7 @@
   isolation: isolate;
 }
 
-// Animated background elements
+// Abstract background elements
 .backgroundElements {
   position: absolute;
   top: 0;
@@ -23,6 +23,20 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
+}
+
+.wireframeGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(93, 168, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(93, 168, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  animation: gridMove 20s linear infinite;
 }
 
 .floatingOrb {
@@ -38,19 +52,19 @@
   filter: blur(30px);
   animation: floatOrb 25s ease-in-out infinite;
 
-  &:nth-child(1) {
+  &:nth-child(2) {
     top: 10%;
     left: 5%;
     animation-delay: 0s;
   }
 
-  &:nth-child(2) {
+  &:nth-child(3) {
     top: 70%;
     right: 10%;
     animation-delay: 8s;
   }
 
-  &:nth-child(3) {
+  &:nth-child(4) {
     bottom: 10%;
     left: 15%;
     animation-delay: 16s;
@@ -62,123 +76,86 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-// Header Section
-.header {
-  text-align: center;
-  margin-bottom: 3rem;
+// Main Layout
+.faqLayout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+// Left Panel - Introduction
+.leftPanel {
   position: relative;
   z-index: 2;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.4rem 1.2rem;
-  background: linear-gradient(135deg, rgba(93, 168, 255, 0.15), rgba(166, 107, 255, 0.15));
-  border: 1px solid rgba(93, 168, 255, 0.3);
-  border-radius: 50px;
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(10px);
-}
-
-.badgeText {
-  color: #5da8ff;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.introContent {
+  position: sticky;
+  top: 2rem;
 }
 
 .title {
   color: #fff;
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.highlight {
-  background: linear-gradient(135deg, #5da8ff, #a66bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 400px;
 }
 
-// FAQ Grid
-.faqGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 1.5rem;
+
+// Right Panel - FAQ Items
+.rightPanel {
+  position: relative;
+  z-index: 2;
+}
+
+.faqList {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(166, 107, 255, 0.05));
+    pointer-events: none;
+  }
 }
 
 .faqItem {
   position: relative;
 }
 
-.faqCard {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.08) 0%, 
-    rgba(255, 255, 255, 0.03) 100%
-  );
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  position: relative;
-
-  &:hover {
-    border-color: rgba(93, 168, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-}
-
-.faqGlow {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: radial-gradient(circle at center, 
-    rgba(93, 168, 255, 0.1) 0%, 
-    rgba(166, 107, 255, 0.05) 30%, 
-    transparent 70%
-  );
-  border-radius: 30px;
-  filter: blur(20px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-
-  .faqCard:hover & {
-    opacity: 1;
-  }
-}
-
 .faqQuestion {
   width: 100%;
   background: transparent;
   border: none;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
@@ -190,14 +167,6 @@
   transition: all 0.3s ease;
   position: relative;
 
-  &:hover {
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  &.expanded {
-    background: rgba(93, 168, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
 }
 
 .questionText {
@@ -207,8 +176,8 @@
 }
 
 .faqIcon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   position: relative;
   flex-shrink: 0;
 }
@@ -221,17 +190,17 @@
 
   &:first-child {
     width: 2px;
-    height: 16px;
+    height: 12px;
     top: 4px;
-    left: 11px;
+    left: 9px;
     transform: rotate(90deg);
   }
 
   &:last-child {
     width: 2px;
-    height: 16px;
+    height: 12px;
     top: 4px;
-    left: 11px;
+    left: 9px;
   }
 
   &.rotated {
@@ -251,17 +220,29 @@
 
   &.show {
     max-height: 200px;
-    padding: 0 2rem 2rem;
+    padding: 0 2rem 1.5rem;
   }
 }
 
 .answerContent {
   p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1rem;
     line-height: 1.6;
     margin: 0;
+    font-weight: 400;
   }
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 20%, 
+    rgba(255, 255, 255, 0.1) 80%, 
+    transparent 100%
+  );
+  margin: 0 2rem;
 }
 
 
@@ -278,41 +259,64 @@
   }
 }
 
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
 
 
 
 
 // Responsive Design
+@media (max-width: 1024px) {
+  .faqLayout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .introContent {
+    position: static;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: clamp(2.2rem, 6vw, 3rem);
+  }
+}
+
 @media (max-width: 768px) {
   .faqSection {
     padding: 4rem 0;
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
-  .header {
-    margin-bottom: 3rem;
+  .faqLayout {
+    gap: 2.5rem;
   }
 
   .title {
-    font-size: clamp(2rem, 8vw, 3rem);
-    margin-bottom: 0.8rem;
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 1rem;
   }
 
   .subtitle {
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
-  .faqGrid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
 
   .faqQuestion {
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     font-size: 1rem;
   }
 
@@ -320,11 +324,13 @@
     padding: 0 1.5rem;
 
     &.show {
-      padding: 0 1.5rem 1.5rem;
+      padding: 0 1.5rem 1.25rem;
     }
   }
 
-
+  .divider {
+    margin: 0 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -332,24 +338,35 @@
     padding: 3rem 0;
   }
 
-  .header {
-    margin-bottom: 2rem;
+  .container {
+    padding: 0 1rem;
+  }
+
+  .faqLayout {
+    gap: 2rem;
   }
 
   .title {
-    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    font-size: clamp(1.8rem, 10vw, 2.4rem);
+    line-height: 1.2;
   }
 
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+
   .faqQuestion {
-    padding: 1.2rem;
+    padding: 1rem 1.25rem;
     font-size: 0.95rem;
   }
 
   .faqAnswer {
-    padding: 0 1.2rem;
+    padding: 0 1.25rem;
 
     &.show {
-      padding: 0 1.2rem 1.2rem;
+      padding: 0 1.25rem 1rem;
     }
 
     .answerContent p {
@@ -357,5 +374,11 @@
     }
   }
 
+  .divider {
+    margin: 0 1.25rem;
+  }
 
+  .faqList {
+    border-radius: 16px;
+  }
 }
