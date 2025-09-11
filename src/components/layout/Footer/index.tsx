@@ -9,12 +9,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer} role="contentinfo">
       {/* Animated background elements */}
-      <div className={styles.backgroundElements}>
-        <div className={styles.orb} />
-        <div className={styles.orb2} />
-        <div className={styles.orb3} />
-        <div className={styles.gridPattern} />
-      </div>
+
 
       <div className={styles.container}>
         {/* Main footer content */}

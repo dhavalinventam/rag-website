@@ -39,12 +39,7 @@ const FAQSection = () => {
   return (
     <section className={styles.faqSection} id="faq">
       {/* Abstract background elements */}
-      <div className={styles.backgroundElements}>
-        <div className={styles.wireframeGrid} />
-        <div className={styles.floatingOrb} data-speed="0.3" />
-        <div className={styles.floatingOrb} data-speed="0.5" />
-        <div className={styles.floatingOrb} data-speed="0.7" />
-      </div>
+
 
       <div className={styles.container}>
         <div className={styles.faqLayout}>

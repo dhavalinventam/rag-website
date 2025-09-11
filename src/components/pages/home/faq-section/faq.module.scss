@@ -3,27 +3,12 @@
 .faqSection {
   position: relative;
   padding: 6rem 0;
-  background: linear-gradient(135deg, 
-    #0b0d16 0%, 
-    #1a1b2e 25%, 
-    #16213e 50%, 
-    #1a1b2e 75%, 
-    #0b0d16 100%
-  );
+  background: linear-gradient(135deg, #0b0d16 100%, #1a1b2e 75%, #16213e 50%, #1a1b2e 25%, #0b0d16 0%);
   overflow: hidden;
   isolation: isolate;
 }
 
 // Abstract background elements
-.backgroundElements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
 
 .wireframeGrid {
   position: absolute;
@@ -37,38 +22,6 @@
   background-size: 50px 50px;
   opacity: 0.3;
   animation: gridMove 20s linear infinite;
-}
-
-.floatingOrb {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, 
-    rgba(93, 168, 255, 0.08) 0%, 
-    rgba(166, 107, 255, 0.04) 50%, 
-    transparent 100%
-  );
-  filter: blur(30px);
-  animation: floatOrb 25s ease-in-out infinite;
-
-  &:nth-child(2) {
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
-  }
-
-  &:nth-child(3) {
-    top: 70%;
-    right: 10%;
-    animation-delay: 8s;
-  }
-
-  &:nth-child(4) {
-    bottom: 10%;
-    left: 15%;
-    animation-delay: 16s;
-  }
 }
 
 // Container
