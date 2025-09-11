@@ -38,8 +38,29 @@ const FAQSection = () => {
 
   return (
     <section className={styles.faqSection} id="faq">
-      {/* Abstract background elements */}
-
+      {/* Animated background elements */}
+      <div className={styles.animatedBackground}>
+        <div className={styles.floatingOrbs}>
+          <div className={styles.orb + ' ' + styles.orb1}></div>
+          <div className={styles.orb + ' ' + styles.orb2}></div>
+          <div className={styles.orb + ' ' + styles.orb3}></div>
+          <div className={styles.orb + ' ' + styles.orb4}></div>
+        </div>
+        <div className={styles.geometricShapes}>
+          <div className={styles.shape + ' ' + styles.triangle}></div>
+          <div className={styles.shape + ' ' + styles.circle}></div>
+          <div className={styles.shape + ' ' + styles.square}></div>
+        </div>
+        <div className={styles.gridPattern}></div>
+        <div className={styles.particleField}>
+          <div className={styles.particle + ' ' + styles.particle1}></div>
+          <div className={styles.particle + ' ' + styles.particle2}></div>
+          <div className={styles.particle + ' ' + styles.particle3}></div>
+          <div className={styles.particle + ' ' + styles.particle4}></div>
+          <div className={styles.particle + ' ' + styles.particle5}></div>
+          <div className={styles.particle + ' ' + styles.particle6}></div>
+        </div>
+      </div>
 
       <div className={styles.container}>
         <div className={styles.faqLayout}>
@@ -54,12 +75,14 @@ const FAQSection = () => {
               <p className={styles.subtitle}>
                 Have more questions? Reach out to our sales team for assistance.
               </p>
-              <button className="btn btn-gradient-primary">
+              <a href="#contact" className={styles.primaryButton}>
                 <span>Contact sales</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+                <div className={styles.buttonIcon}>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
 

@@ -10,6 +10,26 @@ export default function Footer() {
     <footer className={styles.footer} role="contentinfo">
       {/* Animated background elements */}
       <div className={styles.animatedBackground}>
+        <div className={styles.floatingOrbs}>
+          <div className={styles.orb + ' ' + styles.orb1}></div>
+          <div className={styles.orb + ' ' + styles.orb2}></div>
+          <div className={styles.orb + ' ' + styles.orb3}></div>
+          <div className={styles.orb + ' ' + styles.orb4}></div>
+        </div>
+        <div className={styles.geometricShapes}>
+          <div className={styles.shape + ' ' + styles.triangle}></div>
+          <div className={styles.shape + ' ' + styles.circle}></div>
+          <div className={styles.shape + ' ' + styles.square}></div>
+        </div>
+        <div className={styles.gridPattern}></div>
+        <div className={styles.particleField}>
+          <div className={styles.particle + ' ' + styles.particle1}></div>
+          <div className={styles.particle + ' ' + styles.particle2}></div>
+          <div className={styles.particle + ' ' + styles.particle3}></div>
+          <div className={styles.particle + ' ' + styles.particle4}></div>
+          <div className={styles.particle + ' ' + styles.particle5}></div>
+          <div className={styles.particle + ' ' + styles.particle6}></div>
+        </div>
         <div className={styles.ragText}>RAG</div>
       </div>
 

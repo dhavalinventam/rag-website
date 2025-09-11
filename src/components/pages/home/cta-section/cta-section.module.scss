@@ -8,8 +8,8 @@
   min-height: auto;
 }
 
-// Animated Background Elements
-.backgroundAnimation {
+// Animated background elements
+.animatedBackground {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,16 +17,25 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
+  overflow: hidden;
 }
 
-.floatingOrb {
+.floatingOrbs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.orb {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 191, 255, 0.05));
   filter: blur(40px);
-  animation: float 20s ease-in-out infinite;
+  animation: floatOrb 20s ease-in-out infinite;
 
-  &:nth-child(1) {
+  &.orb1 {
     width: 300px;
     height: 300px;
     top: 10%;
@@ -34,7 +43,7 @@
     animation-delay: 0s;
   }
 
-  &:nth-child(2) {
+  &.orb2 {
     width: 200px;
     height: 200px;
     top: 60%;
@@ -42,12 +51,65 @@
     animation-delay: -7s;
   }
 
-  &:nth-child(3) {
+  &.orb3 {
     width: 250px;
     height: 250px;
     bottom: 20%;
     left: 15%;
     animation-delay: -14s;
+  }
+
+  &.orb4 {
+    width: 180px;
+    height: 180px;
+    top: 30%;
+    right: 30%;
+    animation-delay: -10s;
+  }
+}
+
+.geometricShapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.1;
+  animation: geometricFloat 15s ease-in-out infinite;
+
+  &.triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid rgba(0, 255, 255, 0.3);
+    top: 20%;
+    left: 80%;
+    animation-delay: -5s;
+  }
+
+  &.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 191, 255, 0.2);
+    top: 70%;
+    left: 10%;
+    animation-delay: -8s;
+  }
+
+  &.square {
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 128, 255, 0.2);
+    transform: rotate(45deg);
+    top: 40%;
+    right: 20%;
+    animation-delay: -12s;
   }
 }
 
@@ -58,20 +120,64 @@
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(93, 168, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(93, 168, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
-  animation: gridMove 30s linear infinite;
+  opacity: 0.3;
+  animation: gridMove 20s linear infinite;
 }
 
-.gradientOverlay {
+.particleField {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 30% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: particleFloat 12s ease-in-out infinite;
+
+  &.particle1 {
+    top: 15%;
+    left: 20%;
+    animation-delay: 0s;
+  }
+
+  &.particle2 {
+    top: 25%;
+    right: 15%;
+    animation-delay: -2s;
+  }
+
+  &.particle3 {
+    top: 45%;
+    left: 5%;
+    animation-delay: -4s;
+  }
+
+  &.particle4 {
+    top: 65%;
+    right: 25%;
+    animation-delay: -6s;
+  }
+
+  &.particle5 {
+    top: 80%;
+    left: 30%;
+    animation-delay: -8s;
+  }
+
+  &.particle6 {
+    top: 35%;
+    right: 5%;
+    animation-delay: -10s;
+  }
 }
 
 .ctaCard {
@@ -272,15 +378,56 @@
 
 
 // Animations
-@keyframes float {
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) scale(1.05);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-5px) scale(1.1);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-25px) translateX(15px) scale(1.02);
+    opacity: 0.35;
+  }
+}
+
+@keyframes geometricFloat {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
   }
   33% {
-    transform: translateY(-20px) rotate(120deg);
+    transform: translateY(-15px) rotate(120deg);
+    opacity: 0.15;
   }
   66% {
     transform: translateY(10px) rotate(240deg);
+    opacity: 0.12;
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-15px) translateX(10px) scale(1.2);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-25px) translateX(-5px) scale(0.8);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translateY(-10px) translateX(15px) scale(1.1);
+    opacity: 0.6;
   }
 }
 
@@ -290,52 +437,6 @@
   }
   100% {
     transform: translate(50px, 50px);
-  }
-}
-
-@keyframes cubeRotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
-}
-
-@keyframes sphereFloat {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.1);
-  }
-}
-
-@keyframes ringRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes particleFloat {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px) scale(1);
-    opacity: 0.7;
-  }
-  25% {
-    transform: translateY(-15px) translateX(10px) scale(1.2);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-25px) translateX(-5px) scale(0.8);
-    opacity: 0.5;
-  }
-  75% {
-    transform: translateY(-10px) translateX(15px) scale(1.1);
-    opacity: 0.9;
   }
 }
 
