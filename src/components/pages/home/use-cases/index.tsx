@@ -28,7 +28,7 @@ const UseCases = () => {
       desc: "Provide real-time account updates, transaction assistance, and tailored financial advice via a secure, compliant chatbot for banks, insurance, and investments.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
       position: "bottom-left",
-      image: "/image/jpg/Financial Services.jpeg",
+      image: "/image/jpg/Financial-Services.jpeg",
     },
     {
       id: "Ecom",
