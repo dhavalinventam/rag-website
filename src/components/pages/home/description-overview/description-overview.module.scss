@@ -2,7 +2,7 @@
 
 .overview {
   position: relative;
-  padding: 6rem 0 4rem 0;
+  padding: 96px 0 64px 0;
   background: linear-gradient(135deg, 
     #0b0d16 0%, 
     #1a1b2e 25%, 
@@ -20,7 +20,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 32px;
 }
 
 .content {
@@ -31,10 +31,10 @@
 
 // Title
 .title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(40px, 5vw, 64px);
   line-height: 1.1;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   color: #fff;
 }
 
@@ -56,10 +56,10 @@
 
 // Subtitle
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(16px, 2vw, 20.8px);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -68,30 +68,30 @@
 // Trust badges
 .trustBadges {
   display: flex;
-  gap: 1.5rem;
+  gap: 24px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .trustItem {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 6.4px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
+  font-size: 13.6px;
   font-weight: 500;
 }
 
 .trustIcon {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 // Early Access Card Styles
 .wishlistCard {
   position: relative;
   max-width: 450px;
-  margin: 2rem auto 0;
+  margin: 32px auto 0;
   animation: wishlistSlideUp 0.8s ease-out forwards;
   opacity: 0;
   transform: translateY(30px);
@@ -123,7 +123,7 @@
   backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  padding: 1.5rem;
+  padding: 24px;
   box-shadow: 
     0 25px 50px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -161,18 +161,18 @@
 
 .wishlistHeader {
   text-align: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 19.2px;
 }
 
 .wishlistIconContainer {
   position: relative;
   display: inline-block;
-  margin-bottom: 1.8rem;
-  margin-top: 0.5rem;
+  margin-bottom: 28.8px;
+  margin-top: 8px;
 }
 
 .wishlistIcon {
-  font-size: 1.5rem;
+  font-size: 24px;
   animation: iconFloat 3s ease-in-out infinite;
   position: relative;
   z-index: 2;
@@ -203,9 +203,9 @@
 }
 
 .wishlistTitle {
-  font-size: 1.3rem;
+  font-size: 20.8px;
   font-weight: 800;
-  margin-bottom: 0.4rem;
+  margin-bottom: 6.4px;
 }
 
 .titleGradient {
@@ -217,25 +217,25 @@
 }
 
 .wishlistSubtitle {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.4;
-  margin-bottom: 1.2rem;
+  margin-bottom: 19.2px;
 }
 
 .wishlistForm {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 12.8px;
 }
 
 .inputGroup {
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 0.4rem;
+  padding: 6.4px;
   transition: all 0.3s ease;
   position: relative;
 
@@ -251,8 +251,8 @@
   background: transparent;
   border: none;
   color: #fff;
-  padding: 0.6rem 0.8rem;
-  font-size: 0.9rem;
+  padding: 9.6px 12.8px;
+  font-size: 14.4px;
   outline: none;
 
   &::placeholder {
@@ -268,14 +268,14 @@
 .submitButton {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 6.4px;
   background: linear-gradient(135deg, #5da8ff, #a66bff);
   color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 9.6px 19.2px;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -318,7 +318,7 @@
 }
 
 .buttonArrow {
-  font-size: 0.8rem;
+  font-size: 12.8px;
   transition: transform 0.3s ease;
 }
 
@@ -339,15 +339,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
+  gap: 6.4px;
+  font-size: 12.8px;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  margin-top: 0.4rem;
+  margin-top: 6.4px;
 }
 
 .privacyIcon {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   animation: privacyPulse 3s ease-in-out infinite;
 }
 
@@ -360,11 +360,11 @@
 .successIconContainer {
   position: relative;
   display: inline-block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 12.8px;
 }
 
 .successIcon {
-  font-size: 2rem;
+  font-size: 32px;
   animation: successBounce 0.8s ease-out;
   position: relative;
   z-index: 2;
@@ -383,17 +383,17 @@
 }
 
 .successMessage h4 {
-  font-size: 1.2rem;
+  font-size: 19.2px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 0.4rem;
+  margin-bottom: 6.4px;
 }
 
 .successMessage p {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.4;
-  margin-bottom: 0.8rem;
+  margin-bottom: 12.8px;
 }
 
 .successBadge {
@@ -402,9 +402,9 @@
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
   border: 1px solid rgba(34, 197, 94, 0.3);
   color: #22c55e;
-  padding: 0.4rem 0.8rem;
+  padding: 6.4px 12.8px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 12.8px;
   font-weight: 600;
   animation: badgeGlow 2s ease-in-out infinite;
 }
@@ -516,49 +516,49 @@
 // Responsive design
 @media (max-width: 768px) {
   .overview {
-    padding: 4rem 0 3rem 0;
+    padding: 64px 0 48px 0;
   }
 
   .content {
-    padding: 0 1rem;
+    padding: 0 16px;
   }
 
   .trustBadges {
     justify-content: center;
-    gap: 1rem;
+    gap: 16px;
   }
 
   .trustItem {
-    font-size: 0.8rem;
+    font-size: 12.8px;
   }
 
   .wishlistCard {
-    margin: 1.5rem auto 0;
+    margin: 24px auto 0;
   }
 }
 
 @media (max-width: 480px) {
   .title {
-    font-size: 2.2rem;
+    font-size: 35.2px;
   }
 
   .subtitle {
-    font-size: 0.9rem;
+    font-size: 14.4px;
   }
 
   .trustBadges {
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 12.8px;
   }
 
   .wishlistCard {
-    margin: 1rem auto 0;
-    padding: 1.5rem;
+    margin: 16px auto 0;
+    padding: 24px;
   }
 
   .emailInput,
   .submitButton {
-    font-size: 0.9rem;
+    font-size: 14.4px;
   }
 }

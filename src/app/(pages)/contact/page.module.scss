@@ -12,7 +12,7 @@
   );
   overflow: hidden;
   isolation: isolate;
-  padding: 2rem 0;
+  padding: 32px 0;
 }
 
 // Animated background elements
@@ -65,14 +65,14 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 32px;
 }
 
 // Header Section
 .header {
   text-align: center;
-  margin-bottom: 4rem;
-  padding-top: 4.5rem;
+  margin-bottom: 64px;
+  padding-top: 72px;
 }
 
 .badge {
@@ -82,16 +82,16 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  padding: 0.4rem 1.2rem;
-  margin-bottom: 1.5rem;
+  padding: 6.4px 19.2px;
+  margin-bottom: 24px;
   animation: badgeFloat 3s ease-in-out infinite;
 }
 
 .title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(40px, 6vw, 64px);
   line-height: 1.1;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   color: #fff;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(16px, 2vw, 19.2px);
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
   max-width: 700px;
@@ -122,15 +122,15 @@
 .content {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 3rem;
-  margin-bottom: 2rem;
+  gap: 48px;
+  margin-bottom: 32px;
 }
 
 // Contact Information Cards
 .contactInfo {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .infoCard {
@@ -141,7 +141,7 @@
   backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  padding: 1.5rem;
+  padding: 24px;
   text-align: center;
   transition: all 0.4s ease;
   position: relative;
@@ -176,27 +176,27 @@
 }
 
 .infoIcon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 32px;
+  margin-bottom: 16px;
   animation: iconFloat 3s ease-in-out infinite;
 }
 
 .infoCard h3 {
-  font-size: 1.2rem;
+  font-size: 19.2px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .infoCard p {
-  font-size: 1rem;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   font-weight: 500;
 }
 
 .infoCard span {
-  font-size: 0.85rem;
+  font-size: 13.6px;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -213,7 +213,7 @@
   backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 32px;
   position: relative;
   overflow: hidden;
 }
@@ -237,45 +237,45 @@
 
 .formHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .formHeader h2 {
-  font-size: 1.8rem;
+  font-size: 28.8px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .formHeader p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 // Form Styles
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .inputGroup label {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px;
 }
 
 .input,
@@ -283,9 +283,9 @@
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 0.8rem 1rem;
+  padding: 12.8px 16px;
   color: #fff;
-  font-size: 1rem;
+  font-size: 16px;
   transition: all 0.3s ease;
   outline: none;
 
@@ -331,7 +331,7 @@
   backdrop-filter: blur(25px);
   border: 1px solid rgba(34, 197, 94, 0.2);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 32px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -354,23 +354,23 @@
 }
 
 .successIcon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 48px;
+  margin-bottom: 16px;
   animation: successBounce 0.8s ease-out;
 }
 
 .successCard h2 {
-  font-size: 1.8rem;
+  font-size: 28.8px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .successCard p {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .successBadge {
@@ -379,30 +379,30 @@
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
   border: 1px solid rgba(34, 197, 94, 0.3);
   color: #22c55e;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   font-weight: 600;
   animation: badgeGlow 2s ease-in-out infinite;
 }
 
 // FAQ Section
 .faqSection {
-  margin-top: 4rem;
+  margin-top: 64px;
 }
 
 .faqSection h2 {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
   color: #fff;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .faqGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .faqItem {
@@ -413,7 +413,7 @@
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 24px;
   transition: all 0.3s ease;
 
   &:hover {
@@ -424,15 +424,15 @@
 }
 
 .faqItem h3 {
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
 }
 
 .faqItem p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
+  font-size: 15.2px;
   line-height: 1.5;
 }
 
@@ -528,7 +528,7 @@
 @media (max-width: 1024px) {
   .content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 32px;
   }
 
   .contactInfo {
@@ -546,25 +546,25 @@
 
 @media (max-width: 768px) {
   .contactPage {
-    padding: 1.5rem 0;
+    padding: 24px 0;
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 0 16px;
   }
 
   .header {
-    margin-bottom: 3rem;
+    margin-bottom: 48px;
   }
 
   .title {
-    font-size: clamp(2rem, 8vw, 3rem);
-    margin-bottom: 0.8rem;
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 12.8px;
   }
 
   .subtitle {
-    font-size: clamp(0.9rem, 3vw, 1.1rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(14.4px, 3vw, 17.6px);
+    margin-bottom: 24px;
   }
 
   .formRow {
@@ -580,7 +580,7 @@
   }
 
   .formCard {
-    padding: 1.5rem;
+    padding: 24px;
   }
 
   .faqGrid {
@@ -590,26 +590,26 @@
 
 @media (max-width: 480px) {
   .contactPage {
-    padding: 1rem 0;
+    padding: 16px 0;
   }
 
   .header {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 
   .title {
-    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    font-size: clamp(28.8px, 10vw, 40px);
   }
 
   .formCard {
-    padding: 1.2rem;
+    padding: 19.2px;
   }
 
   .formHeader h2 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   .faqSection h2 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }

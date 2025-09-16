@@ -2,7 +2,7 @@
 
 .howSection {
   position: relative;
-  padding: 4rem 0 5rem;
+  padding: 64px 0 80px;
   background: linear-gradient(135deg, 
     #0b0d16 0%, 
     #1a1b2e 15%, 
@@ -100,7 +100,7 @@
 // Header section
 .headerSection {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
   position: relative;
   z-index: 2;
 }
@@ -108,17 +108,17 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.4rem 1.2rem;
+  padding: 6.4px 19.2px;
   background: linear-gradient(135deg, rgba(93, 168, 255, 0.15), rgba(166, 107, 255, 0.15));
   border: 1px solid rgba(93, 168, 255, 0.3);
   border-radius: 50px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   backdrop-filter: blur(10px);
 }
 
 .badgeText {
   color: #5da8ff;
-  font-size: 0.8rem;
+  font-size: 12.8px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -126,10 +126,10 @@
 
 .title {
   color: #fff;
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(32px, 4.5vw, 48px);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,7 +145,7 @@
 
 .subtitle {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5;
   max-width: 700px;
   margin: 0 auto;
@@ -156,7 +156,7 @@
 .timelineContainer {
   position: relative;
   z-index: 2;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
 }
 
 .timeline {
@@ -179,14 +179,14 @@
 
 .timelineStep {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
   
   &:nth-child(odd) .stepContent {
     flex-direction: row;
     text-align: left;
     
     .stepInfo {
-      margin-left: 2.5rem;
+      margin-left: 40px;
       margin-right: 0;
     }
   }
@@ -196,7 +196,7 @@
     text-align: right;
     
     .stepInfo {
-      margin-right: 2.5rem;
+      margin-right: 40px;
       margin-left: 0;
     }
   }
@@ -242,7 +242,7 @@
   justify-content: center;
   color: #5da8ff;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 16px;
   backdrop-filter: blur(10px);
   z-index: 4;
 }
@@ -274,9 +274,9 @@
 
 .stepTitle {
   color: #e8ecf4;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
   background: linear-gradient(135deg, #e8ecf4, rgba(232, 236, 244, 0.8));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -286,23 +286,23 @@
 .stepDescription {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.5;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+  margin-bottom: 16px;
+  font-size: 14.4px;
 }
 
 .stepFeatures {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 6.4px;
 }
 
 .feature {
-  padding: 0.2rem 0.6rem;
+  padding: 3.2px 9.6px;
   background: rgba(93, 168, 255, 0.1);
   border: 1px solid rgba(93, 168, 255, 0.2);
   border-radius: 16px;
   color: #5da8ff;
-  font-size: 0.8rem;
+  font-size: 12.8px;
   font-weight: 500;
 }
 
@@ -311,19 +311,19 @@
 // Responsive design
 @media (max-width: 768px) {
   .howSection {
-    padding: 3rem 0 4rem;
+    padding: 48px 0 64px;
   }
   
   .headerSection {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
   
   .title {
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-size: clamp(28.8px, 5vw, 40px);
   }
   
   .subtitle {
-    font-size: 0.95rem;
+    font-size: 15.2px;
   }
   
   .timeline {
@@ -333,7 +333,7 @@
   }
   
   .timelineStep {
-    margin-bottom: 2.5rem;
+    margin-bottom: 40px;
     
     .stepContent {
       flex-direction: column !important;
@@ -349,11 +349,11 @@
       left: -25px;
       width: 45px;
       height: 45px;
-      font-size: 0.9rem;
+      font-size: 14.4px;
     }
     
     .stepInfo {
-      margin: 1.5rem 0 0 15px !important;
+      margin: 24px 0 0 15px !important;
       max-width: none;
     }
   }
@@ -364,34 +364,34 @@
   }
   
   .stepTitle {
-    font-size: 1.1rem;
+    font-size: 17.6px;
   }
   
   .stepDescription {
-    font-size: 0.85rem;
+    font-size: 13.6px;
   }
 }
 
 @media (max-width: 480px) {
   .howSection {
-    padding: 2.5rem 0 3rem;
+    padding: 40px 0 48px;
   }
   
   .headerSection {
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
   }
   
   .title {
-    font-size: clamp(1.6rem, 6vw, 2rem);
-    margin-bottom: 0.8rem;
+    font-size: clamp(25.6px, 6vw, 32px);
+    margin-bottom: 12.8px;
   }
   
   .subtitle {
-    font-size: 0.9rem;
+    font-size: 14.4px;
   }
   
   .timelineStep {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
     
     .stepContent {
       margin-left: 40px;
@@ -405,7 +405,7 @@
       left: -20px;
       width: 40px;
       height: 40px;
-      font-size: 0.8rem;
+      font-size: 12.8px;
     }
   }
   
@@ -415,18 +415,18 @@
   }
   
   .stepTitle {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
   
   .stepDescription {
-    font-size: 0.8rem;
-    margin-bottom: 0.8rem;
+    font-size: 12.8px;
+    margin-bottom: 12.8px;
   }
   
   .feature {
-    font-size: 0.75rem;
-    padding: 0.15rem 0.5rem;
+    font-size: 12px;
+    padding: 2.4px 8px;
   }
 }
 

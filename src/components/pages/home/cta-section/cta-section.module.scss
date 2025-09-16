@@ -2,7 +2,7 @@
 
 .ctaSection {
   position: relative;
-  padding: 4rem 0;
+  padding: 64px 0;
   overflow: hidden;
   background: linear-gradient(135deg, #0b0d16 100%, #1a1b2e 75%, #16213e 50%, #1a1b2e 25%, #0b0d16 0%);
   min-height: auto;
@@ -184,11 +184,11 @@
   background: linear-gradient(135deg, #0a1a2e 0%, #16213e 50%, #0a1a2e 100%);
   border: none;
   border-radius: 24px;
-  padding: 3rem 2.5rem;
+  padding: 48px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 48px;
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -292,9 +292,9 @@
 
   h3 {
     color: #fff;
-    font-size: 2.2rem;
+    font-size: 35.2px;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     line-height: 1.2;
     background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.9) 100%);
     -webkit-background-clip: text;
@@ -304,8 +304,8 @@
 
   p {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-    margin-bottom: 2.5rem;
+    font-size: 17.6px;
+    margin-bottom: 40px;
     line-height: 1.7;
     max-width: 500px;
     margin-left: auto;
@@ -316,21 +316,21 @@
 .ctaActions {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 32px;
   align-items: center;
 }
 
 .primaryButton {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 12px;
   background: linear-gradient(90deg, #00ffff 0%, #00bfff 50%, #0080ff 100%);
   color: #0a1a2e;
   text-decoration: none;
-  padding: 1rem 2rem;
+  padding: 16px 32px;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   transition: all 0.3s ease;
   box-shadow: 
     0 10px 30px rgba(0, 255, 255, 0.4),
@@ -443,23 +443,23 @@
 // Responsive Design
 @media (max-width: 768px) {
   .ctaSection {
-    padding: 2.5rem 0;
+    padding: 40px 0;
   }
 
   .ctaCard {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1.5rem;
-    gap: 2rem;
+    padding: 32px 24px;
+    gap: 32px;
   }
 
   .ctaContent {
     h3 {
-      font-size: 1.8rem;
+      font-size: 28.8px;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 16px;
       max-width: 100%;
     }
   }
@@ -489,22 +489,22 @@
 
 @media (max-width: 480px) {
   .ctaCard {
-    padding: 1.5rem 1rem;
+    padding: 24px 16px;
   }
 
   .ctaContent {
     h3 {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 14.4px;
     }
   }
 
   .primaryButton {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
+    padding: 12.8px 24px;
+    font-size: 14.4px;
   }
 
 

@@ -2,7 +2,7 @@
 
 .faqSection {
   position: relative;
-  padding: 6rem 0;
+  padding: 96px 0;
   background: linear-gradient(135deg, #0b0d16 100%, #1a1b2e 75%, #16213e 50%, #1a1b2e 25%, #0b0d16 0%);
   overflow: hidden;
   isolation: isolate;
@@ -187,14 +187,14 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 32px;
 }
 
 // Main Layout
 .faqLayout {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 4rem;
+  gap: 64px;
   align-items: start;
 }
 
@@ -206,37 +206,37 @@
 
 .introContent {
   position: sticky;
-  top: 2rem;
+  top: 32px;
 }
 
 .title {
   color: #fff;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(40px, 5vw, 56px);
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   letter-spacing: -0.02em;
 }
 
 .subtitle {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.1rem;
+  font-size: 17.6px;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   max-width: 400px;
 }
 
 .primaryButton {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 12px;
   background: linear-gradient(90deg, #00ffff 0%, #00bfff 50%, #0080ff 100%);
   color: #0a1a2e;
   text-decoration: none;
-  padding: 1rem 2rem;
+  padding: 16px 32px;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   transition: all 0.3s ease;
   box-shadow: 
     0 10px 30px rgba(0, 255, 255, 0.4),
@@ -289,7 +289,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .faqItem {
@@ -313,9 +313,9 @@
   width: 100%;
   background: transparent;
   border: none;
-  padding: 1.5rem 2rem;
+  padding: 24px 32px;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
@@ -352,7 +352,7 @@
 
 .questionText {
   flex: 1;
-  margin-right: 1rem;
+  margin-right: 16px;
   line-height: 1.4;
 }
 
@@ -397,18 +397,18 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 2rem;
+  padding: 0 32px;
 
   &.show {
     max-height: 200px;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
   }
 }
 
 .answerContent {
   p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
     font-weight: 400;
@@ -492,7 +492,7 @@
 @media (max-width: 1024px) {
   .faqLayout {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 48px;
   }
 
   .introContent {
@@ -503,86 +503,86 @@
   }
 
   .title {
-    font-size: clamp(2.2rem, 6vw, 3rem);
+    font-size: clamp(35.2px, 6vw, 48px);
   }
 }
 
 @media (max-width: 768px) {
   .faqSection {
-    padding: 4rem 0;
+    padding: 64px 0;
   }
 
   .container {
-    padding: 0 1.5rem;
+    padding: 0 24px;
   }
 
   .faqLayout {
-    gap: 2.5rem;
+    gap: 40px;
   }
 
   .title {
-    font-size: clamp(2rem, 8vw, 2.8rem);
-    margin-bottom: 1rem;
+    font-size: clamp(32px, 8vw, 44.8px);
+    margin-bottom: 16px;
   }
 
   .subtitle {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: 16px;
+    margin-bottom: 24px;
   }
 
 
   .faqQuestion {
-    padding: 1.25rem 1.5rem;
-    font-size: 1rem;
+    padding: 20px 24px;
+    font-size: 16px;
   }
 
   .faqAnswer {
-    padding: 0 1.5rem;
+    padding: 0 24px;
 
     &.show {
-      padding: 0 1.5rem 1.25rem;
+      padding: 0 24px 20px;
     }
   }
 }
 
 @media (max-width: 480px) {
   .faqSection {
-    padding: 3rem 0;
+    padding: 48px 0;
   }
 
   .container {
-    padding: 0 1rem;
+    padding: 0 16px;
   }
 
   .faqLayout {
-    gap: 2rem;
+    gap: 32px;
   }
 
   .title {
-    font-size: clamp(1.8rem, 10vw, 2.4rem);
+    font-size: clamp(28.8px, 10vw, 38.4px);
     line-height: 1.2;
   }
 
   .subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 1.25rem;
+    font-size: 15.2px;
+    margin-bottom: 20px;
   }
 
 
   .faqQuestion {
-    padding: 1rem 1.25rem;
-    font-size: 0.95rem;
+    padding: 16px 20px;
+    font-size: 15.2px;
   }
 
   .faqAnswer {
-    padding: 0 1.25rem;
+    padding: 0 20px;
 
     &.show {
-      padding: 0 1.25rem 1rem;
+      padding: 0 20px 16px;
     }
 
     .answerContent p {
-      font-size: 0.9rem;
+      font-size: 14.4px;
     }
   }
 

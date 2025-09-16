@@ -187,7 +187,7 @@
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 12rem;
+  font-size: 192px;
   font-weight: 900;
   color: rgba(0, 212, 255, 0.15);
   letter-spacing: -0.02em;
@@ -337,7 +337,7 @@
 }
 
 .brandTitle {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -350,7 +350,7 @@
 .brandDescription {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 15.2px;
   margin: 0;
 }
 
@@ -391,7 +391,7 @@
 }
 
 .sectionTitle {
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: 600;
   color: #ffffff;
   margin: 0;
@@ -422,7 +422,7 @@
 .navLink {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   transition: all 0.3s ease;
   position: relative;
   padding: 4px 0;
@@ -457,7 +457,7 @@
 
 .newsletterDescription {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
+  font-size: 14.4px;
   line-height: 1.5;
   margin: 0;
 }
@@ -491,7 +491,7 @@
   outline: none;
   background: transparent;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   padding: 0 16px;
 }
 
@@ -526,7 +526,7 @@
   align-items: center;
   gap: 8px;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8rem;
+  font-size: 12.8px;
 }
 
 // Bottom Section
@@ -556,7 +556,7 @@
 
 .copyright {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
+  font-size: 14.4px;
 }
 
 .legalLinks {
@@ -568,7 +568,7 @@
 .legalLink {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   transition: color 0.3s ease;
 }
 
@@ -578,7 +578,7 @@
 
 .separator {
   color: rgba(255, 255, 255, 0.3);
-  font-size: 0.8rem;
+  font-size: 12.8px;
 }
 
 // Responsive Design
@@ -643,7 +643,7 @@
   }
   
   .ragText {
-    font-size: 8rem;
+    font-size: 128px;
   }
 }
 
@@ -670,7 +670,7 @@
   }
   
   .ragText {
-    font-size: 6rem;
+    font-size: 96px;
   }
 }
 

@@ -15,7 +15,7 @@
   );
   overflow: hidden;
   isolation: isolate;
-  padding: 8rem 0 5rem 0rem;
+  padding: 128px 0 80px 0px;
 }
 
 // Enhanced Background Animations
@@ -162,7 +162,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 32px;
 }
 
 // Hero Content Layout
@@ -195,7 +195,7 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
-  padding: 2rem;
+  padding: 32px;
   width: 280px;
   height: 200px;
   animation: cardFloat 6s ease-in-out infinite;
@@ -228,18 +228,18 @@
 
 .cardHeader {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .cardIcon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 40px;
+  margin-bottom: 8px;
   animation: iconPulse 3s ease-in-out infinite;
 }
 
 .cardHeader h3 {
     color: #fff;
-  font-size: 1.2rem;
+  font-size: 19.2px;
   font-weight: 600;
   margin: 0;
 }
@@ -254,11 +254,11 @@
 .dataFlow {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .dataPoint {
-  font-size: 1.5rem;
+  font-size: 24px;
   animation: dataPointFloat 4s ease-in-out infinite;
   
   &:nth-child(1) { animation-delay: 0s; }
@@ -289,11 +289,11 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 0.8rem;
+  padding: 12.8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
+  gap: 4.8px;
   animation: dataElementFloat 8s ease-in-out infinite;
   z-index: 2;
 
@@ -317,12 +317,12 @@
 }
 
 .dataIcon {
-  font-size: 1.2rem;
+  font-size: 19.2px;
 }
 
 .dataElement span {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -404,10 +404,10 @@
 
 // Title
 .title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(40px, 5vw, 64px);
   line-height: 1.1;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   color: #fff;
 }
 
@@ -433,10 +433,10 @@
 
 // Subtitle
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(16px, 2vw, 20.8px);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   max-width: 600px;
 }
 
@@ -451,10 +451,10 @@
 // Actions
 .actions {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   flex-wrap: wrap;
 }
 
@@ -465,11 +465,11 @@
   justify-content: center;
   background: linear-gradient(135deg, #5da8ff, #a66bff);
   color: #fff;
-  padding: 0.8rem 2rem;
+  padding: 12.8px 32px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -501,29 +501,29 @@
 }
 
 .playIcon {
-  font-size: 0.8rem;
+  font-size: 12.8px;
   animation: pulse 2s ease-in-out infinite;
 }
 
 // Trust badges
 .trustBadges {
   display: flex;
-  gap: 1.5rem;
+  gap: 24px;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .trustItem {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 6.4px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
+  font-size: 13.6px;
   font-weight: 500;
 }
 
 .trustIcon {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 // New Modern Wishlist Card
@@ -561,7 +561,7 @@
   backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  padding: 1.5rem;
+  padding: 24px;
   box-shadow: 
     0 25px 50px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -599,18 +599,18 @@
 
 .wishlistHeader {
   text-align: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 19.2px;
 }
 
 .wishlistIconContainer {
   position: relative;
   display: inline-block;
-  margin-bottom: 1.8rem;
-  margin-top: 0.5rem;
+  margin-bottom: 28.8px;
+  margin-top: 8px;
 }
 
 .wishlistIcon {
-  font-size: 1.5rem;
+  font-size: 24px;
   animation: iconFloat 3s ease-in-out infinite;
   position: relative;
   z-index: 2;
@@ -641,9 +641,9 @@
 }
 
 .wishlistTitle {
-  font-size: 1.3rem;
+  font-size: 20.8px;
   font-weight: 800;
-  margin-bottom: 0.4rem;
+  margin-bottom: 6.4px;
 }
 
 .titleGradient {
@@ -655,25 +655,25 @@
 }
 
 .wishlistSubtitle {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.4;
-  margin-bottom: 1.2rem;
+  margin-bottom: 19.2px;
 }
 
 .wishlistForm {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 12.8px;
 }
 
 .inputGroup {
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 0.4rem;
+  padding: 6.4px;
   transition: all 0.3s ease;
   position: relative;
 
@@ -687,9 +687,9 @@
 .inputIcon {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  padding: 0 0.5rem;
+  padding: 0 8px;
 }
 
 .emailInput {
@@ -697,8 +697,8 @@
   background: transparent;
   border: none;
   color: #fff;
-  padding: 0.6rem 0.8rem;
-  font-size: 0.9rem;
+  padding: 9.6px 12.8px;
+  font-size: 14.4px;
   outline: none;
 
   &::placeholder {
@@ -714,14 +714,14 @@
 .submitButton {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 6.4px;
   background: linear-gradient(135deg, #5da8ff, #a66bff);
   color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
+  padding: 9.6px 19.2px;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -764,7 +764,7 @@
 }
 
 .buttonArrow {
-  font-size: 0.8rem;
+  font-size: 12.8px;
   transition: transform 0.3s ease;
 }
 
@@ -785,15 +785,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
+  gap: 6.4px;
+  font-size: 12.8px;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  margin-top: 0.4rem;
+  margin-top: 6.4px;
 }
 
 .privacyIcon {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   animation: privacyPulse 3s ease-in-out infinite;
 }
 
@@ -806,11 +806,11 @@
 .successIconContainer {
   position: relative;
   display: inline-block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 12.8px;
 }
 
 .successIcon {
-  font-size: 2rem;
+  font-size: 32px;
   animation: successBounce 0.8s ease-out;
   position: relative;
   z-index: 2;
@@ -829,17 +829,17 @@
 }
 
 .successMessage h4 {
-  font-size: 1.2rem;
+  font-size: 19.2px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 0.4rem;
+  margin-bottom: 6.4px;
 }
 
 .successMessage p {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.4;
-  margin-bottom: 0.8rem;
+  margin-bottom: 12.8px;
 }
 
 .successBadge {
@@ -848,9 +848,9 @@
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
   border: 1px solid rgba(34, 197, 94, 0.3);
   color: #22c55e;
-  padding: 0.4rem 0.8rem;
+  padding: 6.4px 12.8px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 12.8px;
   font-weight: 600;
   animation: badgeGlow 2s ease-in-out infinite;
 }
@@ -1145,14 +1145,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 16px 24px;
   background: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .desktopButtons {
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .desktopButton {
@@ -1168,14 +1168,14 @@
 
 .desktopTitle {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
+  font-size: 14.4px;
   font-weight: 500;
 }
 
 .desktopContent {
   position: relative;
   height: calc(100% - 60px);
-  padding: 2.5rem;
+  padding: 40px;
   overflow: hidden;
 }
 
@@ -1185,7 +1185,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 2.5rem;
+  padding: 40px;
   opacity: 0;
   transform: translateX(100%);
   transition: all 1.5s ease-in-out;
@@ -1202,18 +1202,18 @@
 
 .stepHeader {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
 }
 
 .stepIcon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 40px;
+  margin-bottom: 16px;
   animation: iconBounce 4s ease-in-out infinite;
 }
 
 .stepHeader h3 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 600;
   margin: 0;
   background: linear-gradient(135deg, #5da8ff, #a66bff);
@@ -1225,15 +1225,15 @@
 .dataSources {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem; // Increased from 0.8rem
-  margin-bottom: 2rem; // Increased from 1.5rem
+  gap: 16px; // Increased from 12.8px
+  margin-bottom: 32px; // Increased from 24px
 }
 
 .dataSource {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px; // Increased from 12px
-  padding: 1rem; // Increased from 0.8rem
+  padding: 16px; // Increased from 12.8px
   text-align: center;
   transition: all 0.5s ease; // Slowed down from 0.3s
   
@@ -1245,13 +1245,13 @@
 }
 
 .sourceIcon {
-  font-size: 1.8rem; // Increased from 1.5rem
-  margin-bottom: 0.5rem; // Increased from 0.4rem
+  font-size: 28.8px; // Increased from 24px
+  margin-bottom: 8px; // Increased from 6.4px
 }
 
 .dataSource span {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.8rem; // Increased from 0.75rem
+  font-size: 12.8px; // Increased from 12px
   font-weight: 500;
   display: block;
 }
@@ -1259,14 +1259,14 @@
 .dataFeatures {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem; // Increased from 0.5rem
-  margin-bottom: 2rem; // Increased from 1.5rem
+  gap: 12.8px; // Increased from 8px
+  margin-bottom: 32px; // Increased from 24px
 }
 
 .feature {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem; // Increased from 0.8rem
-  padding: 0.5rem 0.9rem; // Increased from 0.4rem 0.8rem
+  font-size: 14.4px; // Increased from 12.8px
+  padding: 8px 14.4px; // Increased from 6.4px 12.8px
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px; // Increased from 8px
   border-left: 4px solid rgba(93, 168, 255, 0.5); // Increased from 3px
@@ -1282,11 +1282,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 12.8px;
 }
 
 .flowPoint {
-  font-size: 1.2rem;
+  font-size: 19.2px;
   animation: flowPointFloat 3s ease-in-out infinite;
   
   &:nth-child(1) { animation-delay: 0s; }
@@ -1304,18 +1304,18 @@
 .modelGallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .modelCard {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 1.2rem;
+  padding: 19.2px;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
   transition: all 0.5s ease;
   
   &:hover {
@@ -1326,28 +1326,28 @@
 }
 
 .modelIcon {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .modelCard span {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
+  font-size: 14.4px;
   font-weight: 500;
 }
 
 .modelFeatures {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 .modelSwitcher {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .switchButton {
@@ -1360,7 +1360,7 @@
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
   
@@ -1373,9 +1373,9 @@
 
 .currentModel {
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   background: rgba(93, 168, 255, 0.2);
   border-radius: 8px;
   border: 1px solid rgba(93, 168, 255, 0.3);
@@ -1383,8 +1383,8 @@
 
 .deploymentOptions {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 .deployButton {
@@ -1392,9 +1392,9 @@
   background: linear-gradient(135deg, #5da8ff, #a66bff);
   color: #fff;
   border: none;
-  padding: 1rem;
+  padding: 16px;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -1418,12 +1418,12 @@
 .deploymentFeatures {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
 .deploymentProgress {
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .progressBar {
@@ -1432,7 +1432,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .progressFill {
@@ -1444,7 +1444,7 @@
 
 .progressText {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8rem;
+  font-size: 12.8px;
   text-align: center;
 }
 
@@ -1452,15 +1452,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 8px;
   color: #22c55e;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   font-weight: 600;
   animation: statusFadeIn 0.5s ease-out;
 }
 
 .statusIcon {
-  font-size: 1.2rem;
+  font-size: 19.2px;
   animation: statusBounce 0.8s ease-out;
 }
 
@@ -1502,11 +1502,11 @@
 
 .progressIndicator {
   position: absolute;
-  bottom: 1rem;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
   z-index: 5;
 }
 
@@ -1627,8 +1627,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding-top: 96px;
+    padding-bottom: 64px;
   }
 
   .heroContent {
