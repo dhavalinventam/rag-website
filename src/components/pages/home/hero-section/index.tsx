@@ -80,12 +80,6 @@ const HeroSection = () => {
     <section className={styles.hero} id="waitlist-sec">
       {/* Enhanced Background Elements */}
       <div className={styles.backgroundElements}>
-        {/* Floating orbs */}
-        <div className={styles.floatingOrb} />
-        <div className={styles.floatingOrb} />
-        <div className={styles.floatingOrb} />
-        <div className={styles.floatingOrb} />
-
         {/* Geometric shapes */}
         <div className={styles.geometricShape} />
         <div className={styles.geometricShape} />

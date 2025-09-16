@@ -68,13 +68,6 @@ const UseCases = () => {
 
   return (
     <section className={styles.useCasesSection}>
-      {/* Animated Background Elements */}
-      <div className={styles.backgroundAnimation}>
-        <div className={styles.floatingOrb}></div>
-        <div className={styles.floatingOrb}></div>
-        <div className={styles.floatingOrb}></div>
-      </div>
-
       <div className="container">
         <div className={styles.headerSection} id="use-cases">
           <div className={styles.badge}>

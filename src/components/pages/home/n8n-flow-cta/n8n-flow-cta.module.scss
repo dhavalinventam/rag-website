@@ -7,53 +7,9 @@
   background: linear-gradient(135deg, #0b0d16 100%, #1a1b2e 75%, #16213e 50%, #1a1b2e 25%, #0b0d16 0%);
 }
 
-// Animated Background Elements
-.backgroundAnimation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.floatingOrb {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(93, 168, 255, 0.1), rgba(166, 107, 255, 0.1));
-  filter: blur(40px);
-  animation: float 20s ease-in-out infinite;
-
-  &:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
-  }
-
-  &:nth-child(2) {
-    width: 200px;
-    height: 200px;
-    top: 60%;
-    right: 10%;
-    animation-delay: -7s;
-  }
-
-  &:nth-child(3) {
-    width: 250px;
-    height: 250px;
-    bottom: 20%;
-    left: 15%;
-    animation-delay: -14s;
-  }
-}
-
 .contentWrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -64,7 +20,10 @@
 .contentSection {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  text-align: center;
 }
 
 .badge {
@@ -107,64 +66,9 @@
   color: $color-text-muted;
   font-size: 16px;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 750px;
 }
 
-.featuresList {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 16px 0;
-}
-
-.featureItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 16px;
-  background: $glass-bg-dark;
-  border: 1px solid $border-light;
-  border-radius: $radius;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-
-  &:hover {
-    border-color: $border-accent;
-    transform: translateX(4px);
-  }
-}
-
-.featureIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: $radius;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, $color-accent-blue, $color-accent-cyan);
-  flex-shrink: 0;
-
-  i {
-    color: white;
-    font-size: 18px;
-  }
-}
-
-.featureContent {
-  h4 {
-    color: $color-text-primary;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 0 4px 0;
-  }
-
-  p {
-    color: $color-text-muted;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0;
-  }
-}
 
 .ctaButtons {
   display: flex;
@@ -173,20 +77,24 @@
 }
 
 .primaryButton {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: linear-gradient(135deg, $color-accent-blue, $color-accent-cyan);
-  border: none;
-  border-radius: $radius;
-  color: white;
-  font-size: 14px;
+  gap: 12px;
+  background: linear-gradient(90deg, #00ffff 0%, #00bfff 50%, #0080ff 100%);
+  color: #0a1a2e;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 50px;
   font-weight: 600;
-  cursor: pointer;
+  font-size: 16px;
   transition: all 0.3s ease;
+  box-shadow: 
+    0 10px 30px rgba(0, 255, 255, 0.4),
+    0 0 0 1px rgba(0, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
+  max-width: fit-content;
+  z-index: 2;
 
   &::before {
     content: '';
@@ -195,201 +103,31 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     transition: left 0.5s ease;
   }
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(93, 168, 255, 0.3);
+    box-shadow: 
+      0 15px 40px rgba(0, 255, 255, 0.5),
+      0 0 0 1px rgba(0, 255, 255, 0.4);
 
     &::before {
       left: 100%;
     }
   }
 
-  i {
-    font-size: 16px;
-    transition: transform 0.3s ease;
-  }
-
-  &:hover i {
-    transform: translateX(4px);
-  }
-}
-
-.secondaryButton {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: transparent;
-  border: 1px solid $border-medium;
-  border-radius: $radius;
-  color: $color-text-primary;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-
-  &:hover {
-    border-color: $border-accent;
-    background: $glass-bg-light;
-    transform: translateY(-2px);
-  }
-
-  i {
-    font-size: 16px;
-  }
-}
-
-// Visual Section
-.visualSection {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-}
-
-.flowDiagram {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.flowNode {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 20px;
-  background: $glass-bg-dark;
-  border: 1px solid $border-light;
-  border-radius: $radius-large;
-  backdrop-filter: blur(20px);
-  transition: all 0.4s ease;
-  animation: nodeFadeIn 0.8s ease-out forwards;
-  opacity: 0;
-  transform: translateY(20px);
-
-  &:hover {
-    transform: translateY(-4px) scale(1.05);
-    border-color: $border-accent;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-  }
-}
-
-.nodeIcon {
-  width: 50px;
-  height: 50px;
-  border-radius: $radius;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, $color-accent-blue, $color-accent-cyan);
-
-  i {
-    color: white;
-    font-size: 20px;
-  }
-}
-
-.flowNode span {
-  color: $color-text-primary;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.flowArrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $color-accent-blue;
-  font-size: 20px;
-  animation: arrowPulse 2s ease-in-out infinite;
-}
-
-.flowGlow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(93, 168, 255, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(40px);
-  animation: glowPulse 3s ease-in-out infinite;
-  z-index: 1;
-}
-
-// Animations
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-20px) rotate(120deg);
-  }
-  66% {
-    transform: translateY(10px) rotate(240deg);
-  }
-}
-
-@keyframes nodeFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes arrowPulse {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-}
-
-@keyframes glowPulse {
-  0%, 100% {
-    opacity: 0.3;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(1.1);
+  .buttonIcon {
+    display: flex;
+    align-items: center;
   }
 }
 
 // Responsive Design
 @media (max-width: 1024px) {
   .contentWrapper {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .visualSection {
-    min-height: 300px;
-  }
-
-  .flowDiagram {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .flowArrow {
-    transform: rotate(90deg);
+    padding: 0 20px;
   }
 }
 
@@ -407,8 +145,7 @@
     align-items: center;
   }
 
-  .primaryButton,
-  .secondaryButton {
+  .primaryButton {
     width: 100%;
     max-width: 280px;
     justify-content: center;
@@ -431,22 +168,6 @@
     }
   }
 
-  .floatingOrb {
-    &:nth-child(1) {
-      width: 150px;
-      height: 150px;
-    }
-
-    &:nth-child(2) {
-      width: 100px;
-      height: 100px;
-    }
-
-    &:nth-child(3) {
-      width: 120px;
-      height: 120px;
-    }
-  }
 }
 
 @media (max-width: 480px) {
@@ -458,28 +179,6 @@
     font-size: 14px;
   }
 
-  .featureItem {
-    padding: 12px;
-  }
-
-  .featureIcon {
-    width: 32px;
-    height: 32px;
-
-    i {
-      font-size: 14px;
-    }
-  }
-
-  .featureContent {
-    h4 {
-      font-size: 14px;
-    }
-
-    p {
-      font-size: 12px;
-    }
-  }
 
   .flowNode {
     padding: 12px;

@@ -7,48 +7,6 @@
   min-height: auto;
 }
 
-// Animated Background Elements
-.backgroundAnimation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.floatingOrb {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(93, 168, 255, 0.1), rgba(166, 107, 255, 0.1));
-  filter: blur(40px);
-  animation: float 20s ease-in-out infinite;
-
-  &:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
-  }
-
-  &:nth-child(2) {
-    width: 200px;
-    height: 200px;
-    top: 60%;
-    right: 10%;
-    animation-delay: -7s;
-  }
-
-  &:nth-child(3) {
-    width: 250px;
-    height: 250px;
-    bottom: 20%;
-    left: 15%;
-    animation-delay: -14s;
-  }
-}
 // Header Section
 .headerSection {
   text-align: center;
@@ -374,23 +332,6 @@
 
   .dummyImage {
     height: 100px;
-  }
-
-  .floatingOrb {
-    &:nth-child(1) {
-      width: 120px;
-      height: 120px;
-    }
-
-    &:nth-child(2) {
-      width: 100px;
-      height: 100px;
-    }
-
-    &:nth-child(3) {
-      width: 110px;
-      height: 110px;
-    }
   }
 }
 

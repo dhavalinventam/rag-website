@@ -6,13 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, 
-    #0b0d16 0%, 
-    #1a1b2e 25%, 
-    #16213e 50%, 
-    #1a1b2e 75%, 
-    #0b0d16 100%
-  );
+  background: linear-gradient(135deg, #0b0d16 100%, #1a1b2e 75%, #16213e 50%, #1a1b2e 25%, #0b0d16 0%);
   overflow: hidden;
   isolation: isolate;
   padding: 128px 0 80px 0px;
@@ -30,66 +24,6 @@
   overflow: hidden;
 }
 
-// Floating orbs with enhanced gradients
-.floatingOrb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.6;
-  animation: floatOrb 20s ease-in-out infinite;
-
-  &:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, 
-      rgba(93, 168, 255, 0.4) 0%, 
-      rgba(166, 107, 255, 0.2) 40%, 
-      transparent 70%
-    );
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
-  }
-
-  &:nth-child(2) {
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, 
-      rgba(166, 107, 255, 0.3) 0%, 
-      rgba(255, 107, 157, 0.15) 50%, 
-      transparent 80%
-    );
-    top: 60%;
-    right: 10%;
-    animation-delay: 8s;
-  }
-
-  &:nth-child(3) {
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, 
-      rgba(255, 107, 157, 0.25) 0%, 
-      rgba(93, 168, 255, 0.1) 60%, 
-      transparent 85%
-    );
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 16s;
-  }
-
-  &:nth-child(4) {
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle, 
-      rgba(93, 168, 255, 0.2) 0%, 
-      rgba(166, 107, 255, 0.1) 45%, 
-      transparent 75%
-    );
-    top: 30%;
-    right: 25%;
-    animation-delay: 12s;
-  }
-}
 
 // Animated grid pattern
 .gridPattern {
@@ -423,13 +357,6 @@
   background-clip: text;
 }
 
-.typingText {
-  // background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
-  // -webkit-background-clip: text;
-  // background-clip: text;
-  // color: transparent;
-  // animation: typingEffect 3s ease-in-out infinite;
-}
 
 // Subtitle
 .subtitle {
@@ -877,24 +804,6 @@
 }
 
 // Enhanced Animations
-@keyframes floatOrb {
-  0%, 100% {
-    transform: translateY(0px) scale(1) rotate(0deg);
-    opacity: 0.6;
-  }
-  25% {
-    transform: translateY(-20px) scale(1.05) rotate(90deg);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(-10px) scale(1.1) rotate(180deg);
-    opacity: 0.7;
-  }
-  75% {
-    transform: translateY(-25px) scale(1.05) rotate(270deg);
-    opacity: 0.9;
-  }
-}
 
 @keyframes geometricFloat {
   0%, 100% {
