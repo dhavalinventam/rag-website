@@ -24,68 +24,75 @@
 }
 
 // Title
+
 .title {
-  font-size: clamp(40px, 5vw, 64px);
-  line-height: 1.1;
+  color: $color-text-primary;
+  font-size: clamp(28.8px, 4vw, 48px);
   font-weight: 700;
-  margin-bottom: 24px;
-  color: #fff;
-}
-
-.titleLine {
-  display: block;
-  overflow: hidden;
-}
-
-.gradientText {
-  background: linear-gradient(135deg, #5da8ff, #a66bff);
+  line-height: 1.2;
+  margin-bottom: 12.8px;
+  background: linear-gradient(135deg, $color-text-primary 0%, $color-text-muted 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  .highlight {
+    background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
-.typingText {
-  color: #fff;
+.subtitle {
+  color: $color-text-primary;
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
 }
+
+// .title {
+//   font-size: clamp(40px, 5vw, 64px);
+//   line-height: 1.1;
+//   font-weight: 700;
+//   margin-bottom: 24px;
+//   color: #fff;
+// }
+
+// .titleLine {
+//   display: block;
+//   overflow: hidden;
+// }
+
+// .gradientText {
+//   background: linear-gradient(135deg, #5da8ff, #a66bff);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+// }
+
+// .typingText {
+//   color: #fff;
+// }
 
 // Subtitle
-.subtitle {
-  font-size: clamp(16px, 2vw, 20.8px);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 32px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .subtitle {
+//   font-size: clamp(16px, 2vw, 20.8px);
+//   line-height: 1.6;
+//   color: rgba(255, 255, 255, 0.8);
+//   margin-bottom: 32px;
+//   max-width: 600px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
-// Trust badges
-.trustBadges {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 40px;
-}
 
-.trustItem {
-  display: flex;
-  align-items: center;
-  gap: 6.4px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 13.6px;
-  font-weight: 500;
-}
-
-.trustIcon {
-  font-size: 16px;
-}
-
-// Early Access Card Styles
+// Early Access Card Styles - Modernized
 .wishlistCard {
   position: relative;
-  max-width: 450px;
-  margin: 32px auto 0;
+  max-width: 700px;
+  margin: 40px auto 0;
   animation: wishlistSlideUp 0.8s ease-out forwards;
   opacity: 0;
   transform: translateY(30px);
@@ -94,38 +101,59 @@
 
 .wishlistGlow {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
   background: radial-gradient(circle at center, 
-    rgba(93, 168, 255, 0.15) 0%, 
-    rgba(166, 107, 255, 0.1) 30%, 
-    transparent 70%
+    rgba(0, 255, 255, 0.12) 0%, 
+    rgba(0, 191, 255, 0.08) 30%, 
+    rgba(0, 128, 255, 0.04) 60%,
+    transparent 80%
   );
-  border-radius: 30px;
-  filter: blur(20px);
-  animation: glowPulse 4s ease-in-out infinite;
+  border-radius: 40px;
+  filter: blur(30px);
+  animation: glowPulse 6s ease-in-out infinite;
   z-index: -1;
 }
 
 .wishlistContent {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.08) 0%, 
-    rgba(255, 255, 255, 0.03) 100%
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.02) 100%
   );
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 24px;
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 32px 150px;
   box-shadow: 
-    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 
+  // Abstract lines decoration
   &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.1) 49%, rgba(0, 255, 255, 0.1) 51%, transparent 52%),
+      linear-gradient(-45deg, transparent 48%, rgba(0, 191, 255, 0.08) 49%, rgba(0, 191, 255, 0.08) 51%, transparent 52%);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Shimmer effect
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -134,20 +162,22 @@
     height: 100%;
     background: linear-gradient(90deg, 
       transparent, 
-      rgba(255, 255, 255, 0.05), 
+      rgba(255, 255, 255, 0.1), 
       transparent
     );
-    transition: left 0.6s ease;
+    transition: left 0.8s ease;
+    z-index: 2;
   }
 
   &:hover {
-    transform: translateY(-5px) scale(1.01);
+    transform: translateY(-8px) scale(1.02);
     box-shadow: 
-      0 30px 60px rgba(0, 0, 0, 0.5),
+      0 30px 60px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 255, 255, 0.2),
       inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    border-color: rgba(93, 168, 255, 0.3);
+    border-color: rgba(0, 255, 255, 0.3);
 
-    &::before {
+    &::after {
       left: 100%;
     }
   }
@@ -155,21 +185,24 @@
 
 .wishlistHeader {
   text-align: center;
-  margin-bottom: 19.2px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 3;
 }
 
 .wishlistIconContainer {
   position: relative;
   display: inline-block;
-  margin-bottom: 28.8px;
+  margin-bottom: 24px;
   margin-top: 8px;
 }
 
 .wishlistIcon {
-  font-size: 24px;
-  animation: iconFloat 3s ease-in-out infinite;
+  font-size: 28px;
+  animation: iconFloat 4s ease-in-out infinite;
   position: relative;
   z-index: 2;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
 }
 
 .iconRing {
@@ -177,11 +210,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(93, 168, 255, 0.3);
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(0, 255, 255, 0.4);
   border-radius: 50%;
-  animation: ringRotate 8s linear infinite;
+  animation: ringRotate 10s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
 }
 
 .iconRing2 {
@@ -189,54 +223,73 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  border: 1px solid rgba(166, 107, 255, 0.2);
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(0, 191, 255, 0.3);
   border-radius: 50%;
-  animation: ringRotate 12s linear infinite reverse;
+  animation: ringRotate 15s linear infinite reverse;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.15);
 }
 
 .wishlistTitle {
-  font-size: 20.8px;
+  font-size: 24px;
   font-weight: 800;
-  margin-bottom: 6.4px;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .titleGradient {
-  background: linear-gradient(135deg, #5da8ff 0%, #a66bff 50%, #ff6b9d 100%);
+  background: linear-gradient(135deg, #00ffff 0%, #00bfff 50%, #0080ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: titleGlow 3s ease-in-out infinite;
+  animation: titleGlow 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
 }
 
 .wishlistSubtitle {
-  font-size: 14.4px;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.4;
-  margin-bottom: 19.2px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-weight: 400;
 }
 
 .wishlistForm {
   display: flex;
   flex-direction: column;
-  gap: 12.8px;
+  gap: 16px;
+  position: relative;
+  z-index: 3;
 }
 
 .inputGroup {
   display: flex;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 6.4px;
-  transition: all 0.3s ease;
+  gap: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  padding: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
   &.focused {
-    border-color: rgba(93, 168, 255, 0.5);
-    box-shadow: 0 0 0 3px rgba(93, 168, 255, 0.1);
-    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 255, 255, 0.4);
+    box-shadow: 
+      0 0 0 3px rgba(0, 255, 255, 0.1),
+      0 8px 20px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.12) 0%, 
+      rgba(255, 255, 255, 0.06) 100%
+    );
   }
 }
 
@@ -245,12 +298,14 @@
   background: transparent;
   border: none;
   color: #fff;
-  padding: 9.6px 12.8px;
-  font-size: 14.4px;
+  padding: 10px 12px;
+  font-size: 16px;
   outline: none;
+  font-weight: 400;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
   }
 
   &:disabled {
@@ -260,21 +315,26 @@
 }
 
 .submitButton {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6.4px;
-  background: linear-gradient(135deg, #5da8ff, #a66bff);
-  color: #fff;
-  border: none;
-  padding: 9.6px 19.2px;
-  border-radius: 8px;
+  gap: 6px;
+  background: linear-gradient(90deg, #00ffff 0%, #00bfff 50%, #0080ff 100%);
+  color: #0a1a2e;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 14.4px;
-  cursor: pointer;
+  font-size: 16px;
   transition: all 0.3s ease;
-  white-space: nowrap;
+  box-shadow: 
+    0 10px 30px rgba(0, 255, 255, 0.4),
+    0 0 0 1px rgba(0, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
+  max-width: fit-content;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
 
   &::before {
     content: '';
@@ -283,17 +343,15 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, 
-      transparent, 
-      rgba(255, 255, 255, 0.2), 
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     transition: left 0.5s ease;
   }
 
   &:hover:not(:disabled) {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(93, 168, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 
+      0 15px 40px rgba(0, 255, 255, 0.5),
+      0 0 0 1px rgba(0, 255, 255, 0.4);
 
     &::before {
       left: 100%;
@@ -304,16 +362,22 @@
     opacity: 0.6;
     cursor: not-allowed;
     transform: none;
+    box-shadow: 
+      0 5px 15px rgba(0, 255, 255, 0.2),
+      0 0 0 1px rgba(0, 255, 255, 0.2);
   }
 
   &.active {
-    background: linear-gradient(135deg, #4a9eff, #8f5aff);
+    background: linear-gradient(90deg, #00e6e6 0%, #00a3cc 50%, #0066cc 100%);
   }
 }
 
 .buttonArrow {
-  font-size: 12.8px;
+  font-size: 16px;
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .submitButton:hover:not(:disabled) .buttonArrow {
@@ -321,10 +385,10 @@
 }
 
 .loadingSpinner {
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top: 2px solid #fff;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(10, 26, 46, 0.3);
+  border-top: 2px solid #0a1a2e;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -333,35 +397,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6.4px;
-  font-size: 12.8px;
-  color: rgba(255, 255, 255, 0.6);
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  margin-top: 6.4px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 3;
 }
 
 .privacyIcon {
-  font-size: 14.4px;
+  font-size: 16px;
   animation: privacyPulse 3s ease-in-out infinite;
 }
 
-// Enhanced Success Message
+// Enhanced Success Message - Modernized
 .successMessage {
   text-align: center;
   animation: successFadeIn 0.6s ease-out;
+  position: relative;
+  z-index: 3;
 }
 
 .successIconContainer {
   position: relative;
   display: inline-block;
-  margin-bottom: 12.8px;
+  margin-bottom: 16px;
 }
 
 .successIcon {
-  font-size: 32px;
+  font-size: 36px;
   animation: successBounce 0.8s ease-out;
   position: relative;
   z-index: 2;
+  filter: drop-shadow(0 0 15px rgba(34, 197, 94, 0.4));
 }
 
 .successRing {
@@ -369,38 +438,46 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  border: 3px solid rgba(34, 197, 94, 0.3);
+  width: 70px;
+  height: 70px;
+  border: 3px solid rgba(34, 197, 94, 0.4);
   border-radius: 50%;
   animation: successRingExpand 1s ease-out;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
 }
 
 .successMessage h4 {
-  font-size: 19.2px;
+  font-size: 22px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 6.4px;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .successMessage p {
-  font-size: 14.4px;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.4;
-  margin-bottom: 12.8px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .successBadge {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: linear-gradient(135deg, 
+    rgba(34, 197, 94, 0.2) 0%, 
+    rgba(34, 197, 94, 0.1) 100%
+  );
+  border: 1px solid rgba(34, 197, 94, 0.4);
   color: #22c55e;
-  padding: 6.4px 12.8px;
-  border-radius: 20px;
-  font-size: 12.8px;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 14px;
   font-weight: 600;
   animation: badgeGlow 2s ease-in-out infinite;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
 }
 
 // Animations
@@ -413,21 +490,21 @@
 
 @keyframes glowPulse {
   0%, 100% {
-    opacity: 0.4;
+    opacity: 0.3;
     transform: scale(1);
   }
   50% {
-    opacity: 0.7;
-    transform: scale(1.03);
+    opacity: 0.6;
+    transform: scale(1.05);
   }
 }
 
 @keyframes iconFloat {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-8px) rotate(5deg);
   }
 }
 
@@ -442,10 +519,10 @@
 
 @keyframes titleGlow {
   0%, 100% {
-    filter: brightness(1);
+    filter: brightness(1) drop-shadow(0 0 20px rgba(0, 255, 255, 0.3));
   }
   50% {
-    filter: brightness(1.1);
+    filter: brightness(1.2) drop-shadow(0 0 30px rgba(0, 255, 255, 0.5));
   }
 }
 
@@ -477,33 +554,43 @@
 
 @keyframes successBounce {
   0% {
-    transform: scale(0);
+    transform: scale(0.3);
+    opacity: 0;
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes successRingExpand {
   0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
   }
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1.2);
     opacity: 0;
   }
 }
 
 @keyframes badgeGlow {
   0%, 100% {
-    box-shadow: 0 0 8px rgba(34, 197, 94, 0.3);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+    transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
+    transform: scale(1.02);
   }
 }
 
@@ -517,42 +604,67 @@
     padding: 0 16px;
   }
 
-  .trustBadges {
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .trustItem {
-    font-size: 12.8px;
-  }
 
   .wishlistCard {
     margin: 24px auto 0;
+    max-width: 400px;
+  }
+
+  .wishlistContent {
+    padding: 24px;
+  }
+
+  .wishlistTitle {
+    font-size: 20px;
+  }
+
+  .wishlistSubtitle {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .title {
-    font-size: 35.2px;
-  }
+  // .title {
+  //   font-size: 35.2px;
+  // }
 
-  .subtitle {
-    font-size: 14.4px;
-  }
+  // .subtitle {
+  //   font-size: 14.4px;
+  // }
 
-  .trustBadges {
-    flex-direction: column;
-    align-items: center;
-    gap: 12.8px;
-  }
 
   .wishlistCard {
     margin: 16px auto 0;
-    padding: 24px;
+    max-width: 350px;
   }
 
-  .emailInput,
+  .wishlistContent {
+    padding: 20px;
+  }
+
+  .wishlistTitle {
+    font-size: 18px;
+  }
+
+  .wishlistSubtitle {
+    font-size: 13px;
+  }
+
+  .emailInput {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+
   .submitButton {
-    font-size: 14.4px;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  .successMessage h4 {
+    font-size: 18px;
+  }
+
+  .successMessage p {
+    font-size: 14px;
   }
 }

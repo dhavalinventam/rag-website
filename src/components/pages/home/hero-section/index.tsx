@@ -78,16 +78,6 @@ const HeroSection = () => {
 
   return (
     <section className={styles.hero} id="waitlist-sec">
-      {/* Enhanced Background Elements */}
-      <div className={styles.backgroundElements}>
-        {/* Geometric shapes */}
-        <div className={styles.geometricShape} />
-        <div className={styles.geometricShape} />
-        <div className={styles.geometricShape} />
-
-        {/* Animated grid pattern */}
-        <div className={styles.gridPattern} />
-      </div>
 
 
 
@@ -234,10 +224,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Animated grid background */}
-      <div className={styles.gridBackground}>
-        <div className={styles.gridLines} />
-      </div>
     </section>
   );
 };

@@ -29,35 +29,31 @@ const DescriptionOverview = () => {
     <section className={styles.overview}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <h1 className={styles.title}>
+          {/* <h1 className={styles.title}>
             <span className={styles.titleLine}>
               <span className={styles.typingText}>Stop Guesswork.</span>
             </span>
             <span className={styles.titleLine}>
               <span className={styles.gradientText}>Build AI That Knows.</span>
             </span>
-          </h1>
+          </span>
+          </h1> */}
 
-          <p className={styles.subtitle}>
+          <h2 className={styles.title}>
+            Transform your 
+            <p> business with best <span className={styles.highlight}> AI tools</span></p>
+          </h2>
+
+          {/* <p className={styles.subtitle}>
             Join the waitlist for instant access to the next-gen RAG platform
             <br />
             no more hallucinations, full data control, and enterprise-grade security.
+          </p> */}
+
+          <p className={styles.subtitle}>
+            Join the waitlist for instant access to the next-gen RAG platform no more hallucinations, full data control, and enterprise-grade security.
           </p>
 
-          <div className={styles.trustBadges}>
-            <div className={styles.trustItem}>
-              <div className={styles.trustIcon}>🔐</div>
-              <span>Enterprise Ready</span>
-            </div>
-            <div className={styles.trustItem}>
-              <div className={styles.trustIcon}>⚡</div>
-              <span>Lightning Fast</span>
-            </div>
-            <div className={styles.trustItem}>
-              <div className={styles.trustIcon}>🌐</div>
-              <span>Global CDN</span>
-            </div>
-          </div>
 
           {/* Early Access Card */}
           <div className={styles.wishlistCard}>

@@ -12,71 +12,9 @@
   padding: 128px 0 80px 0px;
 }
 
-// Enhanced Background Animations
-.backgroundElements {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
 
 
-// Animated grid pattern
-.gridPattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(93, 168, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(93, 168, 255, 0.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-  animation: gridMove 25s linear infinite;
-  opacity: 0.4;
-}
 
-// Floating geometric shapes
-.geometricShape {
-  position: absolute;
-  opacity: 0.1;
-  animation: geometricFloat 15s ease-in-out infinite;
-
-  &:nth-child(5) {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(45deg, rgba(93, 168, 255, 0.3), rgba(166, 107, 255, 0.3));
-    border-radius: 20px;
-    top: 25%;
-    left: 15%;
-    animation-delay: 0s;
-    transform: rotate(45deg);
-  }
-
-  &:nth-child(6) {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(45deg, rgba(166, 107, 255, 0.25), rgba(255, 107, 157, 0.25));
-    border-radius: 50%;
-    top: 70%;
-    right: 20%;
-    animation-delay: 6s;
-  }
-
-  &:nth-child(7) {
-    width: 100px;
-    height: 40px;
-    background: linear-gradient(45deg, rgba(93, 168, 255, 0.2), rgba(166, 107, 255, 0.2));
-    border-radius: 20px;
-    bottom: 30%;
-    left: 60%;
-    animation-delay: 12s;
-  }
-}
 
 // Particle canvas (enhanced)
 .particleCanvas {
@@ -337,35 +275,30 @@
 }
 
 // Title
-.title {
-  font-size: clamp(40px, 5vw, 64px);
-  line-height: 1.1;
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: #fff;
-}
+// .title {
+//   font-size: clamp(40px, 5vw, 64px);
+//   line-height: 1.1;
+//   font-weight: 700;
+//   margin-bottom: 24px;
+//   color: #fff;
+// }
 
-.titleLine {
-  display: block;
-  overflow: hidden;
-}
-
-.gradientText {
-  background: linear-gradient(135deg, #5da8ff, #a66bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+// .gradientText {
+//   background: linear-gradient(135deg, #5da8ff, #a66bff);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+// }
 
 
 // Subtitle
-.subtitle {
-  font-size: clamp(16px, 2vw, 20.8px);
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 32px;
-  max-width: 600px;
-}
+// .subtitle {
+//   font-size: clamp(16px, 2vw, 20.8px);
+//   line-height: 1.6;
+//   color: rgba(255, 255, 255, 0.8);
+//   margin-bottom: 32px;
+//   max-width: 600px;
+// }
 
 .highlight {
   background: linear-gradient(135deg, #5da8ff, #a66bff);
@@ -782,43 +715,9 @@
   animation: badgeGlow 2s ease-in-out infinite;
 }
 
-// Grid background
-.gridBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 0.1;
-}
-
-.gridLines {
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: gridMove 20s linear infinite;
-}
 
 // Enhanced Animations
 
-@keyframes geometricFloat {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg) scale(1);
-    opacity: 0.1;
-  }
-  33% {
-    transform: translateY(-15px) rotate(120deg) scale(1.1);
-    opacity: 0.15;
-  }
-  66% {
-    transform: translateY(-8px) rotate(240deg) scale(0.95);
-    opacity: 0.12;
-  }
-}
 
 @keyframes gradientShift {
   0%, 100% {

@@ -87,29 +87,29 @@
   animation: badgeFloat 3s ease-in-out infinite;
 }
 
-.title {
-  font-size: clamp(40px, 6vw, 64px);
-  line-height: 1.1;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: #fff;
-}
+// .title {
+//   font-size: clamp(40px, 6vw, 64px);
+//   line-height: 1.1;
+//   font-weight: 700;
+//   margin-bottom: 16px;
+//   color: #fff;
+// }
 
-.gradientText {
-  background: linear-gradient(135deg, #5da8ff 0%, #a66bff 50%, #ff6b9d 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gradientShift 4s ease-in-out infinite;
-}
+// .gradientText {
+//   background: linear-gradient(135deg, #5da8ff 0%, #a66bff 50%, #ff6b9d 100%);
+//   -webkit-background-clip: text;
+//   background-clip: text;
+//   color: transparent;
+//   animation: gradientShift 4s ease-in-out infinite;
+// }
 
-.subtitle {
-  font-size: clamp(16px, 2vw, 19.2px);
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 700px;
-  margin: 0 auto;
-}
+// .subtitle {
+//   font-size: clamp(16px, 2vw, 19.2px);
+//   line-height: 1.5;
+//   color: rgba(255, 255, 255, 0.8);
+//   max-width: 700px;
+//   margin: 0 auto;
+// }
 
 .highlight {
   background: linear-gradient(135deg, #5da8ff, #a66bff);
@@ -557,15 +557,15 @@
     margin-bottom: 48px;
   }
 
-  .title {
-    font-size: clamp(32px, 8vw, 48px);
-    margin-bottom: 12.8px;
-  }
+  // .title {
+  //   font-size: clamp(32px, 8vw, 48px);
+  //   margin-bottom: 12.8px;
+  // }
 
-  .subtitle {
-    font-size: clamp(14.4px, 3vw, 17.6px);
-    margin-bottom: 24px;
-  }
+  // .subtitle {
+  //   font-size: clamp(14.4px, 3vw, 17.6px);
+  //   margin-bottom: 24px;
+  // }
 
   .formRow {
     grid-template-columns: 1fr;
@@ -597,9 +597,9 @@
     margin-bottom: 32px;
   }
 
-  .title {
-    font-size: clamp(28.8px, 10vw, 40px);
-  }
+  // .title {
+  //   font-size: clamp(28.8px, 10vw, 40px);
+  // }
 
   .formCard {
     padding: 19.2px;
