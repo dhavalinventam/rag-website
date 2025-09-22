@@ -5,6 +5,7 @@ import "@/styles/global.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 
 // Deprecated font variables removed; use --font-sf from global styles
 
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ScrollToTop />
         <Header />
         <main>{children}</main>
         <Footer />
