@@ -27,7 +27,7 @@
   // margin-bottom: 4rem;
   padding: 3rem 0;
   position: relative;
-  
+
   // &::after {
   //   content: '';
   //   position: absolute;
@@ -75,7 +75,7 @@
   border-radius: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  
+
   &:hover {
     transform: translateY(-5px);
   }
@@ -85,12 +85,12 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  padding: 2.5rem;
+  padding: 28px;
   backdrop-filter: blur(20px);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -102,14 +102,14 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  
+
   &:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(79, 172, 254, 0.3);
-    box-shadow: 
+    box-shadow:
       0 20px 40px rgba(0, 0, 0, 0.3),
       0 0 0 1px rgba(79, 172, 254, 0.1);
-    
+
     &::before {
       opacity: 1;
     }
@@ -117,19 +117,19 @@
 }
 
 .sectionTitle {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
   color: #ffffff;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  
+  gap: 14px;
+
   &::before {
     content: '';
-    width: 6px;
-    height: 40px;
+    width: 4px;
+    height: 30px;
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     border-radius: 3px;
     flex-shrink: 0;
@@ -146,7 +146,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  
+
   &::before {
     content: '▶';
     font-size: 0.8rem;
@@ -158,30 +158,32 @@
 .paragraph {
   font-size: 1.05rem;
   color: #d0d0d0;
-  margin-bottom: 1.8rem;
+  margin-bottom: 18px;
   text-align: left;
   line-height: 1.8;
   font-weight: 400;
 }
 
 .list {
-  margin: 1.5rem 0;
+  // margin: 1.5rem 0;
+  margin-bottom: 0px;
   padding-left: 0;
   list-style: none;
 
   li {
     position: relative;
-    padding: 1rem 0 1rem 3rem;
+    padding: 15px 10px 15px 40px;
     color: #d0d0d0;
     font-size: 1.05rem;
     line-height: 1.7;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
-    
+
     &:last-child {
       border-bottom: none;
+      padding: 15px 10px 0px 40px;
     }
-    
+
     &:hover {
       color: #ffffff;
       padding-left: 3.5rem;
@@ -216,11 +218,11 @@
   background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
   border: 1px solid rgba(79, 172, 254, 0.3);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 10px 24px;
   margin: 2rem 0;
   position: relative;
   overflow: hidden;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -232,7 +234,7 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
-  
+
   &:hover::before {
     opacity: 1;
   }
@@ -257,7 +259,7 @@
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -271,7 +273,7 @@
 
   &:hover {
     color: #00f2fe;
-    
+
     &::after {
       width: 100%;
     }
@@ -291,7 +293,7 @@
 
   .title {
     font-size: 2.8rem;
-    
+
     &::before {
       font-size: 1.5rem;
       top: -15px;
@@ -306,7 +308,7 @@
   .sectionTitle {
     font-size: 1.6rem;
     gap: 0.75rem;
-    
+
     &::before {
       width: 4px;
       height: 32px;
@@ -325,7 +327,7 @@
   .list li {
     font-size: 1rem;
     padding: 0.875rem 0 0.875rem 2.5rem;
-    
+
     &::before {
       width: 20px;
       height: 20px;
@@ -352,7 +354,7 @@
 
   .title {
     font-size: 2.2rem;
-    
+
     &::before {
       font-size: 1.2rem;
       top: -12px;
@@ -367,7 +369,7 @@
   .sectionTitle {
     font-size: 1.4rem;
     gap: 0.5rem;
-    
+
     &::before {
       width: 3px;
       height: 28px;
@@ -386,7 +388,7 @@
   .list li {
     font-size: 0.95rem;
     padding: 0.75rem 0 0.75rem 2.25rem;
-    
+
     &::before {
       width: 18px;
       height: 18px;
