@@ -110,7 +110,7 @@ export default function Footer() {
               <span>© {year} RAG Studio. All rights reserved.</span>
             </div>
             <div className={styles.legalLinks}>
-              <Link className={styles.legalLink} href="#privacy">Privacy Policy</Link>
+              <Link className={styles.legalLink} href="/privacy-policy">Privacy Policy</Link>
               <span className={styles.separator}>•</span>
               <Link className={styles.legalLink} href="#terms">Terms of Service</Link>
               <span className={styles.separator}>•</span>
