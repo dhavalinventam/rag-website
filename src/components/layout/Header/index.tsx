@@ -81,9 +81,10 @@ export default function Header() {
           <div className="d-none d-lg-flex align-items-center gap-2">
             <Link
               href={{ pathname: "/", hash: "waitlist-sec" }}
-              className={"btn btn-gradient-primary rounded-pill"}
+              className={styles.primaryButton}
             >
-              Join Waitlist
+              <span>Join Waitlist</span>
+              
             </Link>
           </div>
         </Container>

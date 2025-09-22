@@ -2,98 +2,31 @@
 
 .useCasesSection {
   position: relative;
-  padding: 4rem 0;
+  padding: 140px 0px 64px 0px;
   overflow: hidden;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   min-height: auto;
-}
-
-// Animated Background Elements
-.backgroundAnimation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.floatingOrb {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-  filter: blur(40px);
-  animation: float 20s ease-in-out infinite;
-
-  &:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
-  }
-
-  &:nth-child(2) {
-    width: 200px;
-    height: 200px;
-    top: 60%;
-    right: 10%;
-    animation-delay: -7s;
-  }
-
-  &:nth-child(3) {
-    width: 250px;
-    height: 250px;
-    bottom: 20%;
-    left: 15%;
-    animation-delay: -14s;
-  }
-}
-
-.gridPattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: gridMove 30s linear infinite;
-}
-
-.gradientOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 30% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
 }
 
 // Header Section
 .headerSection {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
   position: relative;
   z-index: 2;
 }
 
 .badge {
   display: inline-block;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
-  border: 1px solid rgba(102, 126, 234, 0.3);
+  background: $glass-bg-light;
+  border: 1px solid $border-accent;
   border-radius: 50px;
-  padding: 0.5rem 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 8px 24px;
+  margin-bottom: 24px;
   backdrop-filter: blur(10px);
 
   span {
-    color: #667eea;
-    font-size: 0.875rem;
+    color: $color-accent-blue;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -101,18 +34,18 @@
 }
 
 .title {
-  color: #fff;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: $color-text-primary;
+  font-size: clamp(28.8px, 4vw, 48px);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 0.8rem;
-  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+  margin-bottom: 12.8px;
+  background: linear-gradient(135deg, $color-text-primary 0%, $color-text-muted 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
   .highlight {
-    background: linear-gradient(135deg, #5da8ff, #a66bff);
+    background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -120,29 +53,46 @@
 }
 
 .subtitle {
-  color: $color-text-secondary;
-  font-size: 0.95rem;
+  color: $color-text-primary;
+  font-size: 18px;
   max-width: 650px;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 24px;
   line-height: 1.6;
 }
 
-// Use Cases Grid
-.useCasesGrid {
+// Single Grid Layout
+.sectionsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.2rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+  margin-bottom: 40px;
   position: relative;
   z-index: 2;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.useCaseCard {
+// Bottom row container for 3 equal cards
+.bottomRow {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+// Section Card Positioning
+.sectionCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
   position: relative;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 14px;
-  padding: 1.2rem;
+  background: $glass-bg-dark;
+  border: 1px solid $border-light;
+  border-radius: $radius-large;
   backdrop-filter: blur(20px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
@@ -152,101 +102,94 @@
 
   &:hover {
     transform: translateY(-4px) scale(1.01);
-    border-color: rgba(102, 126, 234, 0.3);
-    box-shadow: 
-      0 12px 25px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(102, 126, 234, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-color: $border-accent;
+    box-shadow:
+      0 12px 25px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(93, 168, 255, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    .sectionContent {
+      filter: blur(2px);
+    }
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, $border-medium, transparent);
+  }
+}
+.cardRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  .sectionHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sectionIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: $glass-bg-dark;
+    border: 1px solid $border-medium;
+
+    i {
+      color: $color-text-primary;
+      font-size: 24px;
+    }
+  }
+
+  .sectionTitle {
+    color: $color-text-primary;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .sectionDesc {
+    color: $color-text-muted;
+    font-size: 14.4px;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+    text-align: center;
   }
 }
 
-.cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.iconWrapper {
-  width: 45px;
-  height: 45px;
-  border-radius: 10px;
+.sectionContent {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: blur(20px);
-    opacity: 0.5;
-  }
-
-  i {
-    color: white;
-    font-size: 1.1rem;
-    position: relative;
-    z-index: 1;
-  }
+  z-index: 2;
+  min-height: 160px;
+  background: $glass-bg-dark;
+  border: 1px solid $border-light;
+  border-radius: $radius-large;
+  margin: 5px;
+  z-index: -1;
 }
 
-.categoryTag {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  backdrop-filter: blur(10px);
-}
-
-.cardContent {
-  margin-bottom: 1rem;
-}
-
-.cardTitle {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  line-height: 1.3;
-}
-
-.cardDesc {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
-
-
-.cardGlow {
+.sectionGlow {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 20px;
+  border-radius: $radius-large;
   opacity: 0;
   filter: blur(40px);
   transition: opacity 0.4s ease;
@@ -254,213 +197,50 @@
   z-index: -1;
 }
 
-.useCaseCard:hover .cardGlow {
-  opacity: 0.3;
+.sectionCard:hover .sectionGlow {
+  opacity: 0.2;
 }
 
-// CTA Section
-.ctaSection {
-  position: relative;
-  z-index: 2;
-}
-
-.ctaCard {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-  border: 1px solid rgba(102, 126, 234, 0.2);
-  border-radius: 18px;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem;
-  backdrop-filter: blur(20px);
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
-    border-radius: 18px;
-  }
-}
-
-.ctaContent {
-  flex: 1;
-  position: relative;
-  z-index: 1;
-
-  h3 {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 0.6rem;
-  }
-
-  p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-}
-
-
-
-.ctaVisual {
-  position: relative;
-  z-index: 1;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-// Animated Cube
-.animatedCube {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  position: absolute;
-  animation: cubeRotate 8s linear infinite;
-  border-radius: 8px;
-  box-shadow: 0 0 30px rgba(102, 126, 234, 0.4);
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 10px;
-    filter: blur(10px);
-    opacity: 0.6;
-    z-index: -1;
-  }
-}
-
-// Animated Sphere
-.animatedSphere {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #f093fb, #f5576c);
-  border-radius: 50%;
-  position: absolute;
-  animation: sphereFloat 6s ease-in-out infinite;
-  box-shadow: 0 0 25px rgba(240, 147, 251, 0.4);
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: linear-gradient(135deg, #f093fb, #f5576c);
-    border-radius: 50%;
-    filter: blur(15px);
-    opacity: 0.4;
-    z-index: -1;
-  }
-}
-
-// Animated Rings
-.animatedRings {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-}
-
-.ring {
-  position: absolute;
-  border: 2px solid transparent;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4facfe, #00f2fe) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  &:nth-child(1) {
-    width: 80px;
-    height: 80px;
-    top: 10px;
-    left: 10px;
-    animation: ringRotate 12s linear infinite;
-  }
-
-  &:nth-child(2) {
-    width: 60px;
-    height: 60px;
-    top: 20px;
-    left: 20px;
-    animation: ringRotate 8s linear infinite reverse;
-  }
-
-  &:nth-child(3) {
-    width: 40px;
-    height: 40px;
-    top: 30px;
-    left: 30px;
-    animation: ringRotate 6s linear infinite;
-  }
-}
-
-// Floating Particles
-.floatingParticles {
-  position: absolute;
+.imagePlaceholder {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-primary;
+  font-size: 14.4px;
+  border-radius: 16px;
+  font-weight: 500;
+
+  i {
+    font-size: 32px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+
+  span {
+    font-size: 12.8px;
+    opacity: 0.9;
+  }
 }
 
-.particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: linear-gradient(135deg, #43e97b, #38f9d7);
-  border-radius: 50%;
-  animation: particleFloat 4s ease-in-out infinite;
+.sectionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $radius-large;
+  transition: transform 0.3s ease;
 
-  &:nth-child(1) {
-    top: 20%;
-    left: 30%;
-    animation-delay: 0s;
-  }
-
-  &:nth-child(2) {
-    top: 60%;
-    left: 70%;
-    animation-delay: -1s;
-  }
-
-  &:nth-child(3) {
-    top: 80%;
-    left: 20%;
-    animation-delay: -2s;
-  }
-
-  &:nth-child(4) {
-    top: 30%;
-    left: 80%;
-    animation-delay: -3s;
-  }
-
-  &:nth-child(5) {
-    top: 70%;
-    left: 10%;
-    animation-delay: -1.5s;
+  &:hover {
+    transform: scale(1.05);
   }
 }
 
 // Animations
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
   }
   33% {
@@ -471,15 +251,6 @@
   }
 }
 
-@keyframes gridMove {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(50px, 50px);
-  }
-}
-
 @keyframes cardFadeIn {
   to {
     opacity: 1;
@@ -487,112 +258,106 @@
   }
 }
 
-@keyframes cubeRotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  100% {
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
-}
-
-@keyframes sphereFloat {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.1);
-  }
-}
-
-@keyframes ringRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes particleFloat {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px) scale(1);
-    opacity: 0.7;
-  }
-  25% {
-    transform: translateY(-15px) translateX(10px) scale(1.2);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-25px) translateX(-5px) scale(0.8);
-    opacity: 0.5;
-  }
-  75% {
-    transform: translateY(-10px) translateX(15px) scale(1.1);
-    opacity: 0.9;
-  }
-}
-
 // Responsive Design
+@media (max-width: 1024px) {
+  .sectionsGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .bottomRow {
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2;
+  }
+
+  .sectionCard {
+    &.top-left {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &.top-right {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    &.bottom-left {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &.bottom-center {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    &.bottom-right {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .useCasesSection {
-    padding: 2.5rem 0;
+    padding: 40px 0;
   }
 
-  .useCasesGrid {
+  .sectionsGrid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-rows: auto;
+    gap: 16px;
   }
 
-  .ctaCard {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.2rem;
+  .bottomRow {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    grid-column: 1;
   }
 
-  .ctaContent h3 {
-    font-size: 1.1rem;
+  .sectionCard {
+    &.top-left,
+    &.top-right,
+    &.bottom-left,
+    &.bottom-right,
+    &.bottom-center {
+      grid-column: 1;
+      grid-row: auto;
+      max-width: none;
+      margin: 0;
+    }
   }
 
-  .floatingOrb {
-    &:nth-child(1) {
-      width: 120px;
-      height: 120px;
-    }
-
-    &:nth-child(2) {
-      width: 100px;
-      height: 100px;
-    }
-
-    &:nth-child(3) {
-      width: 110px;
-      height: 110px;
-    }
+  .dummyImage {
+    height: 100px;
   }
 }
 
 @media (max-width: 480px) {
-  .useCaseCard {
-    padding: 1rem;
-  }
-
-  .iconWrapper {
+  .sectionIcon {
     width: 40px;
     height: 40px;
 
     i {
-      font-size: 1rem;
+      font-size: 16px;
     }
   }
 
   .title {
-    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-size: clamp(24px, 4vw, 28.8px);
   }
 
   .subtitle {
-    font-size: 0.85rem;
+    font-size: 13.6px;
+  }
+
+  .sectionTitle {
+    font-size: 17.6px;
+  }
+
+  .sectionDesc {
+    font-size: 13.6px;
   }
 }
-
-

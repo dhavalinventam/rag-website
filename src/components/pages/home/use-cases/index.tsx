@@ -1,143 +1,135 @@
 import styles from "./use-cases.module.scss";
+import Image from "next/image";
 
 const UseCases = () => {
-  const useCases = [
+  const sections = [
     {
-      icon: "bi-credit-card-2-front",
-      title: "Financial Services",
-      desc: "Transform risk assessment, fraud detection, and customer service with AI-powered insights and automation.",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      category: "Finance",
-    },
-    {
-      icon: "bi-heart-pulse",
+      id: "Healthcare",
+      icon: "bi-heart",
       title: "Healthcare",
-      desc: "Enhance patient care and streamline operations with intelligent medical data analysis and automation.",
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      category: "Health",
-    },
-    {
-      icon: "bi-gear-wide-connected",
-      title: "Manufacturing",
-      desc: "Optimize production processes and predict maintenance needs with advanced AI solutions.",
+      desc: "Automate appointment scheduling, symptom checks, and health education to boost patient engagement and streamline care delivery.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      category: "Industry",
+      position: "top-left",
+      image: "/image/jpg/Healthcare.jpeg",
     },
     {
-      icon: "bi-bag",
-      title: "Retail",
-      desc: "Deliver personalized shopping experiences and optimize inventory management with AI.",
-      gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-      category: "Commerce",
-    },
-    {
-      icon: "bi-truck",
-      title: "Logistics",
-      desc: "Streamline supply chain operations and optimize route planning with intelligent automation.",
-      gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-      category: "Transport",
-    },
-    {
+      id: "Legal ",
       icon: "bi-shield-check",
-      title: "Insurance",
-      desc: "Improve risk assessment and claims processing with AI-powered analysis and automation.",
-      gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-      category: "Security",
+      title: "Legal",
+      desc: "Offer instant legal help by answering FAQs and guiding clients through documents, providing 24/7 support for easier access to justice.",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      position: "top-right",
+      image: "/image/jpg/Legal.jpeg",
     },
     {
-      icon: "bi-airplane",
-      title: "Travel & Hospitality",
-      desc: "Enhance guest experiences and optimize operations with intelligent service solutions.",
-      gradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
-      category: "Service",
+      id: "Financial Services",
+      icon: "bi-currency-dollar",
+      title: "Financial Services",
+      desc: "Provide real-time account updates, transaction assistance, and tailored financial advice via a secure, compliant chatbot for banks, insurance, and investments.",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      position: "bottom-left",
+      image: "/image/jpg/Financial-Services.jpeg",
     },
     {
-      icon: "bi-briefcase",
-      title: "Professional Services",
-      desc: "Transform consulting and advisory services with AI-powered insights and automation.",
-      gradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
-      category: "Consulting",
+      id: "Ecom",
+      icon: "bi-cart",
+      title: "Ecom",
+      desc: "Increase sales and customer satisfaction with a smart chatbot that supports product discovery, order tracking, and personalized recommendations anytime.",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      position: "bottom-center",
+      image: "/image/jpg/Ecom.jpeg",
+    },
+    {
+      id: "chatbot",
+      icon: "bi-chat",
+      title: "chatbot",
+      desc: "An AI-powered assistant that automates customer interactions, speeds up response times, and delivers personalized service across multiple industries.",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      position: "bottom-right",
+      image: "/image/jpg/chatbot.jpeg",
     },
   ];
 
+  const renderSectionContent = (section: any) => {
+    // Return dummy image for all sections
+    return (
+      <div className={styles.dummyImage}>
+        <div className={styles.imagePlaceholder}>
+          <Image
+            src={section.image}
+            alt={section.title}
+            fill
+            className={styles.sectionImage}
+          />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className={styles.useCasesSection}>
-      {/* Animated Background Elements */}
-      <div className={styles.backgroundAnimation}>
-        <div className={styles.floatingOrb}></div>
-        <div className={styles.floatingOrb}></div>
-        <div className={styles.floatingOrb}></div>
-        <div className={styles.gridPattern}></div>
-        <div className={styles.gradientOverlay}></div>
-      </div>
-
       <div className="container">
         <div className={styles.headerSection} id="use-cases">
           <div className={styles.badge}>
-            <span>Industry Solutions</span>
+            <span>AI Solutions</span>
           </div>
           <h2 className={styles.title}>
-            Reimagining Industry Workflows
-            <span className={styles.highlight}> with AI</span>
+            Transform your business with
+            <span className={styles.highlight}> best-in-class AI tools</span>
           </h2>
           <p className={styles.subtitle}>
-            Discover how AI is transforming operations across different sectors, delivering
-            unprecedented efficiency and innovation
+            Discover powerful AI capabilities that automate workflows, enhance productivity, and
+            drive innovation across your organization
           </p>
         </div>
 
-        <div className={styles.useCasesGrid}>
-          {useCases.map((useCase, index) => (
+        <div className={styles.sectionsGrid}>
+          {/* Top Row - 2 cards with 50% each */}
+          {sections.slice(0, 2).map((section, index) => (
             <div
-              className={styles.useCaseCard}
-              key={useCase.title}
+              key={section.id}
+              className={`${styles.sectionCard} ${styles[section.position]}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={styles.cardHeader}>
-                <div className={styles.iconWrapper} style={{ background: useCase.gradient }}>
-                  <i className={`bi ${useCase.icon}`}></i>
+              <div className={styles.cardRow}>
+                <div className={styles.sectionHeader}>
+                  <div className={styles.sectionIcon}>
+                    <i className={`bi ${section.icon}`}></i>
+                  </div>
                 </div>
-                <div className={styles.categoryTag}>{useCase.category}</div>
-              </div>
 
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{useCase.title}</h3>
-                <p className={styles.cardDesc}>{useCase.desc}</p>
+                <h3 className={styles.sectionTitle}>{section.title}</h3>
+                <p className={styles.sectionDesc}>{section.desc}</p>
               </div>
+              <div className={styles.sectionContent}>{renderSectionContent(section)}</div>
 
-              <div className={styles.cardGlow} style={{ background: useCase.gradient }}></div>
+              <div className={styles.sectionGlow} style={{ background: section.gradient }}></div>
             </div>
           ))}
-        </div>
 
-        <div className={styles.ctaSection}>
-          <div className={styles.ctaCard}>
-            <div className={styles.ctaContent}>
-              <h3>Ready to Transform Your Industry?</h3>
-              <p>
-                Join thousands of companies already leveraging AI to revolutionize their operations
-              </p>
-              <a href="#waitlist-sec" className="btn btn-gradient-primary rounded-pill">
-                <span>Get Early Access</span>
-                <i className="bi bi-rocket-takeoff"></i>
-              </a>
-            </div>
-            <div className={styles.ctaVisual}>
-              <div className={styles.animatedCube}></div>
-              <div className={styles.animatedSphere}></div>
-              <div className={styles.animatedRings}>
-                <div className={styles.ring}></div>
-                <div className={styles.ring}></div>
-                <div className={styles.ring}></div>
+          {/* Bottom Row - 3 equal cards */}
+          <div className={styles.bottomRow}>
+            {sections.slice(2).map((section, index) => (
+              <div
+                key={section.id}
+                className={`${styles.sectionCard} ${styles[section.position]}`}
+                style={{ animationDelay: `${(index + 2) * 0.1}s` }}
+              >
+                <div className={styles.cardRow}>
+                  <div className={styles.sectionHeader}>
+                    <div className={styles.sectionIcon}>
+                      <i className={`bi ${section.icon}`}></i>
+                    </div>
+                  </div>
+
+                  <h3 className={styles.sectionTitle}>{section.title}</h3>
+                  <p className={styles.sectionDesc}>{section.desc}</p>
+                </div>
+                <div className={styles.sectionContent}>{renderSectionContent(section)}</div>
+
+                <div className={styles.sectionGlow} style={{ background: section.gradient }}></div>
               </div>
-              <div className={styles.floatingParticles}>
-                <div className={styles.particle}></div>
-                <div className={styles.particle}></div>
-                <div className={styles.particle}></div>
-                <div className={styles.particle}></div>
-                <div className={styles.particle}></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
