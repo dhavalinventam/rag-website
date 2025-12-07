@@ -24,29 +24,6 @@
   align-items: center;
 }
 
-.title {
-  color: $color-text-primary;
-  font-size: clamp(32px, 4vw, 48px);
-  font-weight: 700;
-  line-height: 1.2;
-  background: linear-gradient(135deg, $color-text-primary 0%, $color-text-muted 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  .highlight {
-    background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}
-
-.subtitle {
-  color: $color-text-muted;
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 750px;
 }
 
 

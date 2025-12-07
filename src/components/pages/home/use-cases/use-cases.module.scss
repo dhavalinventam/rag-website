@@ -33,32 +33,6 @@
   }
 }
 
-.title {
-  color: $color-text-primary;
-  font-size: clamp(28.8px, 4vw, 48px);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 12.8px;
-  background: linear-gradient(135deg, $color-text-primary 0%, $color-text-muted 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  .highlight {
-    background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}
-
-.subtitle {
-  color: $color-text-primary;
-  font-size: 18px;
-  max-width: 650px;
-  margin: 0 auto 24px;
-  line-height: 1.6;
-}
 
 // Single Grid Layout
 .sectionsGrid {
@@ -345,13 +319,6 @@
     }
   }
 
-  .title {
-    font-size: clamp(24px, 4vw, 28.8px);
-  }
-
-  .subtitle {
-    font-size: 13.6px;
-  }
 
   .sectionTitle {
     font-size: 17.6px;

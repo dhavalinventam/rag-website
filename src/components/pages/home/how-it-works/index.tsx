@@ -17,11 +17,11 @@ const HowItWorks = () => {
           <div className={styles.badge}>
             <span className={styles.badgeText}>Simple Process</span>
           </div>
-          <h2 className={styles.title}>
+          <h2 className="section-title">
             Transform Your Data into
-            <span className={styles.highlight}> Intelligent Insights</span>
+            <span className="highlight"> Intelligent Insights</span>
           </h2>
-          <p className={styles.subtitle}>
+          <p className="section-subtitle">
             Our streamlined process makes AI implementation effortless. From data connection to
             deployment, we handle the complexity so you can focus on results.
           </p>

@@ -157,3 +157,55 @@ main {
   min-height: 60svh;
 }
 
+// Global Section Title and Subtitle Classes
+.section-title {
+  color: #fff;
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  .highlight {
+    background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+// Responsive adjustments for global classes
+@media (max-width: 768px) {
+  .section-title {
+    font-size: clamp(28.8px, 5.5vw, 44.8px);
+    margin-bottom: 12.8px;
+  }
+
+  .section-subtitle {
+    font-size: clamp(15.2px, 2.8vw, 17.6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: clamp(25.6px, 7.5vw, 35.2px);
+    margin-bottom: 12.8px;
+  }
+
+  .section-subtitle {
+    font-size: 14.4px;
+  }
+}
+

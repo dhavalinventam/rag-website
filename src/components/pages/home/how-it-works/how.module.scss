@@ -124,33 +124,6 @@
   letter-spacing: 0.5px;
 }
 
-.title {
-  color: #fff;
-  font-size: clamp(32px, 4.5vw, 48px);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.highlight {
-  background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.subtitle {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 18px;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
 
 // Timeline container
 .timelineContainer {
@@ -318,13 +291,6 @@
     margin-bottom: 32px;
   }
   
-  .title {
-    font-size: clamp(28.8px, 5vw, 40px);
-  }
-  
-  .subtitle {
-    font-size: 15.2px;
-  }
   
   .timeline {
     &::before {
@@ -381,14 +347,6 @@
     margin-bottom: 24px;
   }
   
-  .title {
-    font-size: clamp(25.6px, 6vw, 32px);
-    margin-bottom: 12.8px;
-  }
-  
-  .subtitle {
-    font-size: 14.4px;
-  }
   
   .timelineStep {
     margin-bottom: 32px;

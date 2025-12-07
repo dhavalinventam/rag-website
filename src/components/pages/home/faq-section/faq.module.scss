@@ -209,22 +209,6 @@
   top: 32px;
 }
 
-.title {
-  color: #fff;
-  font-size: clamp(40px, 5vw, 56px);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  letter-spacing: -0.02em;
-}
-
-.subtitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 32px;
-  max-width: 400px;
-}
 
 .primaryButton {
   display: inline-flex;
@@ -502,9 +486,6 @@
     margin: 0 auto;
   }
 
-  .title {
-    font-size: clamp(35.2px, 6vw, 48px);
-  }
 }
 
 @media (max-width: 768px) {
@@ -520,15 +501,6 @@
     gap: 40px;
   }
 
-  .title {
-    font-size: clamp(32px, 8vw, 44.8px);
-    margin-bottom: 16px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    margin-bottom: 24px;
-  }
 
 
   .faqQuestion {
@@ -558,15 +530,6 @@
     gap: 32px;
   }
 
-  .title {
-    font-size: clamp(28.8px, 10vw, 38.4px);
-    line-height: 1.2;
-  }
-
-  .subtitle {
-    font-size: 15.2px;
-    margin-bottom: 20px;
-  }
 
 
   .faqQuestion {

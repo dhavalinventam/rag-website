@@ -334,12 +334,12 @@ const FeaturesSection = () => {
             <span className={styles.badgeText}>Powerful Features</span>
           </div>
 
-          <h2 className={styles.title}>
+          <h2 className="section-title">
             Everything you need to
-            <span className={styles.highlight}> build RAG applications</span>
+            <span className="highlight"> build RAG applications</span>
           </h2>
 
-          <p className={styles.subtitle}>
+          <p className="section-subtitle">
             From data ingestion to model deployment, we&apos;ve got you covered with
             enterprise-grade tools that scale with your needs.
           </p>

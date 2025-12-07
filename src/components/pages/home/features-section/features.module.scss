@@ -143,33 +143,6 @@
   letter-spacing: 0.5px;
 }
 
-.title {
-  color: #fff;
-  font-size: clamp(32px, 4.5vw, 48px);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.highlight {
-  background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.subtitle {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 18px;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
 
 // Features Grid
 .featuresGrid {
@@ -382,14 +355,6 @@
     margin-bottom: 32px;
   }
 
-  .title {
-    font-size: clamp(28.8px, 5.5vw, 44.8px);
-    margin-bottom: 12.8px;
-  }
-
-  .subtitle {
-    font-size: clamp(15.2px, 2.8vw, 17.6px);
-  }
 
   .featuresGrid {
     grid-template-columns: 1fr;
@@ -444,13 +409,6 @@
     font-size: 12px;
   }
 
-  .title {
-    font-size: clamp(25.6px, 7.5vw, 35.2px);
-  }
-
-  .subtitle {
-    font-size: 14.4px;
-  }
 
   .featuresGrid {
     gap: 16px;

@@ -73,11 +73,11 @@ const UseCases = () => {
           <div className={styles.badge}>
             <span>AI Solutions</span>
           </div>
-          <h2 className={styles.title}>
+          <h2 className="section-title">
             Transform your business with
-            <span className={styles.highlight}> best-in-class AI tools</span>
+            <span className="highlight"> best-in-class AI tools</span>
           </h2>
-          <p className={styles.subtitle}>
+          <p className="section-subtitle">
             Discover powerful AI capabilities that automate workflows, enhance productivity, and
             drive innovation across your organization
           </p>

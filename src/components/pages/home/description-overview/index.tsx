@@ -41,7 +41,7 @@ const DescriptionOverview = () => {
           </h1> */}
 
           <motion.h2 
-            className={styles.title}
+            className="section-title"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -54,18 +54,18 @@ const DescriptionOverview = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              {" "}business with best <span className={styles.highlight}> AI tools</span>
+              {" "}business with best <span className="highlight"> AI tools</span>
             </motion.p>
           </motion.h2>
 
-          {/* <p className={styles.subtitle}>
+          {/* <p className="section-subtitle">
             Join the waitlist for instant access to the next-gen RAG platform
             <br />
             no more hallucinations, full data control, and enterprise-grade security.
           </p> */}
 
           <motion.p 
-            className={styles.subtitle}
+            className="section-subtitle"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

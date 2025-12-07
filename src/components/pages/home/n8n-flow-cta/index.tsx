@@ -11,12 +11,12 @@ const N8nFlowCTA = () => {
               <span>n8n Workflow</span>
             </div>
             
-            <h2 className={styles.title}>
+            <h2 className="section-title">
               Automate your business 
-              <p> processes with <span className={styles.highlight}> n8n workflows</span></p>
+              <p> processes with <span className="highlight"> n8n workflows</span></p>
             </h2>
             
-            <p className={styles.subtitle}>
+            <p className="section-subtitle">
               Connect your favorite tools and services to create powerful automated workflows. 
               From simple data transfers to complex business logic, n8n makes automation accessible to everyone.
             </p>

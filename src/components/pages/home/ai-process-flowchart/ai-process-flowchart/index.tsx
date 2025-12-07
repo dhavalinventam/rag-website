@@ -147,17 +147,17 @@ const AIProcessFlowchart = () => {
           transition={{ duration: 0.6 }}
         >
           <motion.h2 
-            className={styles.title}
+            className="section-title"
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Everything you need to
-            <span className={styles.highlight}> build RAG applications</span>
+            <span className="highlight"> build RAG applications</span>
           </motion.h2>
           <motion.p 
-            className={styles.subtitle}
+            className="section-subtitle"
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
