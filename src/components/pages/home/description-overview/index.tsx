@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 import styles from "./description-overview.module.scss";
 
 const DescriptionOverview = () => {
@@ -127,7 +128,7 @@ const DescriptionOverview = () => {
                       repeatDelay: 3
                     }}
                   >
-                    🎯
+                    <Icon icon="mdi:target" width="28" height="28" />
                   </motion.div>
                   <div className={styles.iconRing} />
                   <div className={styles.iconRing2} />
@@ -200,7 +201,7 @@ const DescriptionOverview = () => {
                               repeatDelay: 1
                             }}
                           >
-                            →
+                            <Icon icon="mdi:arrow-right" width="16" height="16" />
                           </motion.div>
                         </>
                       )}
@@ -213,7 +214,9 @@ const DescriptionOverview = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 1 }}
                   >
-                    <div className={styles.privacyIcon}>🔒</div>
+                    <div className={styles.privacyIcon}>
+                      <Icon icon="mdi:lock" width="16" height="16" />
+                    </div>
                     <span>We respect your privacy. No spam, ever.</span>
                   </motion.div>
                 </motion.form>
@@ -248,7 +251,7 @@ const DescriptionOverview = () => {
                         delay: 0.3
                       }}
                     >
-                      ✅
+                      <Icon icon="mdi:check-circle" width="36" height="36" />
                     </motion.div>
                     <div className={styles.successRing} />
                   </motion.div>
@@ -274,7 +277,10 @@ const DescriptionOverview = () => {
                     transition={{ duration: 0.5, delay: 0.6 }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <span>🎉 Early Access Granted</span>
+                    <span>
+                      <Icon icon="mdi:party-popper" width="16" height="16" style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} />
+                      Early Access Granted
+                    </span>
                   </motion.div>
                 </motion.div>
               )}

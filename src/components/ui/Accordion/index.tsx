@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Icon } from '@iconify/react';
 import styles from './Accordion.module.scss';
 
 interface AccordionItem {
@@ -51,21 +52,15 @@ const Accordion: React.FC<AccordionProps> = ({
             >
               <span className={styles.accordionTitle}>{item.title}</span>
               <div className={`${styles.accordionIcon} ${isOpen ? styles.rotated : ''}`}>
-                <svg
-                  width="20"
+                <Icon 
+                  icon="mdi:chevron-down" 
+                  width="20" 
                   height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 9L12 15L18 9"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                  style={{ 
+                    transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                  }}
+                />
               </div>
             </button>
             

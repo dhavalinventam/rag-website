@@ -345,36 +345,9 @@
   height: 20px;
   position: relative;
   flex-shrink: 0;
-}
-
-.iconLine {
-  position: absolute;
-  background: #fff;
-  border-radius: 1px;
-  transition: all 0.3s ease;
-
-  &:first-child {
-    width: 2px;
-    height: 12px;
-    top: 4px;
-    left: 9px;
-    transform: rotate(90deg);
-  }
-
-  &:last-child {
-    width: 2px;
-    height: 12px;
-    top: 4px;
-    left: 9px;
-  }
-
-  &.rotated {
-    transform: rotate(90deg);
-  }
-
-  &.hidden {
-    opacity: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .faqAnswer {

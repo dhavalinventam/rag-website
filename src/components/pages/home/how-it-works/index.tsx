@@ -1,4 +1,5 @@
 import styles from "./how.module.scss";
+import { Icon } from "@iconify/react";
 
 const HowItWorks = () => {
   return (
@@ -34,35 +35,7 @@ const HowItWorks = () => {
               <div className={styles.stepContent}>
                 <div className={styles.stepNumber}>01</div>
                 <div className={styles.stepIcon}>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2L2 7L12 12L22 7L12 2Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 17L12 22L22 17"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 12L12 17L22 12"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Icon icon="mdi:layers" width="32" height="32" />
                 </div>
                 <div className={styles.stepInfo}>
                   <h3 className={styles.stepTitle}>Connect Your Data</h3>
@@ -84,42 +57,7 @@ const HowItWorks = () => {
               <div className={styles.stepContent}>
                 <div className={styles.stepNumber}>02</div>
                 <div className={styles.stepIcon}>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9 3V5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15V3H13V5H11V3H9Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9 9H15"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9 13H15"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M9 17H15"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Icon icon="mdi:calendar-check" width="32" height="32" />
                 </div>
                 <div className={styles.stepInfo}>
                   <h3 className={styles.stepTitle}>Choose Your AI Model</h3>
@@ -141,42 +79,7 @@ const HowItWorks = () => {
               <div className={styles.stepContent}>
                 <div className={styles.stepNumber}>03</div>
                 <div className={styles.stepIcon}>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 2L2 7L12 12L22 7L12 2Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 17L12 22L22 17"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M2 12L12 17L22 12"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M12 12L12 22"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Icon icon="mdi:rocket-launch" width="32" height="32" />
                 </div>
                 <div className={styles.stepInfo}>
                   <h3 className={styles.stepTitle}>Deploy & Scale</h3>

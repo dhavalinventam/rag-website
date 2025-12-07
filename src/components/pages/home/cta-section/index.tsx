@@ -1,4 +1,5 @@
 import styles from "./cta-section.module.scss";
+import { Icon } from "@iconify/react";
 
 const CTASection = () => {
   return (
@@ -45,9 +46,7 @@ const CTASection = () => {
               <a href="#contact" className={styles.primaryButton}>
                 <span>Contact For Demo</span>
                 <div className={styles.buttonIcon}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M13 7L18 12L13 17M6 12H18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <Icon icon="mdi:arrow-right" width="20" height="20" />
                 </div>
               </a>
             </div>

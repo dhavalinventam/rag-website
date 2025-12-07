@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Icon } from "@iconify/react";
 import styles from "./page.module.scss";
 
 export default function ContactPage() {
@@ -61,21 +62,27 @@ export default function ContactPage() {
           {/* Contact Information */}
           <div className={styles.contactInfo}>
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>📧</div>
+              <div className={styles.infoIcon}>
+                <Icon icon="mdi:email" width="32" height="32" />
+              </div>
               <h3>Email Us</h3>
               <p>hello@ragplatform.com</p>
               <span>We&apos;ll respond within 24 hours</span>
             </div>
 
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>💬</div>
+              <div className={styles.infoIcon}>
+                <Icon icon="mdi:chat" width="32" height="32" />
+              </div>
               <h3>Live Chat</h3>
               <p>Available 24/7</p>
               <span>Get instant support</span>
             </div>
 
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>📞</div>
+              <div className={styles.infoIcon}>
+                <Icon icon="mdi:phone" width="32" height="32" />
+              </div>
               <h3>Call Us</h3>
               <p>+1 (555) 123-4567</p>
               <span>Mon-Fri, 9AM-6PM EST</span>
@@ -176,7 +183,7 @@ export default function ContactPage() {
                     ) : (
                       <>
                         <span>Send Message</span>
-                        <i className="bi bi-arrow-right"></i>
+                        <Icon icon="mdi:arrow-right" width="16" height="16" />
                       </>
                     )}
                   </button>
@@ -185,14 +192,19 @@ export default function ContactPage() {
             ) : (
               <div className={styles.successCard}>
                 <div className={styles.successGlow} />
-                <div className={styles.successIcon}>✅</div>
+                <div className={styles.successIcon}>
+                  <Icon icon="mdi:check-circle" width="48" height="48" />
+                </div>
                 <h2>Message Sent Successfully!</h2>
                 <p>
                   Thank you for reaching out. We've received your message and will get back to you
                   within 24 hours.
                 </p>
                 <div className={styles.successBadge}>
-                  <span>🎉 We'll be in touch soon!</span>
+                  <span>
+                    <Icon icon="mdi:party-popper" width="16" height="16" style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} />
+                    We'll be in touch soon!
+                  </span>
                 </div>
               </div>
             )}

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
 import styles from "./hero.module.scss";
 
 const HeroSection = () => {
@@ -144,21 +145,29 @@ const HeroSection = () => {
                     transition={{ duration: 0.5 }}
                   >
                     <div className={styles.stepHeader}>
-                      <div className={styles.stepIcon}>🔗</div>
+                      <div className={styles.stepIcon}>
+                        <Icon icon="mdi:link" width="40" height="40" />
+                      </div>
                       <h3>Connect Your Data</h3>
                     </div>
                     
                     <div className={styles.dataSources}>
                       <div className={styles.dataSource}>
-                        <div className={styles.sourceIcon}>📁</div>
+                        <div className={styles.sourceIcon}>
+                          <Icon icon="mdi:folder" width="28" height="28" />
+                        </div>
                         <span>Upload Files</span>
                       </div>
                       <div className={styles.dataSource}>
-                        <div className={styles.sourceIcon}>🗄️</div>
+                        <div className={styles.sourceIcon}>
+                          <Icon icon="mdi:database" width="28" height="28" />
+                        </div>
                         <span>Database</span>
                       </div>
                       <div className={styles.dataSource}>
-                        <div className={styles.sourceIcon}>🌐</div>
+                        <div className={styles.sourceIcon}>
+                          <Icon icon="mdi:web" width="28" height="28" />
+                        </div>
                         <span>Web Content</span>
                       </div>
                     </div>
@@ -170,11 +179,17 @@ const HeroSection = () => {
                     </div>
                     
                     <div className={styles.dataFlow}>
-                      <div className={styles.flowPoint}>📊</div>
+                      <div className={styles.flowPoint}>
+                        <Icon icon="mdi:chart-bar" width="19" height="19" />
+                      </div>
                       <div className={styles.flowLine}></div>
-                      <div className={styles.flowPoint}>⚡</div>
+                      <div className={styles.flowPoint}>
+                        <Icon icon="mdi:lightning-bolt" width="19" height="19" />
+                      </div>
                       <div className={styles.flowLine}></div>
-                      <div className={styles.flowPoint}>🔒</div>
+                      <div className={styles.flowPoint}>
+                        <Icon icon="mdi:lock" width="19" height="19" />
+                      </div>
                     </div>
                   </motion.div>
 
@@ -189,21 +204,29 @@ const HeroSection = () => {
                     transition={{ duration: 0.5 }}
                   >
                     <div className={styles.stepHeader}>
-                      <div className={styles.stepIcon}>🧠</div>
+                      <div className={styles.stepIcon}>
+                        <Icon icon="mdi:brain" width="40" height="40" />
+                      </div>
                       <h3>Choose Your AI Model</h3>
                     </div>
                     
                     <div className={styles.modelGallery}>
                       <div className={styles.modelCard}>
-                        <div className={styles.modelIcon}>📈</div>
+                        <div className={styles.modelIcon}>
+                          <Icon icon="mdi:chart-line" width="24" height="24" />
+                        </div>
                         <span>Predictive Analytics</span>
                       </div>
                       <div className={styles.modelCard}>
-                        <div className={styles.modelIcon}>💬</div>
+                        <div className={styles.modelIcon}>
+                          <Icon icon="mdi:chat" width="24" height="24" />
+                        </div>
                         <span>Natural Language</span>
                       </div>
                       <div className={styles.modelCard}>
-                        <div className={styles.modelIcon}>🖼️</div>
+                        <div className={styles.modelIcon}>
+                          <Icon icon="mdi:image" width="24" height="24" />
+                        </div>
                         <span>Image Recognition</span>
                       </div>
                     </div>
@@ -215,9 +238,13 @@ const HeroSection = () => {
                     </div>
                     
                     <div className={styles.modelSwitcher}>
-                      <div className={styles.switchButton}>←</div>
+                      <div className={styles.switchButton}>
+                        <Icon icon="mdi:chevron-left" width="16" height="16" />
+                      </div>
                       <div className={styles.currentModel}>GPT-4</div>
-                      <div className={styles.switchButton}>→</div>
+                      <div className={styles.switchButton}>
+                        <Icon icon="mdi:chevron-right" width="16" height="16" />
+                      </div>
                     </div>
                   </motion.div>
 
@@ -232,7 +259,9 @@ const HeroSection = () => {
                     transition={{ duration: 0.5 }}
                   >
                     <div className={styles.stepHeader}>
-                      <div className={styles.stepIcon}>🚀</div>
+                      <div className={styles.stepIcon}>
+                        <Icon icon="mdi:rocket-launch" width="40" height="40" />
+                      </div>
                       <h3>Deploy & Scale</h3>
                     </div>
                     
@@ -255,7 +284,9 @@ const HeroSection = () => {
                     </div>
                     
                     <div className={styles.deploymentStatus}>
-                      <div className={styles.statusIcon}>✅</div>
+                      <div className={styles.statusIcon}>
+                        <Icon icon="mdi:check-circle" width="19" height="19" />
+                      </div>
                       <span>Deployed Successfully</span>
                     </div>
                   </motion.div>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Icon } from "@iconify/react";
 import styles from "./faq.module.scss";
 
 const FAQSection = () => {
@@ -79,9 +80,7 @@ const FAQSection = () => {
                 <a href="#contact" className={styles.primaryButton}>
                   <span>Contact sales</span>
                   <div className={styles.buttonIcon}>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    <Icon icon="mdi:chevron-right" width="16" height="16" />
                   </div>
                 </a>
               </div>
@@ -100,8 +99,15 @@ const FAQSection = () => {
                   >
                     <span className={styles.questionText}>{faq.question}</span>
                     <div className={styles.faqIcon}>
-                      <div className={`${styles.iconLine} ${expandedFaq === index ? styles.rotated : ""}`} />
-                      <div className={`${styles.iconLine} ${expandedFaq === index ? styles.hidden : ""}`} />
+                      <Icon 
+                        icon="mdi:chevron-down" 
+                        width="20" 
+                        height="20"
+                        style={{ 
+                          transform: expandedFaq === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                          transition: 'transform 0.3s ease'
+                        }}
+                      />
                     </div>
                   </button>
                   <div className={`${styles.faqAnswer} ${expandedFaq === index ? styles.show : ""}`}>

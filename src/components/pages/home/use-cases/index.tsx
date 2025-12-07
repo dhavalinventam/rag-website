@@ -1,11 +1,12 @@
 import styles from "./use-cases.module.scss";
 import Image from "next/image";
+import { Icon } from "@iconify/react";
 
 const UseCases = () => {
   const sections = [
     {
       id: "Healthcare",
-      icon: "bi-heart",
+      icon: "mdi:heart",
       title: "Healthcare",
       desc: "Automate appointment scheduling, symptom checks, and health education to boost patient engagement and streamline care delivery.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
@@ -14,7 +15,7 @@ const UseCases = () => {
     },
     {
       id: "Legal ",
-      icon: "bi-shield-check",
+      icon: "mdi:shield-check",
       title: "Legal",
       desc: "Offer instant legal help by answering FAQs and guiding clients through documents, providing 24/7 support for easier access to justice.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
@@ -23,7 +24,7 @@ const UseCases = () => {
     },
     {
       id: "Financial Services",
-      icon: "bi-currency-dollar",
+      icon: "mdi:currency-usd",
       title: "Financial Services",
       desc: "Provide real-time account updates, transaction assistance, and tailored financial advice via a secure, compliant chatbot for banks, insurance, and investments.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
@@ -32,7 +33,7 @@ const UseCases = () => {
     },
     {
       id: "Ecom",
-      icon: "bi-cart",
+      icon: "mdi:cart",
       title: "Ecom",
       desc: "Increase sales and customer satisfaction with a smart chatbot that supports product discovery, order tracking, and personalized recommendations anytime.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
@@ -41,7 +42,7 @@ const UseCases = () => {
     },
     {
       id: "chatbot",
-      icon: "bi-chat",
+      icon: "mdi:chat",
       title: "chatbot",
       desc: "An AI-powered assistant that automates customer interactions, speeds up response times, and delivers personalized service across multiple industries.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
@@ -94,7 +95,7 @@ const UseCases = () => {
               <div className={styles.cardRow}>
                 <div className={styles.sectionHeader}>
                   <div className={styles.sectionIcon}>
-                    <i className={`bi ${section.icon}`}></i>
+                    <Icon icon={section.icon} width="24" height="24" />
                   </div>
                 </div>
 
@@ -118,7 +119,7 @@ const UseCases = () => {
                 <div className={styles.cardRow}>
                   <div className={styles.sectionHeader}>
                     <div className={styles.sectionIcon}>
-                      <i className={`bi ${section.icon}`}></i>
+                      <Icon icon={section.icon} width="24" height="24" />
                     </div>
                   </div>
 

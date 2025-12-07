@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { Icon } from "@iconify/react";
 import styles from "./features.module.scss";
 
 const FeaturesSection = () => {
@@ -142,21 +143,7 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      icon: (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 1 1 7 7l-1 1" />
-          <path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 1 1-7-7l1-1" />
-        </svg>
-      ),
+      icon: <Icon icon="mdi:link-variant" width="32" height="32" />,
       title: "Connect Any Data Source",
       description:
         "Bring files, URLs, databases, and more. We handle chunking, embeddings, and storage.",
@@ -164,22 +151,7 @@ const FeaturesSection = () => {
       delay: "0s",
     },
     {
-      icon: (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M12 3l8 4-8 4-8-4 8-4z" />
-          <path d="M4 12l8 4 8-4" />
-          <path d="M4 16l8 4 8-4" />
-        </svg>
-      ),
+      icon: <Icon icon="mdi:layers" width="32" height="32" />,
       title: "AI Model Flexibility",
       description:
         "Works with popular LLM providers and lets you switch anytime without vendor lock-in.",
@@ -187,44 +159,14 @@ const FeaturesSection = () => {
       delay: "0.1s",
     },
     {
-      icon: (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M8 8l-4 4 4 4" />
-          <path d="M16 8l4 4-4 4" />
-          <path d="M12 6l-2 12" />
-        </svg>
-      ),
+      icon: <Icon icon="mdi:code-tags" width="32" height="32" />,
       title: "Developer-Friendly APIs",
       description: "Clean SDKs and APIs to integrate quickly with your stack and CI/CD workflows.",
       gradient: "linear-gradient(135deg, #ff6b9d 0%, #ff5a8c 100%)",
       delay: "0.2s",
     },
     {
-      icon: (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M7 18a4.5 4.5 0 1 1 .9-8.9 5.5 5.5 0 0 1 10.6 1.6A3.5 3.5 0 0 1 17 18H7z" />
-          <path d="M16 16v-5" />
-          <path d="M13 14l3-3 3 3" />
-        </svg>
-      ),
+      icon: <Icon icon="mdi:cloud-upload" width="32" height="32" />,
       title: "Deploy in Minutes",
       description:
         "From prototype to production fast with prebuilt flows and infra-friendly defaults.",
@@ -232,45 +174,14 @@ const FeaturesSection = () => {
       delay: "0.3s",
     },
     {
-      icon: (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M12 3l7 4v5c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V7l7-4z" />
-          <path d="M9 13v-2a3 3 0 1 1 6 0v2" />
-          <rect x="7" y="13" width="10" height="7" rx="2" />
-        </svg>
-      ),
+      icon: <Icon icon="mdi:shield-lock" width="32" height="32" />,
       title: "Enterprise Security",
       description: "Role-based access, audit trails, encryption, and SSO for enterprise needs.",
       gradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
       delay: "0.4s",
     },
     {
-      icon: (
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 19h16" />
-          <rect x="6" y="12" width="3" height="5" rx="1" />
-          <rect x="11" y="8" width="3" height="9" rx="1" />
-          <rect x="16" y="14" width="3" height="3" rx="1" />
-        </svg>
-      ),
+      icon: <Icon icon="mdi:chart-bar" width="32" height="32" />,
       title: "Analytics & Monitoring",
       description: "Insights and observability to track usage, performance, and quality.",
       gradient: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
