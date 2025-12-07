@@ -3,14 +3,14 @@
 .howSection {
   position: relative;
   padding: 64px 0 80px;
-  background: linear-gradient(135deg, 
-    #0b0d16 0%, 
-    #1a1b2e 15%, 
-    #16213e 35%, 
-    #1a1b2e 55%, 
-    #0b0d16 75%,
-    #0a0c14 100%
-  );
+  // background: linear-gradient(135deg, 
+  //   #0b0d16 0%, 
+  //   #1a1b2e 15%, 
+  //   #16213e 35%, 
+  //   #1a1b2e 55%, 
+  //   #0b0d16 75%,
+  //   #0a0c14 100%
+  // );
   overflow: hidden;
   min-height: auto;
   display: flex;
@@ -137,7 +137,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #5da8ff, #a66bff);
+  background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

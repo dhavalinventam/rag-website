@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./description-overview.module.scss";
 
 const DescriptionOverview = () => {
@@ -39,10 +40,23 @@ const DescriptionOverview = () => {
           </span>
           </h1> */}
 
-          <h2 className={styles.title}>
+          <motion.h2 
+            className={styles.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             Transform your 
-            <p> business with best <span className={styles.highlight}> AI tools</span></p>
-          </h2>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {" "}business with best <span className={styles.highlight}> AI tools</span>
+            </motion.p>
+          </motion.h2>
 
           {/* <p className={styles.subtitle}>
             Join the waitlist for instant access to the next-gen RAG platform
@@ -50,33 +64,109 @@ const DescriptionOverview = () => {
             no more hallucinations, full data control, and enterprise-grade security.
           </p> */}
 
-          <p className={styles.subtitle}>
+          <motion.p 
+            className={styles.subtitle}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             Join the waitlist for instant access to the next-gen RAG platform no more hallucinations, full data control, and enterprise-grade security.
-          </p>
+          </motion.p>
 
 
           {/* Early Access Card */}
-          <div className={styles.wishlistCard}>
-            <div className={styles.wishlistGlow} />
+          <motion.div 
+            className={styles.wishlistCard}
+            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4, type: "spring", stiffness: 100 }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <motion.div 
+              className={styles.wishlistGlow}
+              animate={{ 
+                scale: [1, 1.1, 1],
+                opacity: [0.5, 0.7, 0.5]
+              }}
+              transition={{ 
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
             <div className={styles.wishlistContent}>
-              <div className={styles.wishlistHeader}>
-                <div className={styles.wishlistIconContainer}>
-                  <div className={styles.wishlistIcon}>🎯</div>
+              <motion.div 
+                className={styles.wishlistHeader}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <motion.div 
+                  className={styles.wishlistIconContainer}
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.6,
+                    type: "spring",
+                    stiffness: 200
+                  }}
+                >
+                  <motion.div 
+                    className={styles.wishlistIcon}
+                    animate={{ 
+                      rotate: [0, 10, -10, 0],
+                    }}
+                    transition={{ 
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatDelay: 3
+                    }}
+                  >
+                    🎯
+                  </motion.div>
                   <div className={styles.iconRing} />
                   <div className={styles.iconRing2} />
-                </div>
-                <h3 className={styles.wishlistTitle}>
+                </motion.div>
+                <motion.h3 
+                  className={styles.wishlistTitle}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                >
                   <span className={styles.titleGradient}>Get Early Access</span>
-                </h3>
-                <p className={styles.wishlistSubtitle}>
+                </motion.h3>
+                <motion.p 
+                  className={styles.wishlistSubtitle}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                >
                   Early access. Limited founder slots. Exclusive community.
-                </p>
-              </div>
+                </motion.p>
+              </motion.div>
 
               {!isSubmitted ? (
-                <form onSubmit={handleSubmit} className={styles.wishlistForm}>
-                  <div className={`${styles.inputGroup} ${isFocused ? styles.focused : ""}`}>
-                    <input
+                <motion.form 
+                  onSubmit={handleSubmit} 
+                  className={styles.wishlistForm}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                >
+                  <motion.div 
+                    className={`${styles.inputGroup} ${isFocused ? styles.focused : ""}`}
+                    whileFocus={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <motion.input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -86,45 +176,110 @@ const DescriptionOverview = () => {
                       className={styles.emailInput}
                       required
                       disabled={isLoading}
+                      whileFocus={{ scale: 1.02 }}
                     />
-                    <button
+                    <motion.button
                       type="submit"
                       className={`${styles.submitButton} ${email ? styles.active : ""}`}
                       disabled={isLoading || !email}
+                      whileHover={{ scale: email ? 1.05 : 1 }}
+                      whileTap={{ scale: email ? 0.95 : 1 }}
+                      transition={{ type: "spring", stiffness: 400 }}
                     >
                       {isLoading ? (
                         <div className={styles.loadingSpinner} />
                       ) : (
                         <>
                           <span>Join Waitlist</span>
-                          <div className={styles.buttonArrow}>→</div>
+                          <motion.div 
+                            className={styles.buttonArrow}
+                            animate={{ x: [0, 5, 0] }}
+                            transition={{ 
+                              duration: 1.5,
+                              repeat: Infinity,
+                              repeatDelay: 1
+                            }}
+                          >
+                            →
+                          </motion.div>
                         </>
                       )}
-                    </button>
-                  </div>
-                  <div className={styles.wishlistNote}>
+                    </motion.button>
+                  </motion.div>
+                  <motion.div 
+                    className={styles.wishlistNote}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 1 }}
+                  >
                     <div className={styles.privacyIcon}>🔒</div>
                     <span>We respect your privacy. No spam, ever.</span>
-                  </div>
-                </form>
+                  </motion.div>
+                </motion.form>
               ) : (
-                <div className={styles.successMessage}>
-                  <div className={styles.successIconContainer}>
-                    <div className={styles.successIcon}>✅</div>
+                <motion.div 
+                  className={styles.successMessage}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ 
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 200
+                  }}
+                >
+                  <motion.div 
+                    className={styles.successIconContainer}
+                    initial={{ scale: 0, rotate: -180 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{ 
+                      duration: 0.6,
+                      type: "spring",
+                      stiffness: 200
+                    }}
+                  >
+                    <motion.div 
+                      className={styles.successIcon}
+                      animate={{ 
+                        scale: [1, 1.2, 1],
+                      }}
+                      transition={{ 
+                        duration: 0.6,
+                        delay: 0.3
+                      }}
+                    >
+                      ✅
+                    </motion.div>
                     <div className={styles.successRing} />
-                  </div>
-                  <h4>You&apos;re on the list!</h4>
-                  <p>
+                  </motion.div>
+                  <motion.h4
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                  >
+                    You&apos;re on the list!
+                  </motion.h4>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
                     Welcome to the future! We&apos;ll notify you as soon as we launch with exclusive
                     early access.
-                  </p>
-                  <div className={styles.successBadge}>
+                  </motion.p>
+                  <motion.div 
+                    className={styles.successBadge}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
                     <span>🎉 Early Access Granted</span>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

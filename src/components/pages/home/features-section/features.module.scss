@@ -3,14 +3,14 @@
 .featuresSection {
   position: relative;
   min-height: auto;
-  background: linear-gradient(135deg, 
-    #0b0d16 0%, 
-    #1a1b2e 15%, 
-    #16213e 35%, 
-    #1a1b2e 55%, 
-    #0b0d16 75%,
-    #0a0c14 100%
-  );
+  // background: linear-gradient(135deg, 
+  //   #0b0d16 0%, 
+  //   #1a1b2e 15%, 
+  //   #16213e 35%, 
+  //   #1a1b2e 55%, 
+  //   #0b0d16 75%,
+  //   #0a0c14 100%
+  // );
   overflow: hidden;
   isolation: isolate;
   padding: 48px 0;
@@ -156,7 +156,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #5da8ff, #a66bff);
+  background: linear-gradient(90deg, $color-accent-blue 0%, $color-accent-cyan 50%, $color-accent-cyan-darker 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,10 +1,10 @@
 "use client";
-import { useEffect, useRef, useState, useMemo } from "react";
+import { useRef, useMemo } from "react";
+import { motion } from "framer-motion";
 import styles from "./ai-process-flowchart.module.scss";
 
 const AIProcessFlowchart = () => {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
 
   const processSteps = useMemo(() => [
     {
@@ -103,25 +103,35 @@ const AIProcessFlowchart = () => {
     }
   ], []);
 
-  // Animation effect
-  useEffect(() => {
-    const animateSteps = () => {
-      // Reset animation
-      setVisibleSteps([]);
-      
-      // Animate each step with 800ms delay for smoother flow
-      processSteps.forEach((_, index) => {
-        setTimeout(() => {
-          setVisibleSteps(prev => [...prev, index]);
-        }, index * 800); // Reduced delay for better flow
-      });
-    };
+  // Framer Motion variants for step cards
+  const cardVariants: any = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.8,
+      y: 20
+    },
+    visible: (index: number) => ({
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        delay: index * 0.2,
+        duration: 0.5,
+      },
+    }),
+  };
 
-    // Start animation after component mounts
-    const timer = setTimeout(animateSteps, 500);
-    
-    return () => clearTimeout(timer);
-  }, [processSteps]);
+  // Container animation
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
 
 
 
@@ -129,15 +139,33 @@ const AIProcessFlowchart = () => {
     <section className={styles.aiProcessSection}>
       <div className={styles.container}>
         {/* Header */}
-        <div className={styles.header}>
-          <h2 className={styles.title}>
+        <motion.div 
+          className={styles.header}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.h2 
+            className={styles.title}
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             Everything you need to
             <span className={styles.highlight}> build RAG applications</span>
-          </h2>
-          <p className={styles.subtitle}>
+          </motion.h2>
+          <motion.p 
+            className={styles.subtitle}
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             From data ingestion to model deployment, we've got you covered with enterprise-grade tools that scale with your needs.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Flowchart */}
         <div className={styles.flowchartContainer}>
@@ -151,28 +179,67 @@ const AIProcessFlowchart = () => {
           </svg>
 
           {/* Step descriptions as cards - positioned to replace white circles */}
-          <div className={styles.stepDescriptions}>
+          <motion.div 
+            className={styles.stepDescriptions}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
             {processSteps.map((step, index) => (
-              <div
+              <motion.div
                 key={step.id}
-                className={`${styles.stepCard} ${visibleSteps.includes(index) ? styles.stepVisible : styles.stepHidden}`}
+                className={styles.stepCard}
+                custom={index}
+                variants={cardVariants}
                 style={{
                   left: `${(step.position.x / 1000) * 100}%`,
                   top: `${(step.position.y / 400) * 100}%`,
                 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.2 }
+                }}
               >
-                <div className={styles.cardIcon}>
+                <motion.div 
+                  className={styles.cardIcon}
+                  initial={{ rotate: -180, opacity: 0 }}
+                  whileInView={{ rotate: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    delay: index * 0.2 + 0.3,
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 200
+                  }}
+                >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     {step.icon}
                   </svg>
-                </div>
+                </motion.div>
                 <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{step.title}</h3>
-                  <p className={styles.cardDescription}>{step.description}</p>
+                  <motion.h3 
+                    className={styles.cardTitle}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2 + 0.4, duration: 0.4 }}
+                  >
+                    {step.title}
+                  </motion.h3>
+                  <motion.p 
+                    className={styles.cardDescription}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2 + 0.5, duration: 0.4 }}
+                  >
+                    {step.description}
+                  </motion.p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

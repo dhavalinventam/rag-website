@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./hero.module.scss";
 
 const HeroSection = () => {
@@ -78,28 +79,70 @@ const HeroSection = () => {
 
   return (
     <section className={styles.hero} id="waitlist-sec">
-
-
-
       {/* Main content - Full width product visualization */}
-      <div className={styles.container}>
-        <div className={styles.heroContent}>
+      <motion.div 
+        className={styles.container}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.div 
+          className={styles.heroContent}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           {/* Full Width Product Visualization */}
-          <div className={styles.productVisualization}>
+          <motion.div 
+            className={styles.productVisualization}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
               {/* Desktop Frame */}
-              <div className={styles.desktopFrame}>
-                <div className={styles.desktopHeader}>
+              <motion.div 
+                className={styles.desktopFrame}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+              >
+                <motion.div 
+                  className={styles.desktopHeader}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                >
                   <div className={styles.desktopButtons}>
-                    <div className={styles.desktopButton}></div>
-                    <div className={styles.desktopButton}></div>
-                    <div className={styles.desktopButton}></div>
+                    <motion.div 
+                      className={styles.desktopButton}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    ></motion.div>
+                    <motion.div 
+                      className={styles.desktopButton}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    ></motion.div>
+                    <motion.div 
+                      className={styles.desktopButton}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    ></motion.div>
                   </div>
                   <div className={styles.desktopTitle}>AI Platform Demo</div>
-                </div>
+                </motion.div>
                 
                 <div className={styles.desktopContent}>
                   {/* Step 1: Connect Your Data */}
-                  <div className={`${styles.demoStep} ${styles.step1} ${currentStep === 0 ? styles.active : ''}`}>
+                  <motion.div 
+                    className={`${styles.demoStep} ${styles.step1} ${currentStep === 0 ? styles.active : ''}`}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ 
+                      opacity: currentStep === 0 ? 1 : 0,
+                      x: currentStep === 0 ? 0 : -20
+                    }}
+                    transition={{ duration: 0.5 }}
+                  >
                     <div className={styles.stepHeader}>
                       <div className={styles.stepIcon}>🔗</div>
                       <h3>Connect Your Data</h3>
@@ -133,10 +176,18 @@ const HeroSection = () => {
                       <div className={styles.flowLine}></div>
                       <div className={styles.flowPoint}>🔒</div>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Step 2: Choose Your AI Model */}
-                  <div className={`${styles.demoStep} ${styles.step2} ${currentStep === 1 ? styles.active : ''}`}>
+                  <motion.div 
+                    className={`${styles.demoStep} ${styles.step2} ${currentStep === 1 ? styles.active : ''}`}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ 
+                      opacity: currentStep === 1 ? 1 : 0,
+                      x: currentStep === 1 ? 0 : -20
+                    }}
+                    transition={{ duration: 0.5 }}
+                  >
                     <div className={styles.stepHeader}>
                       <div className={styles.stepIcon}>🧠</div>
                       <h3>Choose Your AI Model</h3>
@@ -168,10 +219,18 @@ const HeroSection = () => {
                       <div className={styles.currentModel}>GPT-4</div>
                       <div className={styles.switchButton}>→</div>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Step 3: Deploy & Scale */}
-                  <div className={`${styles.demoStep} ${styles.step3} ${currentStep === 2 ? styles.active : ''}`}>
+                  <motion.div 
+                    className={`${styles.demoStep} ${styles.step3} ${currentStep === 2 ? styles.active : ''}`}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ 
+                      opacity: currentStep === 2 ? 1 : 0,
+                      x: currentStep === 2 ? 0 : -20
+                    }}
+                    transition={{ duration: 0.5 }}
+                  >
                     <div className={styles.stepHeader}>
                       <div className={styles.stepIcon}>🚀</div>
                       <h3>Deploy & Scale</h3>
@@ -199,30 +258,52 @@ const HeroSection = () => {
                       <div className={styles.statusIcon}>✅</div>
                       <span>Deployed Successfully</span>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Cursor Animation */}
-                  <div 
+                  <motion.div 
                     className={styles.demoCursor}
-                    style={{
+                    animate={{
                       left: `${cursorPosition.x}%`,
                       top: `${cursorPosition.y}%`
                     }}
-                  ></div>
+                    transition={{ 
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30
+                    }}
+                  ></motion.div>
                   
                   {/* Progress Indicator */}
-                  <div className={styles.progressIndicator}>
-                    <div className={`${styles.progressDot} ${currentStep === 0 ? styles.active : ''}`}></div>
-                    <div className={`${styles.progressDot} ${currentStep === 1 ? styles.active : ''}`}></div>
-                    <div className={`${styles.progressDot} ${currentStep === 2 ? styles.active : ''}`}></div>
-                  </div>
+                  <motion.div 
+                    className={styles.progressIndicator}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                  >
+                    <motion.div 
+                      className={`${styles.progressDot} ${currentStep === 0 ? styles.active : ''}`}
+                      whileHover={{ scale: 1.2 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    ></motion.div>
+                    <motion.div 
+                      className={`${styles.progressDot} ${currentStep === 1 ? styles.active : ''}`}
+                      whileHover={{ scale: 1.2 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    ></motion.div>
+                    <motion.div 
+                      className={`${styles.progressDot} ${currentStep === 2 ? styles.active : ''}`}
+                      whileHover={{ scale: 1.2 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    ></motion.div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Floating Elements have been removed as requested */}
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
     </section>
   );
