@@ -24,40 +24,6 @@
 }
 
 
-// .title {
-//   font-size: clamp(40px, 5vw, 64px);
-//   line-height: 1.1;
-//   font-weight: 700;
-//   margin-bottom: 24px;
-//   color: #fff;
-// }
-
-// .titleLine {
-//   display: block;
-//   overflow: hidden;
-// }
-
-// .gradientText {
-//   background: linear-gradient(135deg, #5da8ff, #a66bff);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   background-clip: text;
-// }
-
-// .typingText {
-//   color: #fff;
-// }
-
-// Subtitle
-// .subtitle {
-//   font-size: clamp(16px, 2vw, 20.8px);
-//   line-height: 1.6;
-//   color: rgba(255, 255, 255, 0.8);
-//   margin-bottom: 32px;
-//   max-width: 600px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
 
 
 // Early Access Card Styles - Modernized
@@ -596,15 +562,6 @@
 }
 
 @media (max-width: 480px) {
-  // .title {
-  //   font-size: 35.2px;
-  // }
-
-  // .subtitle {
-  //   font-size: 14.4px;
-  // }
-
-
   .wishlistCard {
     margin: 16px auto 0;
     max-width: 350px;

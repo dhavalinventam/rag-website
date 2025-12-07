@@ -3,18 +3,9 @@
 .featuresSection {
   position: relative;
   min-height: auto;
-  // background: linear-gradient(135deg, 
-  //   #0b0d16 0%, 
-  //   #1a1b2e 15%, 
-  //   #16213e 35%, 
-  //   #1a1b2e 55%, 
-  //   #0b0d16 75%,
-  //   #0a0c14 100%
-  // );
   overflow: hidden;
   isolation: isolate;
   padding: 48px 0;
-  // margin-top: -16px;
 }
 
 // Animated background canvas
@@ -294,12 +285,6 @@
   }
 }
 
-@keyframes ctaSlideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 @keyframes floatShape {
   0%, 100% {

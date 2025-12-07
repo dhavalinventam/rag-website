@@ -165,7 +165,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className={`btn btn-gradient-primary ${isSubmitting ? styles.loading : ""}`}
+                    className="btn btn-gradient-primary"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

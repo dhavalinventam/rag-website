@@ -318,34 +318,6 @@
   transition: all 0.3s ease;
 }
 
-.logoGlow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent 70%);
-  border-radius: 50%;
-  filter: blur(20px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.logoContainer:hover .logoGlow {
-  opacity: 1;
-}
-
-.brandTitle {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-  background: $gradient-primary;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 
 .brandDescription {
   color: rgba(255, 255, 255, 0.7);
@@ -521,13 +493,6 @@
   background: linear-gradient(135deg, #00e4ff 0%, #00a8cc 100%);
 }
 
-.newsletterNote {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12.8px;
-}
 
 // Bottom Section
 .bottomSection {
@@ -588,10 +553,6 @@
     gap: 40px;
   }
   
-  .navigationSections {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
   
   .newsletterSection {
     grid-column: 1 / -1;
@@ -609,10 +570,6 @@
     margin-bottom: 10px;
   }
   
-  .navigationSections {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
   
   .bottomContent {
     flex-direction: column;
@@ -656,9 +613,6 @@
     gap: 32px;
   }
   
-  .navigationSections {
-    gap: 24px;
-  }
   
   .legalLinks {
     flex-direction: column;

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Accordion.module.scss';
 
 interface AccordionItem {
